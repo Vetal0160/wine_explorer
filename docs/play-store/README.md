@@ -122,8 +122,8 @@ Aplicația oferă doar informații și nu vinde alcool. Pentru persoane de peste
 
 ### Графика
 - **Иконка 512×512:** `assets/icon/icon.png` (1024×1024 — Play уменьшит; при необходимости сохраните копию 512×512)
-- **Feature graphic 1024×500:** пока нет — можно сделать позже
-- **Скриншоты телефона:** минимум 2, лучше 4–8 (каталог, карточка вина, карта, гастро-пары, сорта, подвал)
+- **Feature graphic 1024×500:** `docs/play-store/feature-graphic-en.png` (в переводах карточки — `-ro.png` и `-ru.png`; пересоздать: `python tool/make_feature_graphic.py`)
+- **Скриншоты телефона:** `docs/play-store/screenshots/en/` (5 шт.; пересоздать: `python tool/make_store_screenshots.py <папка со скринами> en|ro|ru`)
 
 ---
 
