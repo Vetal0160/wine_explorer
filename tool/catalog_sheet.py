@@ -244,12 +244,29 @@ def read_csv(path):
 
 
 def read_input(path):
-    if os.path.isdir(path):
-        return (read_csv(os.path.join(path, "wineries.csv")) if os.path.exists(os.path.join(path, "wineries.csv")) else [],
-                read_csv(os.path.join(path, "wines.csv")) if os.path.exists(os.path.join(path, "wines.csv")) else [])
-    if path.lower().endswith(".xlsx"):
-        return read_xlsx(path)
-    raise SystemExit("Укажите файл .xlsx или папку с wineries.csv и wines.csv")
+    full = os.path.abspath(path)
+    if not os.path.exists(full):
+        raise SystemExit(
+            f"Не найдено: {full}\n"
+            "Создайте эту папку и положите в неё wineries.csv и wines.csv "
+            "(или укажите путь к файлу .xlsx).")
+    if os.path.isdir(full):
+        files = {f.lower(): f for f in os.listdir(full)}
+        found = {name: os.path.join(full, files[name]) for name in ("wineries.csv", "wines.csv") if name in files}
+        if not found:
+            listing = ", ".join(sorted(os.listdir(full))) or "папка пустая"
+            raise SystemExit(
+                f"В папке {full} нет файлов wineries.csv и wines.csv.\n"
+                f"Сейчас в ней: {listing}\n"
+                "Переименуйте файлы агента точно так: wineries.csv и wines.csv.")
+        for name in ("wineries.csv", "wines.csv"):
+            if name not in found:
+                print(f"  ! нет файла {name} — загружаю только то, что есть")
+        return (read_csv(found["wineries.csv"]) if "wineries.csv" in found else [],
+                read_csv(found["wines.csv"]) if "wines.csv" in found else [])
+    if full.lower().endswith(".xlsx"):
+        return read_xlsx(full)
+    raise SystemExit(f"Не понимаю этот файл: {full}\nНужен .xlsx или папка с wineries.csv и wines.csv.")
 
 
 # ---------------------------------------------------------------- Проверка
@@ -536,8 +553,9 @@ def do_import(path, out_path):
 
 
 def main():
-    if hasattr(sys.stdout, "reconfigure"):
-        sys.stdout.reconfigure(encoding="utf-8")  # кириллица в консоли Windows
+    for stream in (sys.stdout, sys.stderr):  # кириллица в консоли Windows
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8")
     args = sys.argv[1:]
     if not args or args[0] not in ("export", "template", "import"):
         print(__doc__)
