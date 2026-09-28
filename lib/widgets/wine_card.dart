@@ -12,7 +12,10 @@ import 'wine_image.dart';
 class WineCard extends StatelessWidget {
   final Wine wine;
 
-  const WineCard({super.key, required this.wine});
+  /// Дополнительный блок под карточкой (например, превью заметки в подвале).
+  final Widget? footer;
+
+  const WineCard({super.key, required this.wine, this.footer});
 
   @override
   Widget build(BuildContext context) {
@@ -30,98 +33,103 @@ class WineCard extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
-          child: Row(
+          child: Column(
             children: [
-              // Картинка бутылки
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Hero(
-                  tag: 'wine-image-${wine.id}',
-                  child: WineImage(
-                    imageUrl: wine.imageUrl,
-                    wineType: wine.type,
-                    width: 80,
-                    height: 100,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 12),
-
-              // Инфо о вине
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            wine.name,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                        ValueListenableBuilder<Set<String>>(
-                          valueListenable: favoriteWineIds,
-                          builder: (context, favorites, _) =>
-                              favorites.contains(wine.id)
-                              ? const Icon(
-                                  Icons.favorite,
-                                  color: Colors.redAccent,
-                                  size: 18,
-                                )
-                              : const SizedBox.shrink(),
-                        ),
-                      ],
-                    ),
-                    Text(
-                      '${wine.wineryName} • ${wine.vintage}',
-                      style: TextStyle(color: Colors.grey[600]),
-                    ),
-                    const SizedBox(height: 6),
-                    Chip(
-                      label: Text(
-                        localizedWineType(l10n, wine.type),
-                        style: const TextStyle(fontSize: 11),
+              Row(
+                children: [
+                  // Картинка бутылки
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Hero(
+                      tag: 'wine-image-${wine.id}',
+                      child: WineImage(
+                        imageUrl: wine.imageUrl,
+                        wineType: wine.type,
+                        width: 80,
+                        height: 100,
                       ),
-                      visualDensity: VisualDensity.compact,
-                      padding: EdgeInsets.zero,
                     ),
-                    const SizedBox(height: 6),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  ),
+                  const SizedBox(width: 12),
+
+                  // Инфо о вине
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
                           children: [
-                            const Icon(
-                              Icons.star,
-                              color: Colors.amber,
-                              size: 18,
-                            ),
-                            const SizedBox(width: 4),
-                            Text(
-                              wine.rating.toStringAsFixed(1),
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
+                            Expanded(
+                              child: Text(
+                                wine.name,
+                                style: const TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
+                            ),
+                            ValueListenableBuilder<Set<String>>(
+                              valueListenable: favoriteWineIds,
+                              builder: (context, favorites, _) =>
+                                  favorites.contains(wine.id)
+                                  ? const Icon(
+                                      Icons.favorite,
+                                      color: Colors.redAccent,
+                                      size: 18,
+                                    )
+                                  : const SizedBox.shrink(),
                             ),
                           ],
                         ),
                         Text(
-                          '~${l10n.priceLdl(wine.priceLei.round())}',
-                          style: const TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: AppTheme.wineRed,
+                          '${wine.wineryName} • ${wine.vintage}',
+                          style: TextStyle(color: Colors.grey[600]),
+                        ),
+                        const SizedBox(height: 6),
+                        Chip(
+                          label: Text(
+                            localizedWineType(l10n, wine.type),
+                            style: const TextStyle(fontSize: 11),
                           ),
+                          visualDensity: VisualDensity.compact,
+                          padding: EdgeInsets.zero,
+                        ),
+                        const SizedBox(height: 6),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                const Icon(
+                                  Icons.star,
+                                  color: Colors.amber,
+                                  size: 18,
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  wine.rating.toStringAsFixed(1),
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Text(
+                              '~${l10n.priceLdl(wine.priceLei.round())}',
+                              style: const TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: AppTheme.wineRed,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
+              if (footer != null) ...[const Divider(height: 20), footer!],
             ],
           ),
         ),

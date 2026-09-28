@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/external_links.dart';
+import '../core/share.dart';
 import '../core/theme.dart';
 import '../data/catalog_store.dart';
 import '../l10n/app_localizations.dart';
@@ -83,6 +84,19 @@ class WineryDetailScreen extends StatelessWidget {
           SliverAppBar(
             expandedHeight: 220,
             pinned: true,
+            actions: [
+              Builder(
+                builder: (context) => IconButton(
+                  tooltip: l10n.share,
+                  icon: const Icon(Icons.share),
+                  onPressed: () => shareText(
+                    context,
+                    wineryShareText(l10n, winery, lang),
+                    subject: winery.name,
+                  ),
+                ),
+              ),
+            ],
             flexibleSpace: FlexibleSpaceBar(
               title: Text(
                 winery.name,

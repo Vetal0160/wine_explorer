@@ -103,5 +103,18 @@
   "grapeAbout": "About the grape",
   "grapeTaste": "Taste & aroma",
   "grapeWines": "Wines made from it",
-  "grapeNoWines": "No wines from this grape in the catalog yet."
+  "grapeNoWines": "No wines from this grape in the catalog yet.",
+  "share": "Share",
+  "shareFooter": "Found on the Moldova Wine Explorer app",
+  "myNotes": "My notes",
+  "addNote": "Add a note",
+  "editNote": "Edit",
+  "noteRating": "My rating",
+  "noteText": "Impressions",
+  "noteTextHint": "Taste, what you had it with, did you like it…",
+  "notePlace": "Where you bought or tasted it",
+  "notePlaceHint": "Shop, winery, restaurant",
+  "noteSave": "Save",
+  "noteDelete": "Delete",
+  "noteSaved": "Note saved, the wine is in your cellar"
 }

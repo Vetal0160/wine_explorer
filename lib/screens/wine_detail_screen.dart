@@ -6,6 +6,8 @@ import '../l10n/app_localizations.dart';
 import '../l10n/wine_type_labels.dart';
 import '../models/wine.dart';
 import '../widgets/wine_image.dart';
+import '../widgets/wine_note_sheet.dart';
+import '../core/share.dart';
 import '../data/catalog_store.dart';
 import 'winery_detail_screen.dart';
 import 'grape_detail_screen.dart';
@@ -76,6 +78,19 @@ class WineDetailScreen extends StatelessWidget {
                   ),
                 ),
                 actions: [
+                  Builder(
+                    // Свой context — чтобы окно «Поделиться» на планшете
+                    // открывалось у кнопки
+                    builder: (context) => IconButton(
+                      tooltip: l10n.share,
+                      icon: const Icon(Icons.share, color: Colors.white),
+                      onPressed: () => shareText(
+                        context,
+                        wineShareText(l10n, wine, languageCode),
+                        subject: wine.name,
+                      ),
+                    ),
+                  ),
                   IconButton(
                     tooltip: favorite ? l10n.favoriteRemove : l10n.favoriteAdd,
                     icon: Icon(
@@ -201,6 +216,10 @@ class WineDetailScreen extends StatelessWidget {
                           ],
                         ),
                       ),
+
+                      const SizedBox(height: 24),
+                      MyNoteSection(wine: wine),
+                      const SizedBox(height: 8),
                     ],
                   ),
                 ),

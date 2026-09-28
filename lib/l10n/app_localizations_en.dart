@@ -367,4 +367,43 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get grapeNoWines => 'No wines from this grape in the catalog yet.';
+
+  @override
+  String get share => 'Share';
+
+  @override
+  String get shareFooter => 'Found on the Moldova Wine Explorer app';
+
+  @override
+  String get myNotes => 'My notes';
+
+  @override
+  String get addNote => 'Add a note';
+
+  @override
+  String get editNote => 'Edit';
+
+  @override
+  String get noteRating => 'My rating';
+
+  @override
+  String get noteText => 'Impressions';
+
+  @override
+  String get noteTextHint => 'Taste, what you had it with, did you like it…';
+
+  @override
+  String get notePlace => 'Where you bought or tasted it';
+
+  @override
+  String get notePlaceHint => 'Shop, winery, restaurant';
+
+  @override
+  String get noteSave => 'Save';
+
+  @override
+  String get noteDelete => 'Delete';
+
+  @override
+  String get noteSaved => 'Note saved, the wine is in your cellar';
 }

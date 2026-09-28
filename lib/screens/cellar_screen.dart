@@ -5,6 +5,8 @@ import '../core/theme.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/catalog_builder.dart';
 import '../widgets/wine_card.dart';
+import '../widgets/wine_note_sheet.dart';
+import '../core/wine_notes_controller.dart';
 
 /// «Мой подвал» — избранные вина.
 class CellarScreen extends StatelessWidget {
@@ -63,9 +65,23 @@ class CellarScreen extends StatelessWidget {
             );
           }
 
-          return ListView(
-            padding: const EdgeInsets.all(12),
-            children: [for (final wine in wines) WineCard(wine: wine)],
+          return ValueListenableBuilder<Map<String, WineNote>>(
+            valueListenable: wineNotes,
+            builder: (context, notes, _) => ListView(
+              padding: const EdgeInsets.all(12),
+              children: [
+                for (final wine in wines)
+                  WineCard(
+                    wine: wine,
+                    footer: notes[wine.id] == null
+                        ? null
+                        : Align(
+                            alignment: Alignment.centerLeft,
+                            child: NoteSummary(note: notes[wine.id]!),
+                          ),
+                  ),
+              ],
+            ),
           );
         },
       ),

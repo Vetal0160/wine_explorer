@@ -373,4 +373,43 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get grapeNoWines =>
       'Deocamdată nu sunt vinuri din acest soi în catalog.';
+
+  @override
+  String get share => 'Distribuie';
+
+  @override
+  String get shareFooter => 'Găsit în aplicația Moldova Wine Explorer';
+
+  @override
+  String get myNotes => 'Notițele mele';
+
+  @override
+  String get addNote => 'Adaugă o notiță';
+
+  @override
+  String get editNote => 'Editează';
+
+  @override
+  String get noteRating => 'Nota mea';
+
+  @override
+  String get noteText => 'Impresii';
+
+  @override
+  String get noteTextHint => 'Gust, cu ce l-ai băut, ți-a plăcut…';
+
+  @override
+  String get notePlace => 'Unde l-ai cumpărat sau gustat';
+
+  @override
+  String get notePlaceHint => 'Magazin, vinărie, restaurant';
+
+  @override
+  String get noteSave => 'Salvează';
+
+  @override
+  String get noteDelete => 'Șterge';
+
+  @override
+  String get noteSaved => 'Notița a fost salvată, vinul e în crama ta';
 }

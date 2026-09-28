@@ -723,6 +723,84 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'В каталоге пока нет вин из этого сорта.'**
   String get grapeNoWines;
+
+  /// No description provided for @share.
+  ///
+  /// In ru, this message translates to:
+  /// **'Поделиться'**
+  String get share;
+
+  /// No description provided for @shareFooter.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нашёл в приложении Moldova Wine Explorer'**
+  String get shareFooter;
+
+  /// No description provided for @myNotes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мои заметки'**
+  String get myNotes;
+
+  /// No description provided for @addNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Добавить заметку'**
+  String get addNote;
+
+  /// No description provided for @editNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Изменить'**
+  String get editNote;
+
+  /// No description provided for @noteRating.
+  ///
+  /// In ru, this message translates to:
+  /// **'Моя оценка'**
+  String get noteRating;
+
+  /// No description provided for @noteText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Впечатления'**
+  String get noteText;
+
+  /// No description provided for @noteTextHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вкус, с чем пили, понравилось ли…'**
+  String get noteTextHint;
+
+  /// No description provided for @notePlace.
+  ///
+  /// In ru, this message translates to:
+  /// **'Где купил или пробовал'**
+  String get notePlace;
+
+  /// No description provided for @notePlaceHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Магазин, винодельня, ресторан'**
+  String get notePlaceHint;
+
+  /// No description provided for @noteSave.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сохранить'**
+  String get noteSave;
+
+  /// No description provided for @noteDelete.
+  ///
+  /// In ru, this message translates to:
+  /// **'Удалить'**
+  String get noteDelete;
+
+  /// No description provided for @noteSaved.
+  ///
+  /// In ru, this message translates to:
+  /// **'Заметка сохранена, вино — в вашем подвале'**
+  String get noteSaved;
 }
 
 class _AppLocalizationsDelegate

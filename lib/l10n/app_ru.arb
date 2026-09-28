@@ -166,5 +166,18 @@
   "grapeAbout": "О сорте",
   "grapeTaste": "Вкус и аромат",
   "grapeWines": "Вина из этого сорта",
-  "grapeNoWines": "В каталоге пока нет вин из этого сорта."
+  "grapeNoWines": "В каталоге пока нет вин из этого сорта.",
+  "share": "Поделиться",
+  "shareFooter": "Нашёл в приложении Moldova Wine Explorer",
+  "myNotes": "Мои заметки",
+  "addNote": "Добавить заметку",
+  "editNote": "Изменить",
+  "noteRating": "Моя оценка",
+  "noteText": "Впечатления",
+  "noteTextHint": "Вкус, с чем пили, понравилось ли…",
+  "notePlace": "Где купил или пробовал",
+  "notePlaceHint": "Магазин, винодельня, ресторан",
+  "noteSave": "Сохранить",
+  "noteDelete": "Удалить",
+  "noteSaved": "Заметка сохранена, вино — в вашем подвале"
 }

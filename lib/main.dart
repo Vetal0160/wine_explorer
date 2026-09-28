@@ -5,6 +5,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'l10n/app_localizations.dart';
 import 'core/age_gate_controller.dart';
 import 'core/favorites_controller.dart';
+import 'core/wine_notes_controller.dart';
 import 'core/supabase_config.dart';
 import 'data/catalog_store.dart';
 import 'data/supabase_wine_repository.dart';
@@ -16,7 +17,12 @@ import 'screens/main_screen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   try {
-    await Future.wait([loadSavedLocale(), loadFavorites(), loadAgeConfirmed()]);
+    await Future.wait([
+      loadSavedLocale(),
+      loadFavorites(),
+      loadAgeConfirmed(),
+      loadWineNotes(),
+    ]);
   } catch (e) {
     // Настройки не загрузились — стартуем с языком системы и пустым подвалом
     debugPrint('Не удалось загрузить сохранённые настройки: $e');

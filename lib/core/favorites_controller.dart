@@ -27,3 +27,8 @@ Future<bool> toggleFavorite(String wineId) async {
   await prefs.setStringList(_favoritesKey, ids.toList());
   return added;
 }
+
+/// Добавляет вино в подвал, если его там ещё нет.
+Future<void> addFavorite(String wineId) async {
+  if (!isFavorite(wineId)) await toggleFavorite(wineId);
+}

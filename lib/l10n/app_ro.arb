@@ -103,5 +103,18 @@
   "grapeAbout": "Despre soi",
   "grapeTaste": "Gust și aromă",
   "grapeWines": "Vinuri din acest soi",
-  "grapeNoWines": "Deocamdată nu sunt vinuri din acest soi în catalog."
+  "grapeNoWines": "Deocamdată nu sunt vinuri din acest soi în catalog.",
+  "share": "Distribuie",
+  "shareFooter": "Găsit în aplicația Moldova Wine Explorer",
+  "myNotes": "Notițele mele",
+  "addNote": "Adaugă o notiță",
+  "editNote": "Editează",
+  "noteRating": "Nota mea",
+  "noteText": "Impresii",
+  "noteTextHint": "Gust, cu ce l-ai băut, ți-a plăcut…",
+  "notePlace": "Unde l-ai cumpărat sau gustat",
+  "notePlaceHint": "Magazin, vinărie, restaurant",
+  "noteSave": "Salvează",
+  "noteDelete": "Șterge",
+  "noteSaved": "Notița a fost salvată, vinul e în crama ta"
 }
