@@ -29,6 +29,13 @@ class Wine {
     required this.description,
   });
 
+  /// Рейтинг, цена и год могут быть неизвестны (в данных — 0): тогда не показываем.
+  bool get hasRating => rating > 0;
+  bool get hasPrice => priceLei > 0;
+
+  /// Нет года — например, игристое без урожая (NV).
+  bool get hasVintage => vintage > 0;
+
   String descriptionFor(String languageCode) =>
       localizedFor(description, languageCode);
 

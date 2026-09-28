@@ -11,9 +11,12 @@ String wineShareText(AppLocalizations l10n, Wine wine, String languageCode) {
   final description = wine.descriptionFor(languageCode);
   return [
     '🍷 ${wine.name}',
-    '${wine.wineryName} · ${wine.vintage}',
-    '${localizedWineType(l10n, wine.type)} · ★ ${wine.rating.toStringAsFixed(1)}'
-        ' · ~${l10n.priceLdl(wine.priceLei.round())}',
+    [wine.wineryName, if (wine.hasVintage) '${wine.vintage}'].join(' · '),
+    [
+      localizedWineType(l10n, wine.type),
+      if (wine.hasRating) '★ ${wine.rating.toStringAsFixed(1)}',
+      if (wine.hasPrice) '~${l10n.priceLdl(wine.priceLei.round())}',
+    ].join(' · '),
     if (description.isNotEmpty) '\n$description',
     '\n${l10n.shareFooter}',
   ].join('\n');

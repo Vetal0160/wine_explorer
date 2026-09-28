@@ -82,7 +82,9 @@ class WineCard extends StatelessWidget {
                           ],
                         ),
                         Text(
-                          '${wine.wineryName} • ${wine.vintage}',
+                          wine.hasVintage
+                              ? '${wine.wineryName} • ${wine.vintage}'
+                              : wine.wineryName,
                           style: TextStyle(color: Colors.grey[600]),
                         ),
                         const SizedBox(height: 6),
@@ -98,30 +100,34 @@ class WineCard extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Row(
-                              children: [
-                                const Icon(
-                                  Icons.star,
-                                  color: Colors.amber,
-                                  size: 18,
-                                ),
-                                const SizedBox(width: 4),
-                                Text(
-                                  wine.rating.toStringAsFixed(1),
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
+                            if (wine.hasRating)
+                              Row(
+                                children: [
+                                  const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                    size: 18,
                                   ),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    wine.rating.toStringAsFixed(1),
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            else
+                              const SizedBox.shrink(),
+                            if (wine.hasPrice)
+                              Text(
+                                '~${l10n.priceLdl(wine.priceLei.round())}',
+                                style: const TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: AppTheme.wineRed,
                                 ),
-                              ],
-                            ),
-                            Text(
-                              '~${l10n.priceLdl(wine.priceLei.round())}',
-                              style: const TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: AppTheme.wineRed,
                               ),
-                            ),
                           ],
                         ),
                       ],

@@ -236,7 +236,10 @@ class _WinerySheet extends StatelessWidget {
                       ),
                       title: Text(wine.name),
                       subtitle: Text(
-                        '${localizedWineType(l10n, wine.type)} • ${wine.vintage}',
+                        [
+                          localizedWineType(l10n, wine.type),
+                          if (wine.hasVintage) '${wine.vintage}',
+                        ].join(' • '),
                       ),
                       trailing: const Icon(Icons.chevron_right),
                       onTap: () => Navigator.push(

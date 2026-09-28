@@ -123,7 +123,7 @@ class WineDetailScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 12),
-                          _RatingBadge(rating: wine.rating),
+                          if (wine.hasRating) _RatingBadge(rating: wine.rating),
                         ],
                       ),
                       const SizedBox(height: 4),
@@ -144,16 +144,17 @@ class WineDetailScreen extends StatelessWidget {
                             wine.grapeVariety,
                           ))
                             _GrapeChip(name: variety),
-                          Chip(
-                            backgroundColor: AppTheme.wineRed,
-                            label: Text(
-                              '~${l10n.priceLdl(wine.priceLei.round())}',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
+                          if (wine.hasPrice)
+                            Chip(
+                              backgroundColor: AppTheme.wineRed,
+                              label: Text(
+                                '~${l10n.priceLdl(wine.priceLei.round())}',
+                                style: const TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
-                          ),
                         ],
                       ),
 
@@ -297,11 +298,15 @@ class _WineryLink extends StatelessWidget {
       color: Colors.grey[700],
       fontWeight: FontWeight.w500,
     );
-    final vintage = Text(' • ${l10n.vintageYear(wine.vintage)}', style: style);
+    final vintage = wine.hasVintage
+        ? Text(' • ${l10n.vintageYear(wine.vintage)}', style: style)
+        : const SizedBox.shrink();
 
     if (winery == null) {
       return Text(
-        '${wine.wineryName} • ${l10n.vintageYear(wine.vintage)}',
+        wine.hasVintage
+            ? '${wine.wineryName} • ${l10n.vintageYear(wine.vintage)}'
+            : wine.wineryName,
         style: style,
       );
     }

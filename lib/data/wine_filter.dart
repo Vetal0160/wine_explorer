@@ -83,6 +83,11 @@ class WineFilter {
         a.name.toLowerCase().compareTo(b.name.toLowerCase());
 
     result.sort((a, b) {
+      // Вина без цены при сортировке по цене — в конце
+      if ((sort == WineSort.priceAsc || sort == WineSort.priceDesc) &&
+          a.hasPrice != b.hasPrice) {
+        return a.hasPrice ? -1 : 1;
+      }
       final c = switch (sort) {
         WineSort.rating => b.rating.compareTo(a.rating),
         WineSort.priceAsc => a.priceLei.compareTo(b.priceLei),
@@ -98,7 +103,9 @@ class WineFilter {
 }
 
 /// Границы ползунка цены: округляем до десятков, чтобы шаги были круглыми.
-PriceRange priceBounds(List<Wine> wines) {
+PriceRange priceBounds(List<Wine> allWines) {
+  // Вина без цены в границы не входят
+  final wines = allWines.where((w) => w.hasPrice).toList();
   if (wines.isEmpty) return const PriceRange(0, 0);
   var min = wines.first.priceLei;
   var max = wines.first.priceLei;
