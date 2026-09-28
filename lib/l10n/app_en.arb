@@ -53,5 +53,18 @@
   "dishReasonCheese": "Salty aged sheep's cheese pairs with red; fresh cheeses go with white.",
   "dishReasonDessert": "Vertută, cozonac and fruit pair nicely with a sparkling wine.",
   "loadError": "Couldn't load the catalog. Check your internet connection.",
-  "retry": "Retry"
+  "retry": "Retry",
+  "filters": "Filters",
+  "filterPrice": "Price",
+  "filterWineries": "Wineries",
+  "filterReset": "Reset",
+  "filterShow": "Show ({count})",
+  "filterResults": "{count, plural, =0{No wines found} one{1 wine found} other{{count} wines found}}",
+  "sortBy": "Sort",
+  "sortRating": "Top rated",
+  "sortPriceAsc": "Price: low to high",
+  "sortPriceDesc": "Price: high to low",
+  "sortVintage": "Newest vintage",
+  "sortName": "Name A–Z",
+  "clearSearch": "Clear search"
 }

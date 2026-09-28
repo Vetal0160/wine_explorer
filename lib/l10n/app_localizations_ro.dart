@@ -199,4 +199,55 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get retry => 'Reîncearcă';
+
+  @override
+  String get filters => 'Filtre';
+
+  @override
+  String get filterPrice => 'Preț';
+
+  @override
+  String get filterWineries => 'Vinării';
+
+  @override
+  String get filterReset => 'Resetează';
+
+  @override
+  String filterShow(int count) {
+    return 'Arată ($count)';
+  }
+
+  @override
+  String filterResults(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count de vinuri găsite',
+      few: '$count vinuri găsite',
+      one: 'Un vin găsit',
+      zero: 'Niciun vin găsit',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get sortBy => 'Sortare';
+
+  @override
+  String get sortRating => 'După rating';
+
+  @override
+  String get sortPriceAsc => 'Cele mai ieftine';
+
+  @override
+  String get sortPriceDesc => 'Cele mai scumpe';
+
+  @override
+  String get sortVintage => 'Recolte noi întâi';
+
+  @override
+  String get sortName => 'După nume';
+
+  @override
+  String get clearSearch => 'Șterge căutarea';
 }

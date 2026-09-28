@@ -198,4 +198,56 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get retry => 'Повторить';
+
+  @override
+  String get filters => 'Фильтры';
+
+  @override
+  String get filterPrice => 'Цена';
+
+  @override
+  String get filterWineries => 'Винодельни';
+
+  @override
+  String get filterReset => 'Сбросить';
+
+  @override
+  String filterShow(int count) {
+    return 'Показать ($count)';
+  }
+
+  @override
+  String filterResults(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: 'Найдено $count вина',
+      many: 'Найдено $count вин',
+      few: 'Найдено $count вина',
+      one: 'Найдено $count вино',
+      zero: 'Ничего не найдено',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get sortBy => 'Сортировка';
+
+  @override
+  String get sortRating => 'По рейтингу';
+
+  @override
+  String get sortPriceAsc => 'Сначала дешёвые';
+
+  @override
+  String get sortPriceDesc => 'Сначала дорогие';
+
+  @override
+  String get sortVintage => 'Сначала новые урожаи';
+
+  @override
+  String get sortName => 'По названию';
+
+  @override
+  String get clearSearch => 'Очистить поиск';
 }

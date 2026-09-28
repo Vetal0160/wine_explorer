@@ -196,4 +196,54 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get retry => 'Retry';
+
+  @override
+  String get filters => 'Filters';
+
+  @override
+  String get filterPrice => 'Price';
+
+  @override
+  String get filterWineries => 'Wineries';
+
+  @override
+  String get filterReset => 'Reset';
+
+  @override
+  String filterShow(int count) {
+    return 'Show ($count)';
+  }
+
+  @override
+  String filterResults(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count wines found',
+      one: '1 wine found',
+      zero: 'No wines found',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String get sortBy => 'Sort';
+
+  @override
+  String get sortRating => 'Top rated';
+
+  @override
+  String get sortPriceAsc => 'Price: low to high';
+
+  @override
+  String get sortPriceDesc => 'Price: high to low';
+
+  @override
+  String get sortVintage => 'Newest vintage';
+
+  @override
+  String get sortName => 'Name A–Z';
+
+  @override
+  String get clearSearch => 'Clear search';
 }

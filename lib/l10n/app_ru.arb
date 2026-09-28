@@ -74,5 +74,32 @@
   "dishReasonCheese": "Солёной выдержанной брынзе подойдёт красное, свежим сырам — белое.",
   "dishReasonDessert": "Вертута, куличи и фрукты хорошо сочетаются с игристым вином.",
   "loadError": "Не удалось загрузить каталог. Проверьте интернет.",
-  "retry": "Повторить"
+  "retry": "Повторить",
+  "filters": "Фильтры",
+  "filterPrice": "Цена",
+  "filterWineries": "Винодельни",
+  "filterReset": "Сбросить",
+  "filterShow": "Показать ({count})",
+  "@filterShow": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "filterResults": "{count, plural, =0{Ничего не найдено} one{Найдено {count} вино} few{Найдено {count} вина} many{Найдено {count} вин} other{Найдено {count} вина}}",
+  "@filterResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "sortBy": "Сортировка",
+  "sortRating": "По рейтингу",
+  "sortPriceAsc": "Сначала дешёвые",
+  "sortPriceDesc": "Сначала дорогие",
+  "sortVintage": "Сначала новые урожаи",
+  "sortName": "По названию",
+  "clearSearch": "Очистить поиск"
 }

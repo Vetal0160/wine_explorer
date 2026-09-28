@@ -3,8 +3,10 @@ import 'package:wine_explorer/widgets/wine_image.dart';
 
 void main() {
   test('полный адрес фото используется как есть', () {
-    expect(resolveWineImageUrl(' https://example.com/a.jpg '),
-        'https://example.com/a.jpg');
+    expect(
+      resolveWineImageUrl(' https://example.com/a.jpg '),
+      'https://example.com/a.jpg',
+    );
   });
 
   test('пустое фото — заглушка', () {

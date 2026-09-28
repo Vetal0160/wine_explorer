@@ -423,6 +423,84 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Повторить'**
   String get retry;
+
+  /// No description provided for @filters.
+  ///
+  /// In ru, this message translates to:
+  /// **'Фильтры'**
+  String get filters;
+
+  /// No description provided for @filterPrice.
+  ///
+  /// In ru, this message translates to:
+  /// **'Цена'**
+  String get filterPrice;
+
+  /// No description provided for @filterWineries.
+  ///
+  /// In ru, this message translates to:
+  /// **'Винодельни'**
+  String get filterWineries;
+
+  /// No description provided for @filterReset.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сбросить'**
+  String get filterReset;
+
+  /// No description provided for @filterShow.
+  ///
+  /// In ru, this message translates to:
+  /// **'Показать ({count})'**
+  String filterShow(int count);
+
+  /// No description provided for @filterResults.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, =0{Ничего не найдено} one{Найдено {count} вино} few{Найдено {count} вина} many{Найдено {count} вин} other{Найдено {count} вина}}'**
+  String filterResults(int count);
+
+  /// No description provided for @sortBy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сортировка'**
+  String get sortBy;
+
+  /// No description provided for @sortRating.
+  ///
+  /// In ru, this message translates to:
+  /// **'По рейтингу'**
+  String get sortRating;
+
+  /// No description provided for @sortPriceAsc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сначала дешёвые'**
+  String get sortPriceAsc;
+
+  /// No description provided for @sortPriceDesc.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сначала дорогие'**
+  String get sortPriceDesc;
+
+  /// No description provided for @sortVintage.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сначала новые урожаи'**
+  String get sortVintage;
+
+  /// No description provided for @sortName.
+  ///
+  /// In ru, this message translates to:
+  /// **'По названию'**
+  String get sortName;
+
+  /// No description provided for @clearSearch.
+  ///
+  /// In ru, this message translates to:
+  /// **'Очистить поиск'**
+  String get clearSearch;
 }
 
 class _AppLocalizationsDelegate

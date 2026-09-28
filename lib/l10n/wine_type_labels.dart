@@ -1,5 +1,13 @@
 import 'app_localizations.dart';
 
+/// Все типы вин, которые понимает приложение (в порядке показа).
+const List<String> wineTypeCodes = [
+  'red_dry',
+  'white_dry',
+  'rose_dry',
+  'sparkling',
+];
+
 /// Переводит код типа вина (например, 'red_dry') в подпись на текущем языке.
 /// Неизвестные значения возвращаются как есть.
 String localizedWineType(AppLocalizations l10n, String type) {
