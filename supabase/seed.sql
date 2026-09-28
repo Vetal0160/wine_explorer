@@ -1,5 +1,5 @@
 -- Начальные данные. Выполняется после миграции (или автоматически через `supabase db reset`).
--- Сгенерировано вместе с lib/data/mock_data.dart.
+-- Сгенерировано скриптом tool/gen_catalog_data.py (вместе с lib/data/mock_data.dart).
 
 insert into public.wineries (id, name, latitude, longitude, region) values
   (1, 'Château Vartely', 47.3833, 28.8167, 'Codru · Orhei'),

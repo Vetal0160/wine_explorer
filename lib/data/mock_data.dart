@@ -1,4 +1,5 @@
-// Сгенерировано из одного источника вместе с supabase/seed.sql.
+// Сгенерировано скриптом tool/gen_catalog_data.py (вместе с supabase/seed.sql).
+// Не правьте вручную — меняйте скрипт и запускайте заново.
 // Используется, пока Supabase не настроен (и в тестах).
 import '../models/wine.dart';
 import '../models/winery.dart';

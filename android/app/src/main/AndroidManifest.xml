@@ -2,7 +2,7 @@
     <!-- Тайлы карты и фото вин грузятся из интернета -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="wine_explorer"
+        android:label="Wine Explorer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
