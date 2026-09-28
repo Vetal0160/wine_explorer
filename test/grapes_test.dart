@@ -30,7 +30,9 @@ void main() {
     expect(catalog.grapeByName('Băbească Neagră')?.id, 'rara-neagra');
     // Похожие, но разные сорта не путаются
     expect(catalog.grapeByName('Fetească Albă')?.id, 'feteasca-alba');
-    expect(catalog.grapeByName('Syrah'), isNull);
+    expect(catalog.grapeByName('Nebbiolo'), isNull);
+    expect(catalog.grapeByName('Pinot Grigio')?.id, 'pinot-gris');
+    expect(catalog.grapeByName('Shiraz')?.id, 'syrah');
   });
 
   test('состав «Chardonnay, Pinot Noir» относится к обоим сортам', () {

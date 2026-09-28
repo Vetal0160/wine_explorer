@@ -129,6 +129,112 @@ GRAPES = [
         "ru": "Крыжовник, лайм, зелёный перец, трава.",
         "ro": "Agrișe, lime, ardei verde, iarbă.",
         "en": "Gooseberry, lime, green pepper, grass."}),
+    # --- Добавлены после импорта вин от агента (сентябрь 2026) ---
+    ("floricica", "Floricica", "white", True, [], {
+        "ru": "Белый сорт молдавской селекции, устойчивый к морозам и болезням винограда. Из него делают свежие ароматные вина.",
+        "ro": "Soi alb de selecție moldovenească, rezistent la ger și la bolile viței-de-vie. Din el se fac vinuri proaspete și aromate.",
+        "en": "A white grape bred in Moldova, resistant to frost and vine diseases. It makes fresh, aromatic wines."}, {
+        "ru": "Белые цветы, цитрусы, лёгкие мускатные ноты.",
+        "ro": "Flori albe, citrice, note ușoare de muscat.",
+        "en": "White flowers, citrus, a light muscat touch."}),
+    ("codrinschi", "Codrinschi", "red", True, ["Codrinschii", "Codrinski"], {
+        "ru": "Красный сорт молдавской селекции, названный в честь лесов Кодр. Устойчив к морозам, даёт вина глубокого цвета.",
+        "ro": "Soi roșu de selecție moldovenească, numit după codrii Moldovei. Rezistent la ger, dă vinuri de culoare intensă.",
+        "en": "A red grape bred in Moldova and named after the Codru forests. Frost-hardy, it gives deeply coloured wines."}, {
+        "ru": "Тёмные ягоды, вишня, лёгкая пряность.",
+        "ro": "Fructe de pădure negre, vișine, o notă ușor condimentată.",
+        "en": "Dark berries, cherry, a light spice."}),
+    ("alb-de-onitcani", "Alb de Onițcani", "white", True, ["Alb de Onitcani"], {
+        "ru": "Белый сорт молдавской селекции. Встречается редко — в основном у небольших виноделен.",
+        "ro": "Soi alb de selecție moldovenească. Se întâlnește rar — mai ales la vinăriile mici.",
+        "en": "A white grape bred in Moldova. It is rare and found mostly at small wineries."}, {
+        "ru": "Свежие фрукты, цветы, живая кислотность.",
+        "ro": "Fructe proaspete, flori, aciditate vie.",
+        "en": "Fresh fruit, flowers, lively acidity."}),
+    ("tamaioasa-romaneasca", "Tămâioasă Românească", "white", True, ["Tamaioasa Romaneasca", "Tămâioasă"], {
+        "ru": "Старинный ароматный белый сорт региона, родственник Муската. Известен ярким, почти «ладанным» ароматом.",
+        "ro": "Soi alb aromat vechi al regiunii, rudă cu Muscatul. Cunoscut pentru aroma intensă, aproape de tămâie.",
+        "en": "An old aromatic white grape of the region, related to Muscat, known for its intense, almost incense-like aroma."}, {
+        "ru": "Мускат, роза, мёд, базилик.",
+        "ro": "Muscat, trandafir, miere, busuioc.",
+        "en": "Muscat, rose, honey, basil."}),
+    ("saperavi", "Saperavi", "red", False, [], {
+        "ru": "Грузинский сорт с окрашенной мякотью, широко распространённый в Молдове. Даёт очень тёмные, насыщенные вина с хорошей кислотностью.",
+        "ro": "Soi georgian cu pulpă colorată, larg răspândit în Moldova. Dă vinuri foarte închise la culoare, intense, cu aciditate bună.",
+        "en": "A Georgian grape with coloured flesh, widely planted in Moldova. It gives very dark, intense wines with good acidity."}, {
+        "ru": "Ежевика, чернослив, тёмная вишня, специи.",
+        "ro": "Mure, prune uscate, cireșe negre, condimente.",
+        "en": "Blackberry, prune, dark cherry, spice."}),
+    ("aligote", "Aligoté", "white", False, ["Aligote"], {
+        "ru": "Белый сорт из Бургундии, давно и широко выращивается в Молдове. Лёгкие, свежие вина с яркой кислотностью.",
+        "ro": "Soi alb din Burgundia, cultivat de mult și pe scară largă în Moldova. Vinuri ușoare și proaspete, cu aciditate vie.",
+        "en": "A white grape from Burgundy, long and widely grown in Moldova. Light, fresh wines with bright acidity."}, {
+        "ru": "Зелёное яблоко, лимон, полевые цветы.",
+        "ro": "Măr verde, lămâie, flori de câmp.",
+        "en": "Green apple, lemon, meadow flowers."}),
+    ("riesling", "Riesling", "white", False, ["Rhine Riesling", "Riesling de Rin"], {
+        "ru": "Благородный белый сорт из Германии: от сухих до сладких вин, с высокой кислотностью и хорошим потенциалом выдержки.",
+        "ro": "Soi alb nobil din Germania: de la vinuri seci la dulci, cu aciditate ridicată și bun potențial de învechire.",
+        "en": "A noble white grape from Germany, from dry to sweet styles, with high acidity and good ageing potential."}, {
+        "ru": "Лайм, зелёное яблоко, персик, минеральность.",
+        "ro": "Lime, măr verde, piersică, mineralitate.",
+        "en": "Lime, green apple, peach, minerality."}),
+    ("pinot-blanc", "Pinot Blanc", "white", False, ["Pinot Bianco", "Pinot Alb"], {
+        "ru": "Белая разновидность Пино: мягкие, округлые вина с умеренной кислотностью, часто используется для игристых.",
+        "ro": "Varietatea albă a Pinot-ului: vinuri moi, rotunde, cu aciditate moderată, des folosită pentru spumante.",
+        "en": "The white member of the Pinot family: soft, round wines with moderate acidity, often used for sparkling wine."}, {
+        "ru": "Груша, яблоко, миндаль.",
+        "ro": "Pară, măr, migdale.",
+        "en": "Pear, apple, almond."}),
+    ("pinot-gris", "Pinot Gris", "white", False, ["Pinot Grigio"], {
+        "ru": "Сорт с розовато-серой кожицей. В лёгком стиле известен как Пино Гриджо, в насыщенном — как Пино Гри.",
+        "ro": "Soi cu pielița roz-cenușie. În stil ușor e cunoscut ca Pinot Grigio, în stil bogat — ca Pinot Gris.",
+        "en": "A grape with pinkish-grey skin, known as Pinot Grigio in its light style and Pinot Gris in its richer style."}, {
+        "ru": "Груша, дыня, цитрусы, лёгкая пряность.",
+        "ro": "Pară, pepene galben, citrice, o notă ușor condimentată.",
+        "en": "Pear, melon, citrus, a light spice."}),
+    ("syrah", "Syrah", "red", False, ["Shiraz"], {
+        "ru": "Красный сорт из долины Роны (он же Шираз): плотные вина с тёмными ягодами и перечными нотами.",
+        "ro": "Soi roșu din valea Ronului (numit și Shiraz): vinuri dense, cu fructe negre și note de piper.",
+        "en": "A red grape from the Rhône valley (also called Shiraz): full wines with dark fruit and peppery notes."}, {
+        "ru": "Ежевика, слива, чёрный перец, копчёности.",
+        "ro": "Mure, prune, piper negru, note afumate.",
+        "en": "Blackberry, plum, black pepper, smoky notes."}),
+    ("malbec", "Malbec", "red", False, ["Côt"], {
+        "ru": "Красный сорт французского происхождения, прославленный Аргентиной: сочные, тёмные, мягкие вина.",
+        "ro": "Soi roșu de origine franceză, devenit celebru în Argentina: vinuri suculente, închise și catifelate.",
+        "en": "A red grape of French origin made famous by Argentina: juicy, dark, smooth wines."}, {
+        "ru": "Слива, ежевика, какао, фиалка.",
+        "ro": "Prune, mure, cacao, violete.",
+        "en": "Plum, blackberry, cocoa, violet."}),
+    ("tempranillo", "Tempranillo", "red", False, [], {
+        "ru": "Главный красный сорт Испании (Риоха): вина средней насыщенности, хорошо сочетающиеся с выдержкой в дубе.",
+        "ro": "Principalul soi roșu al Spaniei (Rioja): vinuri de corpolență medie, care se potrivesc bine cu învechirea în stejar.",
+        "en": "Spain's leading red grape (Rioja): medium-bodied wines that take well to oak ageing."}, {
+        "ru": "Вишня, томлёная слива, кожа, ваниль.",
+        "ro": "Vișine, prune coapte, piele, vanilie.",
+        "en": "Cherry, stewed plum, leather, vanilla."}),
+    ("albarino", "Albariño", "white", False, ["Albarino", "Alvarinho"], {
+        "ru": "Белый сорт с атлантического побережья Испании и Португалии: свежие ароматные вина, отлично подходящие к морепродуктам.",
+        "ro": "Soi alb de pe coasta atlantică a Spaniei și Portugaliei: vinuri proaspete și aromate, excelente cu fructe de mare.",
+        "en": "A white grape from the Atlantic coast of Spain and Portugal: fresh, aromatic wines that are great with seafood."}, {
+        "ru": "Персик, абрикос, цитрусы, солёная свежесть.",
+        "ro": "Piersică, caisă, citrice, prospețime sărată.",
+        "en": "Peach, apricot, citrus, saline freshness."}),
+    ("glera", "Glera", "white", False, ["Prosecco"], {
+        "ru": "Итальянский белый сорт, из которого делают Просекко: лёгкие, фруктовые игристые вина.",
+        "ro": "Soi alb italian din care se face Prosecco: vinuri spumante ușoare și fructuoase.",
+        "en": "The Italian white grape behind Prosecco: light, fruity sparkling wines."}, {
+        "ru": "Зелёное яблоко, груша, белые цветы.",
+        "ro": "Măr verde, pară, flori albe.",
+        "en": "Green apple, pear, white flowers."}),
+    ("bastardo", "Bastardo", "red", False, ["Bastardo Magaraci", "Trousseau"], {
+        "ru": "Красный сорт португальского происхождения (во Франции — Труссо). В нашем регионе известен по сорту Бастардо Магарачский.",
+        "ro": "Soi roșu de origine portugheză (în Franța — Trousseau). În regiunea noastră este cunoscut prin soiul Bastardo Magaraci.",
+        "en": "A red grape of Portuguese origin (Trousseau in France), known in our region through the Bastardo Magaraci variety."}, {
+        "ru": "Красные ягоды, вишня, лёгкие землистые ноты.",
+        "ro": "Fructe roșii, vișine, note ușor teroase.",
+        "en": "Red berries, cherry, light earthy notes."}),
 ]
 
 
