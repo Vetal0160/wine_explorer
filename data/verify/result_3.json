@@ -1,0 +1,110 @@
+[
+  {
+    "name": "ATU Winery",
+    "status": "partial",
+    "website": {"value": "https://atu.wine", "source": "https://atu.wine"},
+    "phone": {"value": "+373 69 222 237", "source": "https://atu.wine/tours", "source_tier": 1},
+    "hours": {"value_ru": null, "value_ro": null, "value_en": null, "source": null, "source_tier": 1},
+    "has_tastings": {"value": true, "source": "https://atu.wine/tours"},
+    "tasting_price_lei": {"value": 600, "source": "https://atu.wine/tours", "note": "'Wine Tasting' package: 600.00 MDL/person, groups > 5 people, available May–October, includes 5 premium wines, mix of plăcinte, cheese plate. 'Wine Outline' package is 1000 MDL/p. (The tours page only renders after choosing country 'Republica Moldova' on https://atu.wine/location.)"},
+    "booking_required": {"value": true, "source": "https://atu.wine/tours"},
+    "address": {"value": "Bd. Dacia 58, mun. Chișinău, Republica Moldova", "source": "https://atu.wine/tours"},
+    "comment": "Site shows phone as '0 (69) 222237', so agent1's phone is correct. Agent1's address '58/1' and MD-2062 not seen (site says Bd. Dacia 58). Agent1's hours 'Пн–Вс 11:00–17:00' not found anywhere on the site. Agent1's price of 250 lei is wrong (site: 600 MDL). Tours are seasonal (May–October), 'Booking in advance'."
+  },
+  {
+    "name": "Timbrus Purcari Estate",
+    "status": "partial",
+    "website": {"value": "https://timbrus.com", "source": "https://timbrus.com/en/"},
+    "phone": {"value": "+373 22 23 42 44", "source": "https://timbrus.com/en/", "source_tier": 1},
+    "hours": {"value_ru": null, "value_ro": null, "value_en": null, "source": null, "source_tier": 1},
+    "has_tastings": {"value": null, "source": null},
+    "tasting_price_lei": {"value": null, "source": null, "note": "No tasting/tour offer published on timbrus.com or its wineofmoldova.com page."},
+    "booking_required": {"value": null, "source": null},
+    "address": {"value": "str. Grigore Vieru 134, s. Purcari, r-nul Ștefan Vodă, MD-4229, Republica Moldova", "source": "https://timbrus.com/en/"},
+    "comment": "Candidate domain timbrus.md does not resolve (DNS ENOTFOUND). The real site is timbrus.com. The phone +373 (22) 23-42-44 is listed under the Chișinău 'Communication Office' (str. Arhanghel Mihail 28), not specifically for visits. The site also lists tel./fax +373 (22) 23-74-14 and mobile +373 (79) 308803. Confirmed by https://wineofmoldova.com/en/timbrus-purcari-estate-winery/ (+373 22234244; ONVV gives postcode MD-4224 vs MD-4229 on the official site). Agent1's phone +373 22 835 300 was NOT found anywhere; it is likely invented. Agent1's hours Пн–Пт 09:00–18:00 are not published. No visitor offer on the Timbrus site."
+  },
+  {
+    "name": "Domeniile Pripa",
+    "status": "partial",
+    "website": {"value": "https://pripa.md", "source": "https://pripa.md"},
+    "phone": {"value": "+373 69 108 550", "source": "https://pripa.md/contacte", "source_tier": 1},
+    "hours": {"value_ru": "Пн–Вс 10:00–18:00", "value_ro": "Lun–Dum 10:00–18:00", "value_en": "Mon–Sun 10:00–18:00", "source": "https://wineofmoldova.com/en/domeniile-pripa-winery/", "source_tier": 2},
+    "has_tastings": {"value": true, "source": "https://wineofmoldova.com/en/domeniile-pripa-winery/"},
+    "tasting_price_lei": {"value": null, "source": null, "note": "No price published on pripa.md or on the ONVV page."},
+    "booking_required": {"value": true, "source": "https://wineofmoldova.com/en/domeniile-pripa-winery/"},
+    "address": {"value": "s. Purcari, r-nul Ștefan Vodă, Republica Moldova", "source": "https://wineofmoldova.com/en/domeniile-pripa-winery/"},
+    "comment": "The official site has only phone/email (+373 69 108 550, info@pripa.md), so agent1's phone is correct. Hours ('Open hours (Monday - Sunday): 10:00 - 18:00', all year round), 'Reservation required: Yes' and 'Guided Tours and Wine Tastings' come from the ONVV page (tier 2). The address is also tier 2 (village only, no street/postcode; agent1's MD-4229 not verified). Agent1's price of 300 lei not verified."
+  },
+  {
+    "name": "Equinox Winery",
+    "status": "partial",
+    "website": {"value": "https://equinox.md/ro/", "source": "https://equinox.md/ro/"},
+    "phone": {"value": null, "source": null, "source_tier": 1},
+    "hours": {"value_ru": null, "value_ro": null, "value_en": null, "source": null, "source_tier": 1},
+    "has_tastings": {"value": null, "source": null},
+    "tasting_price_lei": {"value": null, "source": null, "note": "No tasting offer published."},
+    "booking_required": {"value": null, "source": null},
+    "address": {"value": null, "source": null},
+    "comment": "https://equinox.md/ (root and /en) returns HTTP 403 to automated clients, but https://equinox.md/ro/ loads. It is a one-page site. The contact section shows only 'Constantin Stratan', 'Oficiu: mun. Chișinău, Podgoriile companiei: r-l Ștefan Vodă, s. Olanești' and a contact form, with no phone, hours or tasting info. No wineofmoldova.com page found. A directory (madein.md, not an allowed source) lists +373 69 500 505 and Mon–Fri 09:00–17:00; these are unverified and not used. Agent1's phone +373 69 111 602 was not found anywhere; do not use."
+  },
+  {
+    "name": "Minis Terrios",
+    "status": "not_found",
+    "website": {"value": null, "source": null},
+    "phone": {"value": null, "source": null, "source_tier": 1},
+    "hours": {"value_ru": null, "value_ro": null, "value_en": null, "source": null, "source_tier": 1},
+    "has_tastings": {"value": null, "source": null},
+    "tasting_price_lei": {"value": null, "source": null, "note": ""},
+    "booking_required": {"value": null, "source": null},
+    "address": {"value": null, "source": null},
+    "comment": "Candidate domain ministerrios.md does not resolve (DNS ENOTFOUND). An official Facebook page exists (https://www.facebook.com/ministerrios/), but its content cannot be read without login. No wineofmoldova.com or moldova.travel page found. Third-party sources say visits are strictly by appointment, but that could not be verified from an allowed source. Agent1's phone +373 69 113 230 is the Vinuri de Comrat number (verified on vinuridecomrat.md), so it is WRONG for Minis Terrios. Agent1's address and hours are unverified."
+  },
+  {
+    "name": "Domeniile Davidescu",
+    "status": "partial",
+    "website": {"value": "https://domeniiledavidescu.ro", "source": "https://domeniiledavidescu.ro/contact/"},
+    "phone": {"value": "+373 69 388 515", "source": "https://wineofmoldova.com/en/domeniile-davidescu-winery/", "source_tier": 2},
+    "hours": {"value_ru": null, "value_ro": null, "value_en": null, "source": null, "source_tier": 1},
+    "has_tastings": {"value": null, "source": null},
+    "tasting_price_lei": {"value": null, "source": null, "note": "No visitor/tasting offer published."},
+    "booking_required": {"value": null, "source": null},
+    "address": {"value": "str. Unirii 1, s. Slobozia Mare, r-nul Cahul, Republica Moldova", "source": "https://domeniiledavidescu.ro/contact/"},
+    "comment": "The winery and vineyards ARE in the Republic of Moldova (Slobozia Mare, Cahul district), confirmed on the official contact page and the ONVV page. Only the company's registered/sales office is in Romania (mun. Pitești, str. Sfânta Vineri, bl. A10), with phone +40 762 199 923 (a sales contact on the official site, not a visitor line). The Moldovan phone +373 69 388 515 comes from wineofmoldova.com (tier 2) and matches agent1. No hours or tasting info anywhere. Agent1's hours Пн–Пт 09:00–18:00 and postcode MD-3929 not verified."
+  },
+  {
+    "name": "Vinuri de Comrat",
+    "status": "ok",
+    "website": {"value": "https://vinuridecomrat.md", "source": "https://vinuridecomrat.md"},
+    "phone": {"value": "+373 69 113 230", "source": "https://vinuridecomrat.md/turism/", "source_tier": 1},
+    "hours": {"value_ru": "Пн–Вс 12:00–23:00", "value_ro": "Lun–Dum 12:00–23:00", "value_en": "Mon–Sun 12:00–23:00", "source": "https://vinuridecomrat.md/turism/", "source_tier": 1},
+    "has_tastings": {"value": true, "source": "https://vinuridecomrat.md/turism/"},
+    "tasting_price_lei": {"value": 350, "source": "https://vinuridecomrat.md/turism/", "note": "'EXCURSIE + DEGUSTARE – 350 lei' (3 h, tasting of 4 wines), price valid for a group of min. 5 persons. Excursion without tasting: 250 lei. Extended program with tasting and activities: 550 lei."},
+    "booking_required": {"value": null, "source": null},
+    "address": {"value": "str. Vinzavodscaia 1, or. Comrat, Republica Moldova", "source": "https://vinuridecomrat.md/turism/"},
+    "comment": "Both agents had the correct phone. Both agents' hours (08:00–17:00 / 10:00–18:00) and prices (200 / 150 lei) are wrong. The tourism page says 'Vă așteptăm cu drag, 365 zile/an, de la ora 12:00-23:00' and the tasting package is 350 lei. Company stores open 9:00–19:00 (homepage), which are not visitor hours. Booking is not stated explicitly (packages are chosen via 'Alege pachetul', min. 5 persons). The postcode (MD-3800/3801) is not shown on the site."
+  },
+  {
+    "name": "Aurelius Winery",
+    "status": "partial",
+    "website": {"value": "https://aurelius.md", "source": "https://aurelius.md"},
+    "phone": {"value": "+373 22 87 13 21", "source": "https://aurelius.md", "source_tier": 1},
+    "hours": {"value_ru": null, "value_ro": null, "value_en": null, "source": null, "source_tier": 1},
+    "has_tastings": {"value": null, "source": null},
+    "tasting_price_lei": {"value": null, "source": null, "note": "No tasting/tour info on the official site or the ONVV page."},
+    "booking_required": {"value": null, "source": null},
+    "address": {"value": null, "source": null},
+    "comment": "Official site contacts: tel. +373 (22) 87 13 21, +373 79 143 298, info@aurelius.md, address 'str. Voluntarilor, 15, CHIȘINAU' (office, not a visitor address). The ONVV page (https://wineofmoldova.com/en/aurelius-winery/) gives phone +373 22871321 and the location only as 'Nisporeni city'. Agent1's phone is correct. Agent2's address 'str. Alexandru cel Bun 83, Nisporeni' and agent1's hours are not verified. No evidence of tastings for visitors."
+  },
+  {
+    "name": "BASAVIN Winery",
+    "status": "partial",
+    "website": {"value": "https://basavin.md", "source": "https://basavin.md"},
+    "phone": {"value": "+373 60 65 00 52", "source": "https://basavin.md/visit-us/", "source_tier": 1},
+    "hours": {"value_ru": "Пн–Пт 09:00–18:00", "value_ro": "Lun–Vin 09:00–18:00", "value_en": "Mon–Fri 09:00–18:00", "source": "https://basavin.md/contacte/", "source_tier": 1},
+    "has_tastings": {"value": null, "source": null},
+    "tasting_price_lei": {"value": null, "source": null, "note": "The wine tour page (TUR VINICOL) gives no packages or prices."},
+    "booking_required": {"value": true, "source": "https://basavin.md/visit-us/"},
+    "address": {"value": "str. Karl Marx 205, Basarabeasca, Republica Moldova", "source": "https://basavin.md/contacte/"},
+    "comment": "Agent2's phone (+373 60 650 052) is the same number as the site's +373 60 65 00 52, so it is correct. The site also lists +373 22 21 31 48. The hours 'Lun-Vin: 9:00 – 18:00' are general business hours shown on the contact and tour pages, not specifically tasting hours. Tour page: 'Vă rugăm să ne scrieți un e-mail pentru programare' (alina.basavin@gmail.com / basavin7@gmail.com), so booking is required. A wine tour is offered, but tasting is not mentioned explicitly, so has_tastings is left null. The wine shop (vinotecă) is at str. Mihai Eminescu 40, Chișinău. Agent2's price of 150 lei and postcode MD-6700 not verified."
+  }
+]

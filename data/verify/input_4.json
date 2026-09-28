@@ -1,0 +1,136 @@
+[
+ {
+  "name": "Carlevana Winery",
+  "in_db": false,
+  "region": "Codru · Merenii Noi",
+  "websites": [
+   "https://carlevana.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 767 555 50",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "str. Ștefan cel Mare 9, s. Merenii Noi, r. Anenii Noi, MD-6527"
+   }
+  }
+ },
+ {
+  "name": "Crama Tudor",
+  "in_db": false,
+  "region": "Codru · Sadova",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 69 763 771",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "s. Sadova, r. Călărași, MD-4436"
+   }
+  }
+ },
+ {
+  "name": "Doina Vin",
+  "in_db": false,
+  "region": "Codru · Răzeni",
+  "websites": [
+   "https://doinavin.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 60 213 339",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "280",
+    "address": "s. Răzeni, r. Ialoveni, MD-7721"
+   }
+  }
+ },
+ {
+  "name": "Javgur Winery",
+  "in_db": false,
+  "region": "Valul lui Traian · Ialpujeni",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 69 500 300",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "s. Ialpujeni, r. Cimișlia, MD-4121"
+   }
+  }
+ },
+ {
+  "name": "Kazayak-Vin",
+  "in_db": false,
+  "region": "Valul lui Traian · Cazaclia",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 22 229 193",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": "",
+    "address": "str. Lenin 2, s. Cazaclia, r. Ceadîr-Lunga, MD-6113"
+   }
+  }
+ },
+ {
+  "name": "Mihai Sava Winery",
+  "in_db": false,
+  "region": "Codru · Costești",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 69 917 003",
+    "hours": "Пн–Вс 14:00–20:00",
+    "tasting_price_lei": "200",
+    "address": "s. Costești, r. Ialoveni, MD-6813"
+   }
+  }
+ },
+ {
+  "name": "Salcuta Winery",
+  "in_db": false,
+  "region": "Ștefan Vodă · Sălcuța",
+  "websites": [
+   "https://salcutawine.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 22 245 252",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "s. Sălcuța, r. Căușeni, MD-4323"
+   }
+  }
+ },
+ {
+  "name": "Tronciu Wines",
+  "in_db": false,
+  "region": "Codru · Pereni",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 68 056 213",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "s. Pereni, r. Hîncești"
+   }
+  }
+ },
+ {
+  "name": "Vinaria din Vale",
+  "in_db": false,
+  "region": "Valul lui Traian · Slobozia Mare",
+  "websites": [
+   "https://vinaria.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 22 227 442",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "str. Unirii 61, s. Slobozia Mare, r. Cahul, MD-7311"
+   }
+  }
+ }
+]

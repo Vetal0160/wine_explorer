@@ -1,0 +1,164 @@
+[
+ {
+  "name": "ATU Winery",
+  "in_db": true,
+  "region": "Codru · Chișinău",
+  "websites": [
+   "https://atu.wine"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 222 237",
+    "hours": "Пн–Вс 11:00–17:00",
+    "tasting_price_lei": 250.0,
+    "address": "bd. Dacia 58/1, Chișinău, MD-2062"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Timbrus Purcari Estate",
+  "in_db": true,
+  "region": "Ștefan Vodă · Purcari",
+  "websites": [
+   "https://timbrus.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 835 300",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "s. Purcari, r-nul Ștefan Vodă, MD-4229"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Domeniile Pripa",
+  "in_db": true,
+  "region": "Ștefan Vodă · Hamcearca",
+  "websites": [
+   "https://pripa.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 108 550",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": 300.0,
+    "address": "s. Purcari, r-nul Ștefan Vodă, MD-4229"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Equinox Winery",
+  "in_db": true,
+  "region": "Ștefan Vodă · Olănești",
+  "websites": [
+   "https://equinox.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 111 602",
+    "hours": "Пн–Пт 09:00–17:00",
+    "tasting_price_lei": null,
+    "address": "s. Olănești, r-nul Ștefan Vodă, MD-4226"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Minis Terrios",
+  "in_db": true,
+  "region": "Codru · Chișinău",
+  "websites": [
+   "https://ministerrios.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 113 230",
+    "hours": "Пн–Пт 10:00–18:00",
+    "tasting_price_lei": null,
+    "address": "str. Columna 104, Chișinău, MD-2012"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Domeniile Davidescu",
+  "in_db": true,
+  "region": "Valul lui Traian · Slobozia Mare",
+  "websites": [
+   "https://domeniiledavidescu.ro"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 388 515",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "str. Unirii 1, s. Slobozia Mare, r-nul Cahul, MD-3929"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Vinuri de Comrat",
+  "in_db": true,
+  "region": "Valul lui Traian · Comrat",
+  "websites": [
+   "https://vinuridecomrat.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 113 230",
+    "hours": "Пн–Вс 08:00–17:00",
+    "tasting_price_lei": 200.0,
+    "address": "str. Vinzavodscaia 1, Comrat, MD-3800"
+   },
+   "agent2": {
+    "phone": "+373 69 113 230",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. Vinzavodscaia 1, Comrat, MD-3801"
+   }
+  }
+ },
+ {
+  "name": "Aurelius Winery",
+  "in_db": true,
+  "region": "Codru · Nisporeni",
+  "websites": [
+   "https://aurelius.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 871 321",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "or. Nisporeni, r-nul Nisporeni, MD-6401"
+   },
+   "agent2": {
+    "phone": "",
+    "hours": "",
+    "tasting_price_lei": "да",
+    "address": "or. Nisporeni, str. Alexandru cel Bun 83"
+   }
+  }
+ },
+ {
+  "name": "BASAVIN Winery",
+  "in_db": false,
+  "region": "Valul lui Traian · Basarabeasca",
+  "websites": [
+   "https://basavin.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 60 650 052",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. Karl Marx 205, Basarabeasca, MD-6700"
+   }
+  }
+ }
+]

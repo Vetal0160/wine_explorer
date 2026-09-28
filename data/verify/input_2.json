@@ -1,0 +1,193 @@
+[
+ {
+  "name": "Radacini Wines",
+  "in_db": true,
+  "region": "Codru · Cricova",
+  "websites": [
+   "https://radacini.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 108 000",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "str. Vasile Alecsandri 62, Cricova, MD-2084"
+   },
+   "agent2": {
+    "phone": "+373 22 856 501",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. P. Ungureanu 3, Cricova, MD-2084"
+   }
+  }
+ },
+ {
+  "name": "Crama Mircești",
+  "in_db": true,
+  "region": "Codru · Mircești",
+  "websites": [
+   "https://cramamircesti.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 60 111 170",
+    "hours": "Пн–Вс 11:00–16:00",
+    "tasting_price_lei": 300.0,
+    "address": "s. Mircești, r-nul Ungheni, MD-3613"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Kara Gani",
+  "in_db": true,
+  "region": "Valul lui Traian · Vulcănești",
+  "websites": [
+   "https://karagani.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 124 996",
+    "hours": "Пн–Вс 10:00–17:30",
+    "tasting_price_lei": 250.0,
+    "address": "str. Krupskaia 31, Vulcănești, MD-5301"
+   },
+   "agent2": {
+    "phone": "+373 69 124 996",
+    "hours": "Пн–Вс 10:00–22:00",
+    "tasting_price_lei": "200",
+    "address": "str. Krupskaia 31, Vulcănești, MD-5301"
+   }
+  }
+ },
+ {
+  "name": "Poiana Winery",
+  "in_db": true,
+  "region": "Codru · Ulmu",
+  "websites": [
+   "https://poiana.wine",
+   "https://vinariapoiana.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 76 711 111",
+    "hours": "Пн–Пт 10:00–18:00, Сб–Вс 11:00–20:00",
+    "tasting_price_lei": 350.0,
+    "address": "s. Ulmu, r-nul Ialoveni, MD-6829"
+   },
+   "agent2": {
+    "phone": "+373 79 450 793",
+    "hours": "Пн–Пт 10:00–18:00; Сб–Вс 11:00–20:00",
+    "tasting_price_lei": "250",
+    "address": "s. Ulmu, r. Strășeni"
+   }
+  }
+ },
+ {
+  "name": "Gogu Winery",
+  "in_db": true,
+  "region": "Ștefan Vodă · Căușeni",
+  "websites": [
+   "https://goguwinery.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 79 825 409",
+    "hours": "Пн–Вс 10:00–22:00",
+    "tasting_price_lei": 300.0,
+    "address": "str. Mihai Eminescu 35, Căușeni, MD-4301"
+   },
+   "agent2": {
+    "phone": "+373 79 825 409",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. Păcii 87, Căușeni, MD-4301"
+   }
+  }
+ },
+ {
+  "name": "Leuntea-Vin",
+  "in_db": true,
+  "region": "Ștefan Vodă · Leuntea",
+  "websites": [
+   "https://leuntea-vin.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 023 001",
+    "hours": "Пн–Вс 10:00–19:00",
+    "tasting_price_lei": 250.0,
+    "address": "s. Leuntea, r-nul Căușeni, MD-4225"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "NOVAK Winery",
+  "in_db": true,
+  "region": "Valul lui Traian · Comrat",
+  "websites": [
+   "https://novak.md",
+   "https://novakwinery.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 68 888 842",
+    "hours": "Пт–Вс 11:00–19:00",
+    "tasting_price_lei": 250.0,
+    "address": "str. Tretiakov 43, Comrat, MD-3805"
+   },
+   "agent2": {
+    "phone": "+373 68 888 814",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "s. Tartaul, r. Cantemir, MD-7321"
+   }
+  }
+ },
+ {
+  "name": "Pivnițele Brănești",
+  "in_db": true,
+  "region": "Codru · Brănești",
+  "websites": [
+   "http://mouldwine.com"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 164 445",
+    "hours": "Пн–Вс 09:00–18:00",
+    "tasting_price_lei": 250.0,
+    "address": "s. Brănești, r-nul Orhei, MD-3515"
+   },
+   "agent2": {
+    "phone": "+373 69 164 445",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "s. Branesti, r. Orhei, MD-3515"
+   }
+  }
+ },
+ {
+  "name": "Château Cojușna",
+  "in_db": true,
+  "region": "Codru · Cojușna",
+  "websites": [
+   "https://cojusna.com",
+   "https://migdal.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 68 969 981",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": 200.0,
+    "address": "str. Mecanizatorilor 1, s. Cojușna, r-nul Strășeni, MD-3715"
+   },
+   "agent2": {
+    "phone": "+373 68 969 981",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "str. Mecanizatorilor 1, s. Cojusna, r. Strășeni, MD-3715"
+   }
+  }
+ }
+]

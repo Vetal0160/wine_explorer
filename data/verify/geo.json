@@ -1,0 +1,538 @@
+{
+ "Château Vartely": {
+  "current": [
+   47.3804,
+   28.8336
+  ],
+  "poi": [
+   47.3802853,
+   28.8343232,
+   "Chateau Vartely, 170/B, Strada Eliberării, Centru, Orhei, Raionul Orhei, MD-3501, Moldova"
+  ],
+  "village": null,
+  "village_geo": null
+ },
+ "Château Purcari": {
+  "current": [
+   46.5348,
+   29.8661
+  ],
+  "poi": [
+   46.5294968,
+   29.871919,
+   "Chateau Purcari, Strada Grigore Vieru, Purcari, Raionul Ștefan Vodă, MD-4229, Moldova"
+  ],
+  "village": "Purcari",
+  "village_geo": [
+   46.5366863,
+   29.8562302,
+   "Purcari, Raionul Ștefan Vodă, MD-4229, Moldova"
+  ]
+ },
+ "Cricova": {
+  "current": [
+   47.135,
+   28.8617
+  ],
+  "poi": [
+   47.1369462,
+   28.8618053,
+   "Cricova, Municipiul Chișinău, MD-2084, Moldova"
+  ],
+  "village": null,
+  "village_geo": null
+ },
+ "Mileștii Mici": {
+  "current": [
+   46.9032,
+   28.821
+  ],
+  "poi": [
+   46.9070085,
+   28.804098,
+   "Mileștii Mici, Raionul Ialoveni, Moldova"
+  ],
+  "village": "Mileștii Mici",
+  "village_geo": [
+   46.9070085,
+   28.804098,
+   "Mileștii Mici, Raionul Ialoveni, Moldova"
+  ]
+ },
+ "Castel Mimi": {
+  "current": [
+   46.8921,
+   29.2918
+  ],
+  "poi": [
+   46.8920933,
+   29.2918024,
+   "Castel Mimi, 1, Strada Renașterii, Bulboaca, Raionul Anenii Noi, MD-6512, Moldova"
+  ],
+  "village": "Bulboaca",
+  "village_geo": [
+   46.8911966,
+   29.3026176,
+   "Bulboaca, Raionul Anenii Noi, MD-6512, Moldova"
+  ]
+ },
+ "Et Cetera": {
+  "current": [
+   46.4526,
+   29.9868
+  ],
+  "poi": [
+   46.4535938,
+   29.9232498,
+   "Vinăria Et Cetera, Ștefan Vodă - frontiera cu Ucraina, Crocmaz, Raionul Ștefan Vodă, MD-4218, Moldova"
+  ],
+  "village": "Crocmaz",
+  "village_geo": [
+   46.4501488,
+   29.9876673,
+   "Crocmaz, Raionul Ștefan Vodă, MD-4218, Moldova"
+  ]
+ },
+ "Asconi": {
+  "current": [
+   46.8506,
+   29.0069
+  ],
+  "poi": [
+   46.8641136,
+   29.0312097,
+   "Crama „Asconi Winery”, Sîngera, Municipiul Chișinău, Moldova"
+  ],
+  "village": "Puhoi",
+  "village_geo": [
+   46.8237494,
+   29.0344065,
+   "Puhoi, Raionul Ialoveni, MD-6824, Moldova"
+  ]
+ },
+ "Gitana Winery": {
+  "current": [
+   46.4386,
+   28.2325
+  ],
+  "poi": [
+   47.02515,
+   28.842995,
+   "Gitana Wine Shop, 6, Strada Alexandru Vlăhuță, Huțuleuca, Chișinău, sectorul Rîșcani, Municipiul Chișinău, MD-2005, Moldova"
+  ],
+  "village": "Plopi",
+  "village_geo": [
+   47.9524252,
+   29.1615587,
+   "Plopi, Рыбницкий район, Unitățile administrativ-teritoriale din stînga Nistrului, Нистрения / Приднестровье / Придністров'я, Moldova"
+  ]
+ },
+ "Fautor Winery": {
+  "current": [
+   46.3813,
+   28.3742
+  ],
+  "poi": null,
+  "village": "Tigheci",
+  "village_geo": [
+   46.3868894,
+   28.3743661,
+   "Tigheci, Raionul Leova, MD-6329, Moldova"
+  ]
+ },
+ "Radacini Wines": {
+  "current": [
+   47.0514,
+   28.8644
+  ],
+  "poi": [
+   47.1389471,
+   28.8539178,
+   "Fabrica de vinuri „Rădăcini”, Cricova, Municipiul Chișinău, Moldova"
+  ],
+  "village": "Cricova",
+  "village_geo": [
+   47.1369462,
+   28.8618053,
+   "Cricova, Municipiul Chișinău, MD-2084, Moldova"
+  ]
+ },
+ "Crama Mircești": {
+  "current": [
+   47.3551,
+   27.9904
+  ],
+  "poi": [
+   47.4033281,
+   27.9905633,
+   "Crama Mircești, 3, Strada Codrilor, Mircești, Boghenii Noi, Raionul Ungheni, MD-3613, Moldova"
+  ],
+  "village": "Mircești",
+  "village_geo": [
+   47.4029642,
+   28.0002505,
+   "Mircești, Boghenii Noi, Raionul Ungheni, Moldova"
+  ]
+ },
+ "Kara Gani": {
+  "current": [
+   45.686,
+   28.4069
+  ],
+  "poi": null,
+  "village": "Vulcănești",
+  "village_geo": [
+   45.6824005,
+   28.4022095,
+   "Vulcănești, raionul Vulcănești / Valkaneş dolayı / Вулканештский район, Găgăuzia / Gagauziya / Гагаузия, Moldova"
+  ]
+ },
+ "Poiana Winery": {
+  "current": [
+   47.0143,
+   28.5375
+  ],
+  "poi": [
+   47.8860271,
+   28.8569369,
+   "Poiana, Raionul Șoldănești, Moldova"
+  ],
+  "village": "Ulmu",
+  "village_geo": [
+   47.738963,
+   29.1159509,
+   "Ульма, Рыбницкий район, Unitățile administrativ-teritoriale din stînga Nistrului, Нистрения / Приднестровье / Придністров'я, Moldova"
+  ]
+ },
+ "Gogu Winery": {
+  "current": [
+   46.6373,
+   29.4124
+  ],
+  "poi": [
+   46.9117034,
+   28.8024662,
+   "Moara de Ulei „Olium Gogu”, Bucium, Mileștii Mici, Raionul Ialoveni, Moldova"
+  ],
+  "village": "Căușeni",
+  "village_geo": [
+   46.6495405,
+   29.4067719,
+   "Căuşeni, Raionul Căușeni, Moldova"
+  ]
+ },
+ "Leuntea-Vin": {
+  "current": [
+   46.6669,
+   29.5898
+  ],
+  "poi": null,
+  "village": "Leuntea",
+  "village_geo": [
+   46.6634351,
+   29.5921887,
+   "Leuntea, Grădiniţa, Raionul Căușeni, MD-4221, Moldova"
+  ]
+ },
+ "NOVAK Winery": {
+  "current": [
+   46.299,
+   28.657
+  ],
+  "poi": null,
+  "village": "Lingura",
+  "village_geo": [
+   46.2297953,
+   28.3231304,
+   "Lingura, Raionul Cantemir, MD-7338, Moldova"
+  ]
+ },
+ "Pivnițele Brănești": {
+  "current": [
+   47.3061,
+   28.9242
+  ],
+  "poi": [
+   47.312356,
+   28.9347088,
+   "Drum de acces la 'Epoca de Piatră' și 'Pivnițele Brănești', Brănești, Ivancea, Raionul Orhei, MD-3515, Moldova"
+  ],
+  "village": "Brănești",
+  "village_geo": [
+   47.30396,
+   28.9270568,
+   "Brănești, Ivancea, Raionul Orhei, MD-3515, Moldova"
+  ]
+ },
+ "Château Cojușna": {
+  "current": [
+   47.0944,
+   28.6586
+  ],
+  "poi": [
+   47.0920297,
+   28.6890424,
+   "Fabrica de vin „Migdal-P Château Cojușna”, Cojușna, Raionul Strășeni, Moldova"
+  ],
+  "village": "Cojușna",
+  "village_geo": [
+   47.0939394,
+   28.6693148,
+   "Cojușna, Raionul Strășeni, MD-3715, Moldova"
+  ]
+ },
+ "ATU Winery": {
+  "current": [
+   46.9806,
+   28.8986
+  ],
+  "poi": [
+   46.9608348,
+   28.8883052,
+   "Vinăria ATU Winery, Băcioi, Municipiul Chișinău, Moldova"
+  ],
+  "village": "Chișinău",
+  "village_geo": [
+   47.0245117,
+   28.8322923,
+   "Chișinău, sectorul Buiucani, Municipiul Chișinău, Moldova"
+  ]
+ },
+ "Timbrus Purcari Estate": {
+  "current": [
+   46.505,
+   29.905
+  ],
+  "poi": null,
+  "village": "Purcari",
+  "village_geo": [
+   46.5366863,
+   29.8562302,
+   "Purcari, Raionul Ștefan Vodă, MD-4229, Moldova"
+  ]
+ },
+ "Domeniile Pripa": {
+  "current": [
+   46.502,
+   29.915
+  ],
+  "poi": null,
+  "village": "Purcari",
+  "village_geo": [
+   46.5366863,
+   29.8562302,
+   "Purcari, Raionul Ștefan Vodă, MD-4229, Moldova"
+  ]
+ },
+ "Equinox Winery": {
+  "current": [
+   46.4958,
+   29.9234
+  ],
+  "poi": null,
+  "village": null,
+  "village_geo": null
+ },
+ "Minis Terrios": {
+  "current": [
+   47.0245,
+   28.8322
+  ],
+  "poi": [
+   47.0076111,
+   28.8750614,
+   "Minis Terrios, Strada Calea Basarabiei, Chișinău, sectorul Centru, Municipiul Chișinău, MD-2023, Moldova"
+  ],
+  "village": null,
+  "village_geo": null
+ },
+ "Domeniile Davidescu": {
+  "current": [
+   45.5786,
+   28.1756
+  ],
+  "poi": null,
+  "village": "Slobozia Mare",
+  "village_geo": [
+   45.5768187,
+   28.1762102,
+   "Slobozia Mare, Raionul Cahul, MD-5320, Moldova"
+  ]
+ },
+ "Vinuri de Comrat": {
+  "current": [
+   46.2936,
+   28.6531
+  ],
+  "poi": [
+   46.9908224,
+   28.849909,
+   "Vinuri de Comrat, 10A, Bulevardul Dacia, Botanica de Jos, Chișinău, sectorul Botanica, Municipiul Chișinău, MD-2043, Moldova"
+  ],
+  "village": "Comrat",
+  "village_geo": [
+   46.301119,
+   28.6558805,
+   "Comrat, raionul Comrat / Komrat dolayı / Комратский район, Găgăuzia / Gagauziya / Гагаузия, Moldova"
+  ]
+ },
+ "Aurelius Winery": {
+  "current": [
+   47.0805,
+   28.1812
+  ],
+  "poi": null,
+  "village": null,
+  "village_geo": null
+ },
+ "BASAVIN Winery": {
+  "current": [
+   46.3588,
+   28.8947
+  ],
+  "poi": [
+   46.3589408,
+   28.8946533,
+   "Basavin Winery, Abaclia, Raionul Basarabeasca, Moldova"
+  ],
+  "village": null,
+  "village_geo": null
+ },
+ "Carlevana Winery": {
+  "current": [
+   46.9261,
+   29.0528
+  ],
+  "poi": [
+   46.9260469,
+   29.0528852,
+   "Dionysos-Mereni / Carlevana Winery, 9, Merenii Noi, Raionul Anenii Noi, Moldova"
+  ],
+  "village": "Merenii Noi",
+  "village_geo": [
+   46.9261588,
+   29.064336,
+   "Merenii Noi, Raionul Anenii Noi, MD-6527, Moldova"
+  ]
+ },
+ "Crama Tudor": {
+  "current": [
+   47.1924,
+   28.3511
+  ],
+  "poi": [
+   47.1922406,
+   28.3509474,
+   "Crama Tudor, Sadova, Raionul Călărași, Moldova"
+  ],
+  "village": "Sadova",
+  "village_geo": [
+   47.1930411,
+   28.3437577,
+   "Sadova, Raionul Călărași, MD-4436, Moldova"
+  ]
+ },
+ "Doina Vin": {
+  "current": [
+   46.7587,
+   28.9227
+  ],
+  "poi": [
+   46.7586328,
+   28.9226344,
+   "Fabrica de vin „Doina Vin”, Răzeni, Raionul Ialoveni, Moldova"
+  ],
+  "village": "Răzeni",
+  "village_geo": [
+   46.7672551,
+   28.9020488,
+   "Răzeni, Raionul Ialoveni, Moldova"
+  ]
+ },
+ "Javgur Winery": {
+  "current": [
+   46.5396,
+   28.6116
+  ],
+  "poi": [
+   46.5347115,
+   28.6185102,
+   "Javgur, Raionul Cimișlia, MD-4123, Moldova"
+  ],
+  "village": "Ialpujeni",
+  "village_geo": [
+   46.5708005,
+   28.6259175,
+   "Ialpujeni, Raionul Cimișlia, MD-4120, Moldova"
+  ]
+ },
+ "Kazayak-Vin": {
+  "current": [
+   46.0061,
+   28.6628
+  ],
+  "poi": null,
+  "village": "Cazaclia",
+  "village_geo": [
+   46.0060512,
+   28.6628157,
+   "Cazaclia, raionul Ceadîr-Lunga / Çadır dolayı / Чадыр-Лунгский район, Găgăuzia / Gagauziya / Гагаузия, Moldova"
+  ]
+ },
+ "Mihai Sava Winery": {
+  "current": [
+   46.85,
+   28.8
+  ],
+  "poi": null,
+  "village": "Costești",
+  "village_geo": [
+   47.8582386,
+   27.2582159,
+   "Costești, Raionul Rîșcani, Moldova"
+  ]
+ },
+ "Salcuta Winery": {
+  "current": [
+   46.5833,
+   29.2
+  ],
+  "poi": [
+   46.5924215,
+   29.2429364,
+   "Sălcuța, Raionul Căușeni, Moldova"
+  ],
+  "village": "Sălcuța",
+  "village_geo": [
+   46.5924215,
+   29.2429364,
+   "Sălcuța, Raionul Căușeni, Moldova"
+  ]
+ },
+ "Tronciu Wines": {
+  "current": [
+   46.8,
+   28.5
+  ],
+  "poi": null,
+  "village": "Pereni",
+  "village_geo": [
+   46.9999889,
+   28.3747263,
+   "Pereni, Pașcani, Raionul Hîncești, MD-3443, Moldova"
+  ]
+ },
+ "Vinaria din Vale": {
+  "current": [
+   45.75,
+   28.3
+  ],
+  "poi": null,
+  "village": "Slobozia Mare",
+  "village_geo": [
+   45.5768187,
+   28.1762102,
+   "Slobozia Mare, Raionul Cahul, MD-5320, Moldova"
+  ]
+ }
+}

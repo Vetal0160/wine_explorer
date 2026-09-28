@@ -1,0 +1,350 @@
+[
+ {
+  "name": "Château Vartely",
+  "status": "ok",
+  "website": {
+   "value": "https://vartely.md",
+   "source": "https://vartely.md"
+  },
+  "phone": {
+   "value": "+373 68 500 555",
+   "source": "https://vartely.md/contacte/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Вт–Вс 12:00–19:00",
+   "value_ro": "Mar–Dum 12:00–19:00",
+   "value_en": "Tue–Sun 12:00–19:00",
+   "source": "https://vartely.md/contacte/",
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://vartely.md/tururi-vinicole/"
+  },
+  "tasting_price_lei": {
+   "value": 100,
+   "source": "https://vartely.md/tururi-vinicole/",
+   "note": "'Excursie prin vinărie' / 'Excursie ghidată': 100 MDL/person incl. tasting of IGP wines; minimum group of 5 persons. Other tours listed at 250/350/550/1100 MDL. Page content may be dated; confirm current prices."
+  },
+  "booking_required": {
+   "value": null,
+   "source": null
+  },
+  "address": {
+   "value": "str. Eliberării 170/B, Orhei, MD-3501",
+   "source": "https://vartely.md/contacte/"
+  },
+  "comment": "Phone given by both agents is correct (call center 24/7; bookings 08:00–20:00). Hours are the Tourism department's 'Tururi vinicole și degustații de vin' schedule on the contact page; restaurant Tue–Sun 11:30–22:30, shop has separate hours. Both agents' hours and prices (200/250) are wrong. Postcode MD-3501 (agent2) correct. Tourism & corporate line: +373 68 278 359 (Mon–Fri 9–18). Site does not explicitly state booking is required (tour page has a booking form)."
+ },
+ {
+  "name": "Château Purcari",
+  "status": "partial",
+  "website": {
+   "value": "https://www.chateau-purcari.com/ro/",
+   "source": "https://purcariwineries.com/turism/"
+  },
+  "phone": {
+   "value": "+373 68 001 827",
+   "source": "https://www.chateau-purcari.com/ro/tururi/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": null,
+   "value_ro": null,
+   "value_en": null,
+   "source": null,
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://www.chateau-purcari.com/ro/tururi/"
+  },
+  "tasting_price_lei": {
+   "value": 450,
+   "source": "https://www.chateau-purcari.com/ro/tururi/",
+   "note": "'Pachet Clasic' 450 MDL (tour + 4 wines), min. 1 person. 'Tur Château' 300 MDL is a tour WITHOUT tasting."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://www.chateau-purcari.com/ro/tururi/",
+   "note": "FAQ: 'Este necesar să rezerv turul de vin în avans? Da, recomandăm cu tărie...' (strongly recommended rather than strictly mandatory)."
+  },
+  "address": {
+   "value": "s. Purcari, r-nul Ștefan Vodă, MD-4229",
+   "source": "https://www.chateau-purcari.com/ro/"
+  },
+  "comment": "purcari.wine redirects to purcariwineries.com (group corporate site; its phone +373 22 856 022 is the Chișinău HQ). The visitor site is chateau-purcari.com (linked from the group Tourism page). Neither agent's phone matches: tourism phone is +373 68 001 827, turism@purcari.wine. No opening hours published; booking form offers start times 10:00, 12:00, 15:00, 17:00, 19:00. Both agents' prices (350/300) wrong."
+ },
+ {
+  "name": "Cricova",
+  "status": "ok",
+  "website": {
+   "value": "https://cricova.md",
+   "source": "https://cricova.md"
+  },
+  "phone": {
+   "value": "+373 22 427 777",
+   "source": "https://cricova.md/ro/excursii/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пн–Пт 10:00–20:00; Сб–Вс 10:00–18:00",
+   "value_ro": "Lun–Vin 10:00–20:00; Sâm–Dum 10:00–18:00",
+   "value_en": "Mon–Fri 10:00–20:00; Sat–Sun 10:00–18:00",
+   "source": "https://cricova.md/ro/excursii/",
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://cricova.md/ro/excursii/"
+  },
+  "tasting_price_lei": {
+   "value": 700,
+   "source": "https://cricova.md/ro/excursii/",
+   "note": "'Business' tour 700 MDL (1h30, 4 wines + nuts/biscuits). Cheaper tours (Orașul Subteran 400, Matinal 250, Pachet Social 200 MDL) do not include tasting."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://cricova.md/ro/excursii/",
+   "note": "'REZERVAREA SE FACE DIN TIMP LA NUMĂRUL DE TELEFON'"
+  },
+  "address": {
+   "value": "str. Chișinăului 124, Cricova, MD-2084",
+   "source": "https://cricova.md/ro/excursii/"
+  },
+  "comment": "Phone from both agents (+373 22 427 777) correct; page also lists mobiles +373 69 077 734 and +373 79 202 999. Hours: agent2 had the day ranges but wrong times; agent1 wrong. Both prices (250/350) wrong. 'Regatul Vinului' complex: Mon–Sun 10:00–23:00."
+ },
+ {
+  "name": "Mileștii Mici",
+  "status": "partial",
+  "website": {
+   "value": "https://milestii-mici.md",
+   "source": "https://milestii-mici.md"
+  },
+  "phone": {
+   "value": "+373 67 121 121",
+   "source": "https://milestii-mici.md",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пн–Чт 10:00–18:00; Пт–Вс 10:00–19:00",
+   "value_ro": "Lun–Joi 10:00–18:00; Vin–Dum 10:00–19:00",
+   "value_en": "Mon–Thu 10:00–18:00; Fri–Sun 10:00–19:00",
+   "source": "https://milestii-mici.md",
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://milestii-mici.md"
+  },
+  "tasting_price_lei": {
+   "value": 800,
+   "source": "https://milestii-mici.md",
+   "note": "'Hai, Noroc!' menu 800 MDL (visit + 3 wines + appetizers). 'Winery Visit' 350 MDL lists no tasting (galleries + tasting-complex visit + gift bottle). +100 MDL surcharge per visitor at 17:00, weekends and public holidays."
+  },
+  "booking_required": {
+   "value": null,
+   "source": null
+  },
+  "address": {
+   "value": "com. Mileștii Mici, r-nul Ialoveni, MD-6819",
+   "source": "https://milestii-mici.md"
+  },
+  "comment": "Site is a JS single-page app; values read from its official JS bundle (milestii-mici.md/assets/index-*.js) that renders the contact section. Agent2 phone correct; agent1 phone wrong. Both agents' hours and prices wrong. Online booking with card payment exists, but the site does not state that walk-ins are refused."
+ },
+ {
+  "name": "Castel Mimi",
+  "status": "partial",
+  "website": {
+   "value": "https://castelmimi.md",
+   "source": "https://castelmimi.md"
+  },
+  "phone": {
+   "value": "+373 265 01 893",
+   "source": "https://castelmimi.md/contacte/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": null,
+   "value_ro": null,
+   "value_en": null,
+   "source": null,
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://castelmimi.md/tururi-vinicole/tur-simbol/"
+  },
+  "tasting_price_lei": {
+   "value": 400,
+   "source": "https://castelmimi.md/tururi-vinicole/tur-simbol/",
+   "note": "'Tur Simbol' 400 MDL Mon–Fri (450 MDL Sat–Sun), 3 wines + grissini, 1h10."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://castelmimi.md/tururi-vinicole/",
+   "note": "'Toate vizitele se efectuează în regim de PROGRAMARE PREALABILĂ'"
+  },
+  "address": {
+   "value": "str. Dacia 1, s. Bulboaca, r-nul Anenii Noi, MD-6512",
+   "source": "https://castelmimi.md/contacte/"
+  },
+  "comment": "Both agents gave the same number (0265 01893), correct. Reservations for excursions & restaurant also +373 620 01 893 (mobile). No visiting hours published on the pages checked. Agent1 price 400 matches Tur Simbol weekday price; agent2 (350) wrong."
+ },
+ {
+  "name": "Et Cetera",
+  "status": "ok",
+  "website": {
+   "value": "https://etcetera.md",
+   "source": "https://etcetera.md"
+  },
+  "phone": {
+   "value": "+373 79 050 587",
+   "source": "https://etcetera.md/tur-vinicol/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пн–Сб 09:00–18:00",
+   "value_ro": "Lun–Sâm 09:00–18:00",
+   "value_en": "Mon–Sat 09:00–18:00",
+   "source": "https://etcetera.md",
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://etcetera.md/tur-vinicol/"
+  },
+  "tasting_price_lei": {
+   "value": 350,
+   "source": "https://etcetera.md/tur-vinicol/",
+   "note": "'Express Tur' 350 MDL/person Tue–Fri (450 Sat–Sun): tour + 3 wines + plăcinte; minimum group of 4."
+  },
+  "booking_required": {
+   "value": null,
+   "source": null,
+   "note": "Tour page says 'SUNĂ PENTRU A REZERVA'; homepage says guests are received 'în mare parte cu programări în prealabil' (mostly by appointment) - not a strict requirement."
+  },
+  "address": {
+   "value": "s. Crocmaz, r-nul Ștefan Vodă",
+   "source": "https://etcetera.md"
+  },
+  "comment": "Hours are from the site footer 'CONTACTE LU-SÂ: 9:00-18:00' (general contact hours; no separate tasting hours published; tour prices are quoted for Tue–Sun). Agent2 phone correct; agent1 wrong. Agent1 price 350 correct. Neither agent's hours match. No postcode on site."
+ },
+ {
+  "name": "Asconi",
+  "status": "ok",
+  "website": {
+   "value": "https://asconiwinery.com",
+   "source": "https://asconiwinery.com"
+  },
+  "phone": {
+   "value": "+373 79 988 637",
+   "source": "https://asconiwinery.com/contact-us/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пн–Вс 11:00–17:00",
+   "value_ro": "Lun–Dum 11:00–17:00",
+   "value_en": "Mon–Sun 11:00–17:00",
+   "source": "https://asconiwinery.com/experiences/",
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://asconiwinery.com/experiences/"
+  },
+  "tasting_price_lei": {
+   "value": 175,
+   "source": "https://asconiwinery.com/experiences/",
+   "note": "'Wine Tour & Tasting' - tour + 3 wines, 175 MDL/person (5 wines 225, 7 wines 275)."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://asconiwinery.com/experiences/",
+   "note": "'Prior reservation is required at least 1 day in advance'"
+  },
+  "address": {
+   "value": "s. Puhoi, r-nul Ialoveni, MD-6824",
+   "source": "https://asconiwinery.com/contact-us/"
+  },
+  "comment": "asconi.md shows only an empty server directory listing; official site is asconiwinery.com. +373 79 988 637 is labelled RESTAURANT on the contact page and is the general number on the homepage; neither agent's phone matches (agent1's 79 988 633 is the EXPORT SALES line; agent2's 79 988 642 not found). Hotel: +373 79 972 285. Agent2 hours correct. Site gives no street address ('str. Ștefan cel Mare 1' from agents unverified). Both prices (250/200) wrong."
+ },
+ {
+  "name": "Gitana Winery",
+  "status": "partial",
+  "website": {
+   "value": "https://www.gitanawinery1953.com/en",
+   "source": "https://www.gitanawinery1953.com/en/contact"
+  },
+  "phone": {
+   "value": "+373 69 614 440",
+   "source": "https://www.gitanawinery1953.com/en/contact",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": null,
+   "value_ro": null,
+   "value_en": null,
+   "source": null,
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": null,
+   "source": null
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No tasting/tour information on the official site."
+  },
+  "booking_required": {
+   "value": null,
+   "source": null
+  },
+  "address": {
+   "value": "s. Plopi, r-nul Cantemir",
+   "source": "https://www.gitanawinery1953.com/en/contact"
+  },
+  "comment": "gitana.md and gitanawinery.com both redirect to gitanawinery1953.com. Winery phone +373 69 614 440. Agent2's +373 69 122 504 and agent1's malformed 691 23 563 (= 69 123 563) are phones of the Chișinău store (6 Alexandru Vlahuță St), not the winery; wineofmoldova.com (tier 2) lists +373 69122504. Only working hours published are for the Bucharest office (Mon–Fri 9–17), not applicable. No postcode published."
+ },
+ {
+  "name": "Fautor Winery",
+  "status": "partial",
+  "website": {
+   "value": "https://fautor.wine",
+   "source": "https://fautor.wine"
+  },
+  "phone": {
+   "value": "+373 69 106 400",
+   "source": "https://fautor.wine",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": null,
+   "value_ro": null,
+   "value_en": null,
+   "source": null,
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://fautor.wine"
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No prices published."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://fautor.wine",
+   "note": "'For private meeting and degustation, please, contact us in advance for reservation.'"
+  },
+  "address": {
+   "value": "s. Tigheci",
+   "source": "https://fautor.wine"
+  },
+  "comment": "Phone is the 'General contacts' number; winery wine shop: 069 014 818, 060 443 444. Neither agent's phone (022 numbers) appears on the site. Only hours published are for the Chișinău central office (Mon–Fri 8:30–17:30), not visitor hours, so left null. Site says only 'Tigheci village, Republic of Moldova'; district/postcode from agents unverified."
+ }
+]

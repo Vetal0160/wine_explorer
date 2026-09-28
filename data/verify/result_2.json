@@ -1,0 +1,346 @@
+[
+ {
+  "name": "Radacini Wines",
+  "status": "partial",
+  "website": {
+   "value": "https://radacini.md",
+   "source": "https://radacini.md/ro/contacte"
+  },
+  "phone": {
+   "value": "+373 22 856 511",
+   "source": "https://radacini.md/ro/contacte",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пн–Пт 08:00–16:30",
+   "value_ro": "Lun–Vin 08:00–16:30",
+   "value_en": "Mon–Fri 08:00–16:30",
+   "source": "https://radacini.md/ro/contacte",
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": null,
+   "source": null
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No tasting/wine-tourism offer or prices published on radacini.md or its wineofmoldova.com page."
+  },
+  "booking_required": {
+   "value": null,
+   "source": null
+  },
+  "address": {
+   "value": "str. Petru Ungureanu 3, or. Cricova, MD-2084, Republica Moldova",
+   "source": "https://radacini.md/ro/contacte"
+  },
+  "comment": "Site is behind an 18+ age gate (content reachable after accepting). +373 22 856 511 is the 'Oficiul Central' number; the Wine Shop ('Magazin de Vinuri', str. Petru Ungureanu 3, Cricova) has +373 79 600 353, and the hours given are the Wine Shop hours ('8.00-16.30 (luni–vineri)'), not tasting hours. Other numbers on the contacts page: sales Moldova +373 22 866 855, export +373 22 856 517. Both agents' phones are wrong (agent2's +373 22 856 501 appears only on wineofmoldova.com/en/radacini-wines/, which disagrees with the official site); both agents' hours (Mon–Fri 09–18) unconfirmed. Agent2's address is correct; agent1's (Vasile Alecsandri 62) is wrong. No evidence of visitor tastings on official sources; agent2's price 150 unconfirmed."
+ },
+ {
+  "name": "Crama Mircești",
+  "status": "site_unreachable",
+  "website": {
+   "value": null,
+   "source": null
+  },
+  "phone": {
+   "value": "+373 60 111 170",
+   "source": "https://wineofmoldova.com/en/crama-mircesti-winery/",
+   "source_tier": 2
+  },
+  "hours": {
+   "value_ru": null,
+   "value_ro": null,
+   "value_en": null,
+   "source": null,
+   "source_tier": null
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/crama-mircesti-winery/"
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No prices published in allowed sources."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/crama-mircesti-winery/"
+  },
+  "address": {
+   "value": "s. Mircești, r-nul Ungheni, MD-3613, Republica Moldova",
+   "source": "https://wineofmoldova.com/en/crama-mircesti-winery/"
+  },
+  "comment": "cramamircesti.md does not resolve (DNS ENOTFOUND), although wineofmoldova.com still lists it as the website. Official Instagram (instagram.com/cramamircesti) and Facebook (facebook.com/cramamircesti) exist but could not be read. Agent1's phone and address match ONVV; agent1's hours (daily 11–16) and price (300) are not confirmed by any allowed source."
+ },
+ {
+  "name": "Kara Gani",
+  "status": "site_unreachable",
+  "website": {
+   "value": null,
+   "source": null
+  },
+  "phone": {
+   "value": "+373 69 124 996",
+   "source": "https://wineofmoldova.com/en/kara-gani-winery/",
+   "source_tier": 2
+  },
+  "hours": {
+   "value_ru": "Пн–Вс 10:00–17:30",
+   "value_ro": "Lun–Dum 10:00–17:30",
+   "value_en": "Mon–Sun 10:00–17:30",
+   "source": "https://wineofmoldova.com/en/kara-gani-winery/",
+   "source_tier": 2
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/kara-gani-winery/"
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No prices published in allowed sources."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/kara-gani-winery/"
+  },
+  "address": {
+   "value": "str. Krupskaia 31, or. Vulcănești, Republica Moldova",
+   "source": "https://wineofmoldova.com/en/kara-gani-winery/"
+  },
+  "comment": "karagani.md returns HTTP 404 (Wix 'ConnectYourDomain Error' – domain not connected). moldova.travel page has no readable details. Both agents' phone and address match ONVV; agent1's hours (10:00–17:30) correct, agent2's (10–22) wrong. ONVV notes excursion groups of 5–25 people. Prices (250/200) unconfirmed."
+ },
+ {
+  "name": "Poiana Winery",
+  "status": "ok",
+  "website": {
+   "value": "https://poiana.wine",
+   "source": "https://poiana.wine/contacte/"
+  },
+  "phone": {
+   "value": "+373 76 711 111",
+   "source": "https://poiana.wine/degustare-vinuri/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Ср–Вс 11:00–22:00; Пн–Вт выходной",
+   "value_ro": "Mie–Dum 11:00–22:00; Lun–Mar închis",
+   "value_en": "Wed–Sun 11:00–22:00; Mon–Tue closed",
+   "source": "https://poiana.wine/degustare-vinuri/",
+   "source_tier": 1
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://poiana.wine/degustare-vinuri/"
+  },
+  "tasting_price_lei": {
+   "value": 400,
+   "source": "https://poiana.wine/degustare-vinuri/",
+   "note": "400 lei: 3 wines + platter of local cheeses. Other packages: 600 lei (5 wines + cheese), 1200 lei (7 wines, cheese, main course, dessert)."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/poiana-winery/",
+   "source_tier": 2
+  },
+  "address": {
+   "value": "s. Ulmu, r-nul Ialoveni, MD-6829, Agropensiunea Vinăria Poiana",
+   "source": "https://poiana.wine/contacte/"
+  },
+  "comment": "Reservations mobile per official site: '(+373) 767 111 11' = +373 76 711 111 (agent1 correct; agent2's +373 79 450 793 not found). Second official number: +373 67 121 703. ONVV lists a different phone (+373 79 749 725) and older hours (Mon–Fri 10–18, Sat–Sun 11–20, which both agents copied) – the official site now says Wed–Sun 11–22, closed Mon–Tue. Both agents' prices (350/250) wrong. Agent2's district (Strășeni) wrong; it is Ialoveni. Booking: official site offers 'Rezervă un Tur'; 'Reservation required: Yes' (min. 5 people for tastings) is from ONVV."
+ },
+ {
+  "name": "Gogu Winery",
+  "status": "partial",
+  "website": {
+   "value": "https://goguwinery.md",
+   "source": "https://goguwinery.md/contact/"
+  },
+  "phone": {
+   "value": "+373 79 825 409",
+   "source": "https://goguwinery.md/contact/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пн–Вс 10:00–22:00",
+   "value_ro": "Lun–Dum 10:00–22:00",
+   "value_en": "Mon–Sun 10:00–22:00",
+   "source": "https://wineofmoldova.com/en/gogu-winery/",
+   "source_tier": 2
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/gogu-winery/"
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No prices published in allowed sources."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/gogu-winery/"
+  },
+  "address": {
+   "value": "str. Păcii 87, or. Căușeni, Republica Moldova",
+   "source": "https://goguwinery.md/contact/"
+  },
+  "comment": "Official site has only phone, address and email; hours/tastings/booking from ONVV (tier 2). Both agents' phone correct. Agent1's hours (10–22) match ONVV, agent2's (10–18) don't. Agent2's address (Păcii 87) correct, agent1's (Mihai Eminescu 35) wrong. Prices (300/150) unconfirmed."
+ },
+ {
+  "name": "Leuntea-Vin",
+  "status": "site_unreachable",
+  "website": {
+   "value": null,
+   "source": null
+  },
+  "phone": {
+   "value": "+373 69 207 644",
+   "source": "https://wineofmoldova.com/en/leuntea-vin-wine-cellars/",
+   "source_tier": 2
+  },
+  "hours": {
+   "value_ru": "Пн–Вс 10:00–19:00",
+   "value_ro": "Lun–Dum 10:00–19:00",
+   "value_en": "Mon–Sun 10:00–19:00",
+   "source": "https://wineofmoldova.com/en/leuntea-vin-wine-cellars/",
+   "source_tier": 2
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/leuntea-vin-wine-cellars/"
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No prices published in allowed sources."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/leuntea-vin-wine-cellars/"
+  },
+  "address": {
+   "value": "s. Leuntea, r-nul Căușeni, Republica Moldova",
+   "source": "https://wineofmoldova.com/en/leuntea-vin-wine-cellars/"
+  },
+  "comment": "leuntea-vin.md and www.leuntea-vin.md do not resolve (DNS ENOTFOUND). Agent1's phone (+373 69 023 001) is WRONG – ONVV lists +373 69 207 644. Agent1's hours match ONVV. Price (250) unconfirmed."
+ },
+ {
+  "name": "NOVAK Winery",
+  "status": "partial",
+  "website": {
+   "value": "https://novak.md",
+   "source": "https://novak.md/"
+  },
+  "phone": {
+   "value": "+373 22 332 255",
+   "source": "https://novak.md/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пт–Вс 11:00–19:00",
+   "value_ro": "Vin–Dum 11:00–19:00",
+   "value_en": "Fri–Sun 11:00–19:00",
+   "source": "https://wineofmoldova.com/en/novak-winery/",
+   "source_tier": 2
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/novak-winery/"
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No prices published in allowed sources."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/novak-winery/"
+  },
+  "address": {
+   "value": "s. Lingura, r-nul Cantemir, Republica Moldova",
+   "source": "https://wineofmoldova.com/en/novak-winery/"
+  },
+  "comment": "novak.md is reachable but its TLS certificate is expired and content dates from 2018–2019; it lists 'Winery: +373 22332255' (a Chișinău landline) and an incomplete sales number '+373 7548362' (7 digits, not used). ONVV's wine-tourism listing gives +373 68 888 814 (matches agent2) – probably the better visitor number but tier 2; agent1's +373 68 888 842 not found. novakwinery.md does not resolve. Agent1's hours (Fri–Sun 11–19) match ONVV. Both agents' addresses (Comrat / Tartaul) differ from ONVV's visitor address (Lingura village, Cantemir). Prices unconfirmed."
+ },
+ {
+  "name": "Pivnițele Brănești",
+  "status": "site_unreachable",
+  "website": {
+   "value": null,
+   "source": null
+  },
+  "phone": {
+   "value": "+373 69 164 445",
+   "source": "https://wineofmoldova.com/en/branesti-cellars/",
+   "source_tier": 2
+  },
+  "hours": {
+   "value_ru": "Пн–Пт 11:00–15:00; Сб–Вс 11:00–20:00",
+   "value_ro": "Lun–Vin 11:00–15:00; Sâm–Dum 11:00–20:00",
+   "value_en": "Mon–Fri 11:00–15:00; Sat–Sun 11:00–20:00",
+   "source": "https://wineofmoldova.com/en/branesti-cellars/",
+   "source_tier": 2
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/branesti-cellars/"
+  },
+  "tasting_price_lei": {
+   "value": null,
+   "source": null,
+   "note": "No prices in allowed sources (third-party sites mention 'from 6 EUR', not accepted)."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/branesti-cellars/"
+  },
+  "address": {
+   "value": "s. Brănești, r-nul Orhei, MD-3515, Republica Moldova",
+   "source": "https://wineofmoldova.com/en/branesti-cellars/"
+  },
+  "comment": "mouldwine.com does not resolve (DNS ENOTFOUND). ONVV lists Facebook facebook.com/EpocadePiatra (not readable) and a second phone +373 23 559 999. Both agents' phone correct; both agents' hours (daily 09–18 / 10–18) WRONG vs ONVV. Prices (250/200) unconfirmed."
+ },
+ {
+  "name": "Château Cojușna",
+  "status": "ok",
+  "website": {
+   "value": "https://cojusna.com",
+   "source": "https://cojusna.com/contacte/"
+  },
+  "phone": {
+   "value": "+373 60 336 300",
+   "source": "https://cojusna.com/turism/",
+   "source_tier": 1
+  },
+  "hours": {
+   "value_ru": "Пн–Вс 10:00–18:00",
+   "value_ro": "Lun–Dum 10:00–18:00",
+   "value_en": "Mon–Sun 10:00–18:00",
+   "source": "https://wineofmoldova.com/en/chateau-cojusna/",
+   "source_tier": 2
+  },
+  "has_tastings": {
+   "value": true,
+   "source": "https://cojusna.com/turism/"
+  },
+  "tasting_price_lei": {
+   "value": 400,
+   "source": "https://cojusna.com/turism/",
+   "note": "'Tur Degust' 400 MDL/person, groups of 2+, 60 min. The cheaper 'Tur Chateau Cojușna' (350 MDL) is a guided tour without tasting (a bottle of wine as gift). Others: Select 500, Premium 650, Exclusiv 700, Răsfăț Tradițional 850, Extra 1100 MDL."
+  },
+  "booking_required": {
+   "value": true,
+   "source": "https://wineofmoldova.com/en/chateau-cojusna/",
+   "source_tier": 2
+  },
+  "address": {
+   "value": "str. Mecanizatorilor 1, s. Cojușna, r-nul Strășeni, Republica Moldova",
+   "source": "https://cojusna.com/contacte/"
+  },
+  "comment": "Official site footer: 'Rezervări Telefon: +373 60 336 300'; central office +373 22 221 630. The agents' +373 68 969 981 also appears on cojusna.com/turism ('REZERVAȚI ACUM', next to hall/photo-session offers) and on ONVV, so it is a real winery number too. Official site publishes no hours; hours (restaurant 09:00–21:00) from ONVV. Agents' price 200 is WRONG (lowest tasting package 400 MDL). Agents' address correct. migdal.md not checked (cojusna.com confirmed official)."
+ }
+]
