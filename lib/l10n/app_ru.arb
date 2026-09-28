@@ -1,0 +1,53 @@
+{
+  "@@locale": "ru",
+  "appTitle": "Moldova Wine Explorer",
+  "tabWines": "Вина",
+  "tabMap": "Карта",
+  "tabPairings": "Гастро-пары",
+  "searchHint": "Поиск вина или винодельни...",
+  "priceLdl": "{price} MDL",
+  "@priceLdl": {
+    "placeholders": {
+      "price": {
+        "type": "int"
+      }
+    }
+  },
+  "pairingPlaceholder": "Подбор еды и вина",
+  "language": "Язык",
+  "wineTypeRedDry": "Красное сухое",
+  "wineTypeWhiteDry": "Белое сухое",
+  "wineTypeRoseDry": "Розовое сухое",
+  "wineTypeSparkling": "Игристое",
+  "vintageYear": "{year} год",
+  "@vintageYear": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "detailTasting": "Описание и вкус",
+  "detailPairing": "С чем сочетается",
+  "noDescription": "Описание пока отсутствует.",
+  "pairingRed": "Идеально подходит к плациндам с мясом, точкэре, шашлыку на гратаре и выдержанным овечьим сырам (брынзе).",
+  "pairingWhite": "Прекрасно сочетается с замой из домашней курицы, мамалыгой с рыбой и свежими сырами.",
+  "pairingRose": "Отлично подходит к летним салатам, запечённым овощам и молодой брынзе.",
+  "pairingSparkling": "Хорош как аперитив, с морепродуктами и десертами.",
+  "favoriteAdd": "Добавить в мой подвал",
+  "favoriteRemove": "Убрать из подвала",
+  "favoriteAdded": "Добавлено в ваш подвал",
+  "favoriteRemoved": "Удалено из подвала",
+  "noResults": "Ничего не найдено",
+  "mapWinesCount": "{count, plural, =0{Вин пока нет в каталоге} one{{count} вино в каталоге} few{{count} вина в каталоге} many{{count} вин в каталоге} other{{count} вина в каталоге}}",
+  "@mapWinesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mapRoute": "Маршрут",
+  "mapRouteError": "Не удалось открыть карты",
+  "mapShowAll": "Показать все винодельни"
+}
