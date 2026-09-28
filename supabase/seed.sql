@@ -37,6 +37,39 @@ insert into public.wines (id, winery_id, name, type, grape_variety, vintage, rat
    jsonb_build_object('ru', 'Выдержанное в подвалах вино с тонами чёрной смородины и табака.', 'ro', 'Vin maturat în beciuri, cu tonuri de coacăză neagră și tutun.', 'en', 'Aged in underground cellars, with tones of blackcurrant and tobacco.'))
 on conflict (id) do nothing;
 
+insert into public.grapes (id, name, color, is_native, aliases, description, taste, sort_order) values
+  ('feteasca-neagra', 'Fetească Neagră', 'red', true, '{}'::text[],
+   jsonb_build_object('ru', 'Древний местный красный сорт, один из символов молдавского виноделия. Даёт насыщенные вина, которые хорошо раскрываются с выдержкой.', 'ro', 'Soi roșu autohton străvechi, unul dintre simbolurile vinificației moldovenești. Dă vinuri intense, care se dezvoltă frumos la învechire.', 'en', 'An ancient native red grape and one of the symbols of Moldovan winemaking. It gives rich wines that develop beautifully with age.'),
+   jsonb_build_object('ru', 'Чернослив, спелая вишня, чёрная смородина, пряности.', 'ro', 'Prune uscate, cireșe coapte, coacăză neagră, condimente.', 'en', 'Prunes, ripe cherry, blackcurrant, spice.'), 10),
+  ('rara-neagra', 'Rară Neagră', 'red', true, array['Băbească Neagră']::text[],
+   jsonb_build_object('ru', 'Местный красный сорт, в Румынии известный как Бэбяскэ Нягрэ. Даёт лёгкие, мягкие вина с яркой ягодностью.', 'ro', 'Soi roșu autohton, cunoscut în România ca Băbească Neagră. Dă vinuri ușoare, catifelate, cu fructuozitate vie.', 'en', 'A native red grape known in Romania as Băbească Neagră. It makes light, soft wines with bright red fruit.'),
+   jsonb_build_object('ru', 'Вишня, красные ягоды, лёгкие пряные ноты.', 'ro', 'Vișine, fructe roșii, note ușor condimentate.', 'en', 'Sour cherry, red berries, a hint of spice.'), 20),
+  ('feteasca-alba', 'Fetească Albă', 'white', true, '{}'::text[],
+   jsonb_build_object('ru', 'Старинный местный белый сорт. Вина получаются лёгкими и изящными, часто с тонким цветочным ароматом.', 'ro', 'Soi alb autohton vechi. Dă vinuri ușoare și elegante, adesea cu o aromă florală delicată.', 'en', 'An old native white grape producing light, elegant wines, often with a delicate floral aroma.'),
+   jsonb_build_object('ru', 'Белые цветы, зелёное яблоко, персик.', 'ro', 'Flori albe, măr verde, piersică.', 'en', 'White flowers, green apple, peach.'), 30),
+  ('feteasca-regala', 'Fetească Regală', 'white', true, '{}'::text[],
+   jsonb_build_object('ru', 'Белый сорт, появившийся в XX веке как потомок Фетяски Албэ. Свежий и универсальный — от сухих вин до игристых.', 'ro', 'Soi alb apărut în secolul XX, descendent al Feteascăi Albe. Proaspăt și versatil — de la vinuri seci la spumante.', 'en', 'A white grape that appeared in the 20th century as a descendant of Fetească Albă. Fresh and versatile — from dry wines to sparkling.'),
+   jsonb_build_object('ru', 'Цитрусы, груша, свежескошенная трава.', 'ro', 'Citrice, pară, iarbă proaspăt cosită.', 'en', 'Citrus, pear, freshly cut grass.'), 40),
+  ('viorica', 'Viorica', 'white', true, '{}'::text[],
+   jsonb_build_object('ru', 'Ароматный белый сорт, выведенный в Молдове во второй половине XX века. Узнаётся по яркому мускатному аромату.', 'ro', 'Soi alb aromat, creat în Moldova în a doua jumătate a secolului XX. Se recunoaște după aroma intensă de muscat.', 'en', 'An aromatic white grape bred in Moldova in the second half of the 20th century, recognisable by its vivid muscat aroma.'),
+   jsonb_build_object('ru', 'Мускат, липа, цитрусы, тропические фрукты.', 'ro', 'Muscat, tei, citrice, fructe tropicale.', 'en', 'Muscat, linden blossom, citrus, tropical fruit.'), 50),
+  ('cabernet-sauvignon', 'Cabernet Sauvignon', 'red', false, '{}'::text[],
+   jsonb_build_object('ru', 'Самый известный красный сорт в мире и один из самых распространённых в Молдове. Плотные, танинные вина для выдержки.', 'ro', 'Cel mai cunoscut soi roșu din lume și unul dintre cele mai răspândite în Moldova. Vinuri dense, taninoase, potrivite pentru învechire.', 'en', 'The world''s best-known red grape and one of the most planted in Moldova. Full, tannic wines built for ageing.'),
+   jsonb_build_object('ru', 'Чёрная смородина, вишня, табак, кедр.', 'ro', 'Coacăză neagră, cireșe, tutun, cedru.', 'en', 'Blackcurrant, cherry, tobacco, cedar.'), 60),
+  ('merlot', 'Merlot', 'red', false, '{}'::text[],
+   jsonb_build_object('ru', 'Мягкий и бархатистый красный сорт, часто встречается в купажах с Каберне.', 'ro', 'Soi roșu moale și catifelat, des întâlnit în cupaje cu Cabernet.', 'en', 'A soft, velvety red grape, often blended with Cabernet.'),
+   jsonb_build_object('ru', 'Слива, вишня, шоколад.', 'ro', 'Prune, cireșe, ciocolată.', 'en', 'Plum, cherry, chocolate.'), 70),
+  ('pinot-noir', 'Pinot Noir', 'red', false, '{}'::text[],
+   jsonb_build_object('ru', 'Капризный, но изысканный красный сорт. Даёт лёгкие элегантные вина и служит основой многих игристых.', 'ro', 'Soi roșu pretențios, dar rafinat. Dă vinuri ușoare și elegante și stă la baza multor spumante.', 'en', 'A demanding but refined red grape, giving light, elegant wines and forming the base of many sparkling wines.'),
+   jsonb_build_object('ru', 'Клубника, малина, вишня, лесные ноты.', 'ro', 'Căpșuni, zmeură, cireșe, note de pădure.', 'en', 'Strawberry, raspberry, cherry, forest floor.'), 80),
+  ('chardonnay', 'Chardonnay', 'white', false, '{}'::text[],
+   jsonb_build_object('ru', 'Один из самых популярных белых сортов в мире. Бывает и свежим, и насыщенным после выдержки в дубе; основа классических игристых.', 'ro', 'Unul dintre cele mai populare soiuri albe din lume. Poate fi proaspăt sau bogat după învechire în stejar; bază pentru spumantele clasice.', 'en', 'One of the world''s most popular white grapes — fresh or rich after oak ageing, and a base for classic sparkling wines.'),
+   jsonb_build_object('ru', 'Яблоко, груша, цитрусы, ваниль (после дуба).', 'ro', 'Măr, pară, citrice, vanilie (după stejar).', 'en', 'Apple, pear, citrus, vanilla (when oaked).'), 90),
+  ('sauvignon-blanc', 'Sauvignon Blanc', 'white', false, '{}'::text[],
+   jsonb_build_object('ru', 'Свежий ароматный белый сорт с яркой кислотностью.', 'ro', 'Soi alb proaspăt și aromat, cu aciditate vie.', 'en', 'A fresh, aromatic white grape with lively acidity.'),
+   jsonb_build_object('ru', 'Крыжовник, лайм, зелёный перец, трава.', 'ro', 'Agrișe, lime, ardei verde, iarbă.', 'en', 'Gooseberry, lime, green pepper, grass.'), 100)
+on conflict (id) do nothing;
+
 -- id заданы вручную — сдвигаем счётчики, чтобы новые записи не конфликтовали
 select setval(pg_get_serial_sequence('public.wineries', 'id'), (select max(id) from public.wineries));
 select setval(pg_get_serial_sequence('public.wines', 'id'), (select max(id) from public.wines));

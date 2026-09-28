@@ -147,5 +147,24 @@
   "wineryPhone": "Телефон",
   "wineryWebsite": "Сайт",
   "wineryWines": "Вина винодельни",
-  "openError": "Не удалось открыть"
+  "openError": "Не удалось открыть",
+  "tabGrapes": "Сорта",
+  "grapesNative": "Местные сорта",
+  "grapesInternational": "Международные сорта",
+  "grapesEmpty": "Справочник пока пуст.",
+  "grapeRed": "Красный",
+  "grapeWhite": "Белый",
+  "grapeNativeBadge": "Местный сорт",
+  "grapeAliases": "Другие названия: {names}",
+  "@grapeAliases": {
+    "placeholders": {
+      "names": {
+        "type": "String"
+      }
+    }
+  },
+  "grapeAbout": "О сорте",
+  "grapeTaste": "Вкус и аромат",
+  "grapeWines": "Вина из этого сорта",
+  "grapeNoWines": "В каталоге пока нет вин из этого сорта."
 }

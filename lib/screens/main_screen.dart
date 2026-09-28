@@ -4,6 +4,7 @@ import '../l10n/app_localizations.dart';
 import '../data/catalog_store.dart';
 import 'catalog_screen.dart';
 import 'cellar_screen.dart';
+import 'grapes_screen.dart';
 import 'map_screen.dart';
 import 'pairing_screen.dart';
 import '../widgets/language_menu_button.dart';
@@ -50,6 +51,7 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
         0 => const CatalogScreen(),
         1 => const MapScreen(),
         2 => const PairingScreen(),
+        3 => const GrapesScreen(),
         _ => CellarScreen(onBrowse: () => setState(() => _currentIndex = 0)),
       },
       bottomNavigationBar: BottomNavigationBar(
@@ -70,6 +72,11 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
           BottomNavigationBarItem(
             icon: const Icon(Icons.restaurant_menu),
             label: l10n.tabPairings,
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.eco_outlined),
+            activeIcon: const Icon(Icons.eco),
+            label: l10n.tabGrapes,
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.favorite_border),

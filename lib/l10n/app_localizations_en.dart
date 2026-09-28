@@ -329,4 +329,42 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get openError => 'Couldn\'t open';
+
+  @override
+  String get tabGrapes => 'Grapes';
+
+  @override
+  String get grapesNative => 'Native grapes';
+
+  @override
+  String get grapesInternational => 'International grapes';
+
+  @override
+  String get grapesEmpty => 'The guide is empty for now.';
+
+  @override
+  String get grapeRed => 'Red';
+
+  @override
+  String get grapeWhite => 'White';
+
+  @override
+  String get grapeNativeBadge => 'Native grape';
+
+  @override
+  String grapeAliases(String names) {
+    return 'Also known as: $names';
+  }
+
+  @override
+  String get grapeAbout => 'About the grape';
+
+  @override
+  String get grapeTaste => 'Taste & aroma';
+
+  @override
+  String get grapeWines => 'Wines made from it';
+
+  @override
+  String get grapeNoWines => 'No wines from this grape in the catalog yet.';
 }

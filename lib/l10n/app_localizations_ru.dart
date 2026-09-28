@@ -334,4 +334,42 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get openError => 'Не удалось открыть';
+
+  @override
+  String get tabGrapes => 'Сорта';
+
+  @override
+  String get grapesNative => 'Местные сорта';
+
+  @override
+  String get grapesInternational => 'Международные сорта';
+
+  @override
+  String get grapesEmpty => 'Справочник пока пуст.';
+
+  @override
+  String get grapeRed => 'Красный';
+
+  @override
+  String get grapeWhite => 'Белый';
+
+  @override
+  String get grapeNativeBadge => 'Местный сорт';
+
+  @override
+  String grapeAliases(String names) {
+    return 'Другие названия: $names';
+  }
+
+  @override
+  String get grapeAbout => 'О сорте';
+
+  @override
+  String get grapeTaste => 'Вкус и аромат';
+
+  @override
+  String get grapeWines => 'Вина из этого сорта';
+
+  @override
+  String get grapeNoWines => 'В каталоге пока нет вин из этого сорта.';
 }

@@ -651,6 +651,78 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Не удалось открыть'**
   String get openError;
+
+  /// No description provided for @tabGrapes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сорта'**
+  String get tabGrapes;
+
+  /// No description provided for @grapesNative.
+  ///
+  /// In ru, this message translates to:
+  /// **'Местные сорта'**
+  String get grapesNative;
+
+  /// No description provided for @grapesInternational.
+  ///
+  /// In ru, this message translates to:
+  /// **'Международные сорта'**
+  String get grapesInternational;
+
+  /// No description provided for @grapesEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Справочник пока пуст.'**
+  String get grapesEmpty;
+
+  /// No description provided for @grapeRed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Красный'**
+  String get grapeRed;
+
+  /// No description provided for @grapeWhite.
+  ///
+  /// In ru, this message translates to:
+  /// **'Белый'**
+  String get grapeWhite;
+
+  /// No description provided for @grapeNativeBadge.
+  ///
+  /// In ru, this message translates to:
+  /// **'Местный сорт'**
+  String get grapeNativeBadge;
+
+  /// No description provided for @grapeAliases.
+  ///
+  /// In ru, this message translates to:
+  /// **'Другие названия: {names}'**
+  String grapeAliases(String names);
+
+  /// No description provided for @grapeAbout.
+  ///
+  /// In ru, this message translates to:
+  /// **'О сорте'**
+  String get grapeAbout;
+
+  /// No description provided for @grapeTaste.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вкус и аромат'**
+  String get grapeTaste;
+
+  /// No description provided for @grapeWines.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вина из этого сорта'**
+  String get grapeWines;
+
+  /// No description provided for @grapeNoWines.
+  ///
+  /// In ru, this message translates to:
+  /// **'В каталоге пока нет вин из этого сорта.'**
+  String get grapeNoWines;
 }
 
 class _AppLocalizationsDelegate

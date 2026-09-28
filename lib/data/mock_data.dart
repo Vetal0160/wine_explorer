@@ -1,6 +1,7 @@
 // Сгенерировано скриптом tool/gen_catalog_data.py (вместе с supabase/seed.sql).
 // Не правьте вручную — меняйте скрипт и запускайте заново.
 // Используется, пока Supabase не настроен (и в тестах).
+import '../models/grape.dart';
 import '../models/wine.dart';
 import '../models/winery.dart';
 
@@ -231,6 +232,179 @@ const List<Winery> mockWineries = [
       'ru': 'Небольшая семейная винодельня в селе Крокмаз на юге Молдовы, в регионе Штефан-Водэ.',
       'ro': 'Vinărie mică de familie în satul Crocmaz, în sudul Moldovei, în regiunea Ștefan Vodă.',
       'en': 'A small family winery in the village of Crocmaz in southern Moldova, in the Ștefan Vodă region.',
+    },
+  ),
+];
+
+const List<Grape> mockGrapes = [
+  Grape(
+    id: 'feteasca-neagra',
+    name: 'Fetească Neagră',
+    color: 'red',
+    isNative: true,
+    aliases: [],
+    description: {
+      'ru': 'Древний местный красный сорт, один из символов молдавского виноделия. Даёт насыщенные вина, которые хорошо раскрываются с выдержкой.',
+      'ro': 'Soi roșu autohton străvechi, unul dintre simbolurile vinificației moldovenești. Dă vinuri intense, care se dezvoltă frumos la învechire.',
+      'en': 'An ancient native red grape and one of the symbols of Moldovan winemaking. It gives rich wines that develop beautifully with age.',
+    },
+    taste: {
+      'ru': 'Чернослив, спелая вишня, чёрная смородина, пряности.',
+      'ro': 'Prune uscate, cireșe coapte, coacăză neagră, condimente.',
+      'en': 'Prunes, ripe cherry, blackcurrant, spice.',
+    },
+  ),
+  Grape(
+    id: 'rara-neagra',
+    name: 'Rară Neagră',
+    color: 'red',
+    isNative: true,
+    aliases: ['Băbească Neagră'],
+    description: {
+      'ru': 'Местный красный сорт, в Румынии известный как Бэбяскэ Нягрэ. Даёт лёгкие, мягкие вина с яркой ягодностью.',
+      'ro': 'Soi roșu autohton, cunoscut în România ca Băbească Neagră. Dă vinuri ușoare, catifelate, cu fructuozitate vie.',
+      'en': 'A native red grape known in Romania as Băbească Neagră. It makes light, soft wines with bright red fruit.',
+    },
+    taste: {
+      'ru': 'Вишня, красные ягоды, лёгкие пряные ноты.',
+      'ro': 'Vișine, fructe roșii, note ușor condimentate.',
+      'en': 'Sour cherry, red berries, a hint of spice.',
+    },
+  ),
+  Grape(
+    id: 'feteasca-alba',
+    name: 'Fetească Albă',
+    color: 'white',
+    isNative: true,
+    aliases: [],
+    description: {
+      'ru': 'Старинный местный белый сорт. Вина получаются лёгкими и изящными, часто с тонким цветочным ароматом.',
+      'ro': 'Soi alb autohton vechi. Dă vinuri ușoare și elegante, adesea cu o aromă florală delicată.',
+      'en': 'An old native white grape producing light, elegant wines, often with a delicate floral aroma.',
+    },
+    taste: {
+      'ru': 'Белые цветы, зелёное яблоко, персик.',
+      'ro': 'Flori albe, măr verde, piersică.',
+      'en': 'White flowers, green apple, peach.',
+    },
+  ),
+  Grape(
+    id: 'feteasca-regala',
+    name: 'Fetească Regală',
+    color: 'white',
+    isNative: true,
+    aliases: [],
+    description: {
+      'ru': 'Белый сорт, появившийся в XX веке как потомок Фетяски Албэ. Свежий и универсальный — от сухих вин до игристых.',
+      'ro': 'Soi alb apărut în secolul XX, descendent al Feteascăi Albe. Proaspăt și versatil — de la vinuri seci la spumante.',
+      'en': 'A white grape that appeared in the 20th century as a descendant of Fetească Albă. Fresh and versatile — from dry wines to sparkling.',
+    },
+    taste: {
+      'ru': 'Цитрусы, груша, свежескошенная трава.',
+      'ro': 'Citrice, pară, iarbă proaspăt cosită.',
+      'en': 'Citrus, pear, freshly cut grass.',
+    },
+  ),
+  Grape(
+    id: 'viorica',
+    name: 'Viorica',
+    color: 'white',
+    isNative: true,
+    aliases: [],
+    description: {
+      'ru': 'Ароматный белый сорт, выведенный в Молдове во второй половине XX века. Узнаётся по яркому мускатному аромату.',
+      'ro': 'Soi alb aromat, creat în Moldova în a doua jumătate a secolului XX. Se recunoaște după aroma intensă de muscat.',
+      'en': 'An aromatic white grape bred in Moldova in the second half of the 20th century, recognisable by its vivid muscat aroma.',
+    },
+    taste: {
+      'ru': 'Мускат, липа, цитрусы, тропические фрукты.',
+      'ro': 'Muscat, tei, citrice, fructe tropicale.',
+      'en': 'Muscat, linden blossom, citrus, tropical fruit.',
+    },
+  ),
+  Grape(
+    id: 'cabernet-sauvignon',
+    name: 'Cabernet Sauvignon',
+    color: 'red',
+    isNative: false,
+    aliases: [],
+    description: {
+      'ru': 'Самый известный красный сорт в мире и один из самых распространённых в Молдове. Плотные, танинные вина для выдержки.',
+      'ro': 'Cel mai cunoscut soi roșu din lume și unul dintre cele mai răspândite în Moldova. Vinuri dense, taninoase, potrivite pentru învechire.',
+      'en': 'The world\'s best-known red grape and one of the most planted in Moldova. Full, tannic wines built for ageing.',
+    },
+    taste: {
+      'ru': 'Чёрная смородина, вишня, табак, кедр.',
+      'ro': 'Coacăză neagră, cireșe, tutun, cedru.',
+      'en': 'Blackcurrant, cherry, tobacco, cedar.',
+    },
+  ),
+  Grape(
+    id: 'merlot',
+    name: 'Merlot',
+    color: 'red',
+    isNative: false,
+    aliases: [],
+    description: {
+      'ru': 'Мягкий и бархатистый красный сорт, часто встречается в купажах с Каберне.',
+      'ro': 'Soi roșu moale și catifelat, des întâlnit în cupaje cu Cabernet.',
+      'en': 'A soft, velvety red grape, often blended with Cabernet.',
+    },
+    taste: {
+      'ru': 'Слива, вишня, шоколад.',
+      'ro': 'Prune, cireșe, ciocolată.',
+      'en': 'Plum, cherry, chocolate.',
+    },
+  ),
+  Grape(
+    id: 'pinot-noir',
+    name: 'Pinot Noir',
+    color: 'red',
+    isNative: false,
+    aliases: [],
+    description: {
+      'ru': 'Капризный, но изысканный красный сорт. Даёт лёгкие элегантные вина и служит основой многих игристых.',
+      'ro': 'Soi roșu pretențios, dar rafinat. Dă vinuri ușoare și elegante și stă la baza multor spumante.',
+      'en': 'A demanding but refined red grape, giving light, elegant wines and forming the base of many sparkling wines.',
+    },
+    taste: {
+      'ru': 'Клубника, малина, вишня, лесные ноты.',
+      'ro': 'Căpșuni, zmeură, cireșe, note de pădure.',
+      'en': 'Strawberry, raspberry, cherry, forest floor.',
+    },
+  ),
+  Grape(
+    id: 'chardonnay',
+    name: 'Chardonnay',
+    color: 'white',
+    isNative: false,
+    aliases: [],
+    description: {
+      'ru': 'Один из самых популярных белых сортов в мире. Бывает и свежим, и насыщенным после выдержки в дубе; основа классических игристых.',
+      'ro': 'Unul dintre cele mai populare soiuri albe din lume. Poate fi proaspăt sau bogat după învechire în stejar; bază pentru spumantele clasice.',
+      'en': 'One of the world\'s most popular white grapes — fresh or rich after oak ageing, and a base for classic sparkling wines.',
+    },
+    taste: {
+      'ru': 'Яблоко, груша, цитрусы, ваниль (после дуба).',
+      'ro': 'Măr, pară, citrice, vanilie (după stejar).',
+      'en': 'Apple, pear, citrus, vanilla (when oaked).',
+    },
+  ),
+  Grape(
+    id: 'sauvignon-blanc',
+    name: 'Sauvignon Blanc',
+    color: 'white',
+    isNative: false,
+    aliases: [],
+    description: {
+      'ru': 'Свежий ароматный белый сорт с яркой кислотностью.',
+      'ro': 'Soi alb proaspăt și aromat, cu aciditate vie.',
+      'en': 'A fresh, aromatic white grape with lively acidity.',
+    },
+    taste: {
+      'ru': 'Крыжовник, лайм, зелёный перец, трава.',
+      'ro': 'Agrișe, lime, ardei verde, iarbă.',
+      'en': 'Gooseberry, lime, green pepper, grass.',
     },
   ),
 ];

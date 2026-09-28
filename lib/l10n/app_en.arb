@@ -91,5 +91,17 @@
   "wineryPhone": "Phone",
   "wineryWebsite": "Website",
   "wineryWines": "Wines from this winery",
-  "openError": "Couldn't open"
+  "openError": "Couldn't open",
+  "tabGrapes": "Grapes",
+  "grapesNative": "Native grapes",
+  "grapesInternational": "International grapes",
+  "grapesEmpty": "The guide is empty for now.",
+  "grapeRed": "Red",
+  "grapeWhite": "White",
+  "grapeNativeBadge": "Native grape",
+  "grapeAliases": "Also known as: {names}",
+  "grapeAbout": "About the grape",
+  "grapeTaste": "Taste & aroma",
+  "grapeWines": "Wines made from it",
+  "grapeNoWines": "No wines from this grape in the catalog yet."
 }

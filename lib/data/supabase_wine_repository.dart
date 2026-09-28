@@ -1,5 +1,6 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import '../models/grape.dart';
 import '../models/wine.dart';
 import '../models/winery.dart';
 import 'wine_repository.dart';
@@ -22,5 +23,11 @@ class SupabaseWineRepository implements WineRepository {
   Future<List<Winery>> fetchWineries() async {
     final rows = await _db.from('wineries').select().order('name');
     return rows.map(Winery.fromJson).toList();
+  }
+
+  @override
+  Future<List<Grape>> fetchGrapes() async {
+    final rows = await _db.from('grapes').select().order('sort_order');
+    return rows.map(Grape.fromJson).toList();
   }
 }

@@ -57,6 +57,92 @@ WINERY_DETAILS = {
         "en": "A small family winery in the village of Crocmaz in southern Moldova, in the Ștefan Vodă region."}},
 }
 
+# Справочник сортов: id, название, цвет, местный?, другие названия, описание, вкус
+GRAPES = [
+    ("feteasca-neagra", "Fetească Neagră", "red", True, [], {
+        "ru": "Древний местный красный сорт, один из символов молдавского виноделия. Даёт насыщенные вина, которые хорошо раскрываются с выдержкой.",
+        "ro": "Soi roșu autohton străvechi, unul dintre simbolurile vinificației moldovenești. Dă vinuri intense, care se dezvoltă frumos la învechire.",
+        "en": "An ancient native red grape and one of the symbols of Moldovan winemaking. It gives rich wines that develop beautifully with age."}, {
+        "ru": "Чернослив, спелая вишня, чёрная смородина, пряности.",
+        "ro": "Prune uscate, cireșe coapte, coacăză neagră, condimente.",
+        "en": "Prunes, ripe cherry, blackcurrant, spice."}),
+    ("rara-neagra", "Rară Neagră", "red", True, ["Băbească Neagră"], {
+        "ru": "Местный красный сорт, в Румынии известный как Бэбяскэ Нягрэ. Даёт лёгкие, мягкие вина с яркой ягодностью.",
+        "ro": "Soi roșu autohton, cunoscut în România ca Băbească Neagră. Dă vinuri ușoare, catifelate, cu fructuozitate vie.",
+        "en": "A native red grape known in Romania as Băbească Neagră. It makes light, soft wines with bright red fruit."}, {
+        "ru": "Вишня, красные ягоды, лёгкие пряные ноты.",
+        "ro": "Vișine, fructe roșii, note ușor condimentate.",
+        "en": "Sour cherry, red berries, a hint of spice."}),
+    ("feteasca-alba", "Fetească Albă", "white", True, [], {
+        "ru": "Старинный местный белый сорт. Вина получаются лёгкими и изящными, часто с тонким цветочным ароматом.",
+        "ro": "Soi alb autohton vechi. Dă vinuri ușoare și elegante, adesea cu o aromă florală delicată.",
+        "en": "An old native white grape producing light, elegant wines, often with a delicate floral aroma."}, {
+        "ru": "Белые цветы, зелёное яблоко, персик.",
+        "ro": "Flori albe, măr verde, piersică.",
+        "en": "White flowers, green apple, peach."}),
+    ("feteasca-regala", "Fetească Regală", "white", True, [], {
+        "ru": "Белый сорт, появившийся в XX веке как потомок Фетяски Албэ. Свежий и универсальный — от сухих вин до игристых.",
+        "ro": "Soi alb apărut în secolul XX, descendent al Feteascăi Albe. Proaspăt și versatil — de la vinuri seci la spumante.",
+        "en": "A white grape that appeared in the 20th century as a descendant of Fetească Albă. Fresh and versatile — from dry wines to sparkling."}, {
+        "ru": "Цитрусы, груша, свежескошенная трава.",
+        "ro": "Citrice, pară, iarbă proaspăt cosită.",
+        "en": "Citrus, pear, freshly cut grass."}),
+    ("viorica", "Viorica", "white", True, [], {
+        "ru": "Ароматный белый сорт, выведенный в Молдове во второй половине XX века. Узнаётся по яркому мускатному аромату.",
+        "ro": "Soi alb aromat, creat în Moldova în a doua jumătate a secolului XX. Se recunoaște după aroma intensă de muscat.",
+        "en": "An aromatic white grape bred in Moldova in the second half of the 20th century, recognisable by its vivid muscat aroma."}, {
+        "ru": "Мускат, липа, цитрусы, тропические фрукты.",
+        "ro": "Muscat, tei, citrice, fructe tropicale.",
+        "en": "Muscat, linden blossom, citrus, tropical fruit."}),
+    ("cabernet-sauvignon", "Cabernet Sauvignon", "red", False, [], {
+        "ru": "Самый известный красный сорт в мире и один из самых распространённых в Молдове. Плотные, танинные вина для выдержки.",
+        "ro": "Cel mai cunoscut soi roșu din lume și unul dintre cele mai răspândite în Moldova. Vinuri dense, taninoase, potrivite pentru învechire.",
+        "en": "The world's best-known red grape and one of the most planted in Moldova. Full, tannic wines built for ageing."}, {
+        "ru": "Чёрная смородина, вишня, табак, кедр.",
+        "ro": "Coacăză neagră, cireșe, tutun, cedru.",
+        "en": "Blackcurrant, cherry, tobacco, cedar."}),
+    ("merlot", "Merlot", "red", False, [], {
+        "ru": "Мягкий и бархатистый красный сорт, часто встречается в купажах с Каберне.",
+        "ro": "Soi roșu moale și catifelat, des întâlnit în cupaje cu Cabernet.",
+        "en": "A soft, velvety red grape, often blended with Cabernet."}, {
+        "ru": "Слива, вишня, шоколад.",
+        "ro": "Prune, cireșe, ciocolată.",
+        "en": "Plum, cherry, chocolate."}),
+    ("pinot-noir", "Pinot Noir", "red", False, [], {
+        "ru": "Капризный, но изысканный красный сорт. Даёт лёгкие элегантные вина и служит основой многих игристых.",
+        "ro": "Soi roșu pretențios, dar rafinat. Dă vinuri ușoare și elegante și stă la baza multor spumante.",
+        "en": "A demanding but refined red grape, giving light, elegant wines and forming the base of many sparkling wines."}, {
+        "ru": "Клубника, малина, вишня, лесные ноты.",
+        "ro": "Căpșuni, zmeură, cireșe, note de pădure.",
+        "en": "Strawberry, raspberry, cherry, forest floor."}),
+    ("chardonnay", "Chardonnay", "white", False, [], {
+        "ru": "Один из самых популярных белых сортов в мире. Бывает и свежим, и насыщенным после выдержки в дубе; основа классических игристых.",
+        "ro": "Unul dintre cele mai populare soiuri albe din lume. Poate fi proaspăt sau bogat după învechire în stejar; bază pentru spumantele clasice.",
+        "en": "One of the world's most popular white grapes — fresh or rich after oak ageing, and a base for classic sparkling wines."}, {
+        "ru": "Яблоко, груша, цитрусы, ваниль (после дуба).",
+        "ro": "Măr, pară, citrice, vanilie (după stejar).",
+        "en": "Apple, pear, citrus, vanilla (when oaked)."}),
+    ("sauvignon-blanc", "Sauvignon Blanc", "white", False, [], {
+        "ru": "Свежий ароматный белый сорт с яркой кислотностью.",
+        "ro": "Soi alb proaspăt și aromat, cu aciditate vie.",
+        "en": "A fresh, aromatic white grape with lively acidity."}, {
+        "ru": "Крыжовник, лайм, зелёный перец, трава.",
+        "ro": "Agrișe, lime, ardei verde, iarbă.",
+        "en": "Gooseberry, lime, green pepper, grass."}),
+]
+
+
+def sql_text_array(items):
+    return "array[" + ", ".join(sql_str(a) for a in items) + "]::text[]" if items else "'{}'::text[]"
+
+
+def grape_sql_rows():
+    rows = []
+    for n, (gid, name, color, native, aliases, desc, taste) in enumerate(GRAPES):
+        rows.append(f"  ({sql_str(gid)}, {sql_str(name)}, {sql_str(color)}, {'true' if native else 'false'}, "
+                    f"{sql_text_array(aliases)},\n   {sql_json(desc)},\n   {sql_json(taste)}, {(n + 1) * 10})")
+    return rows
+
 
 def dart_map(d):
     return "{" + ", ".join(f"{dart_str(k)}: {dart_str(v)}" for k, v in d.items()) + "}"
@@ -114,6 +200,7 @@ def sql_str(s):
 out = ["// Сгенерировано скриптом tool/gen_catalog_data.py (вместе с supabase/seed.sql).",
        "// Не правьте вручную — меняйте скрипт и запускайте заново.",
        "// Используется, пока Supabase не настроен (и в тестах).",
+       "import '../models/grape.dart';",
        "import '../models/wine.dart';",
        "import '../models/winery.dart';",
        "",
@@ -145,6 +232,18 @@ for i, name, lat, lng, region in WINERIES:
     region: {dart_str(region)},
     description: {dart_map(det.get("description", {}))},{founded}
   ),""")
+out += ["];", "", "const List<Grape> mockGrapes = ["]
+for gid, name, color, native, aliases, desc, taste in GRAPES:
+    al = ", ".join(dart_str(a) for a in aliases)
+    out.append(f"""  Grape(
+    id: '{gid}',
+    name: {dart_str(name)},
+    color: '{color}',
+    isNative: {'true' if native else 'false'},
+    aliases: [{al}],
+    description: {dart_map(desc)},
+    taste: {dart_map(taste)},
+  ),""")
 out += ["];", ""]
 open(ROOT + "lib/data/mock_data.dart", "w", encoding="utf-8", newline="\n").write("\n".join(out))
 
@@ -163,6 +262,8 @@ for i, wid, name, typ, grape, vintage, rating, price, img, desc in WINES:
     j = "jsonb_build_object(" + ", ".join(f"{sql_str(k)}, {sql_str(v)}" for k, v in desc.items()) + ")"
     rows.append(f"  ({i}, {wid}, {sql_str(name)}, {sql_str(typ)}, {sql_str(grape)}, {vintage}, {rating}, {price}, {sql_str(img)},\n   {j})")
 sql.append(",\n".join(rows) + "\non conflict (id) do nothing;")
+sql += ["", "insert into public.grapes (id, name, color, is_native, aliases, description, taste, sort_order) values"]
+sql.append(",\n".join(grape_sql_rows()) + "\non conflict (id) do nothing;")
 sql += ["",
         "-- id заданы вручную — сдвигаем счётчики, чтобы новые записи не конфликтовали",
         "select setval(pg_get_serial_sequence('public.wineries', 'id'), (select max(id) from public.wineries));",
@@ -177,5 +278,8 @@ if len(sys.argv) > 1:
         det = WINERY_DETAILS.get(i, {})
         upd.append(f"update public.wineries set description = {sql_json(det.get('description', {}))}, "
                    f"founded_year = {det.get('founded') or 'null'} where id = {i};")
+    upd += ["", "-- Справочник сортов",
+            "insert into public.grapes (id, name, color, is_native, aliases, description, taste, sort_order) values",
+            ",\n".join(grape_sql_rows()) + "\non conflict (id) do nothing;"]
     open(sys.argv[1], "w", encoding="utf-8", newline="\n").write("\n".join(upd) + "\n")
 print("ok")

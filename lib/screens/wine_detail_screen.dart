@@ -8,6 +8,8 @@ import '../models/wine.dart';
 import '../widgets/wine_image.dart';
 import '../data/catalog_store.dart';
 import 'winery_detail_screen.dart';
+import 'grape_detail_screen.dart';
+import '../models/grape.dart';
 
 /// Детальная карточка вина.
 class WineDetailScreen extends StatelessWidget {
@@ -123,11 +125,10 @@ class WineDetailScreen extends StatelessWidget {
                             avatar: const Icon(Icons.wine_bar, size: 16),
                             label: Text(localizedWineType(l10n, wine.type)),
                           ),
-                          if (wine.grapeVariety.isNotEmpty)
-                            Chip(
-                              avatar: const Icon(Icons.local_florist, size: 16),
-                              label: Text(wine.grapeVariety),
-                            ),
+                          for (final variety in splitGrapeVarieties(
+                            wine.grapeVariety,
+                          ))
+                            _GrapeChip(name: variety),
                           Chip(
                             backgroundColor: AppTheme.wineRed,
                             label: Text(
@@ -320,6 +321,33 @@ class _WineryLink extends StatelessWidget {
         ),
         vintage,
       ],
+    );
+  }
+}
+
+/// Сорт в составе вина; если он есть в справочнике — открывает его страницу.
+class _GrapeChip extends StatelessWidget {
+  final String name;
+
+  const _GrapeChip({required this.name});
+
+  @override
+  Widget build(BuildContext context) {
+    final grape = catalog.grapeByName(name);
+    const avatar = Icon(Icons.eco, size: 16);
+    if (grape == null) return Chip(avatar: avatar, label: Text(name));
+    return ActionChip(
+      avatar: avatar,
+      label: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [Text(name), const Icon(Icons.chevron_right, size: 16)],
+      ),
+      onPressed: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => GrapeDetailScreen(grape: grape),
+        ),
+      ),
     );
   }
 }

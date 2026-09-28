@@ -334,4 +334,43 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get openError => 'Nu s-a putut deschide';
+
+  @override
+  String get tabGrapes => 'Soiuri';
+
+  @override
+  String get grapesNative => 'Soiuri autohtone';
+
+  @override
+  String get grapesInternational => 'Soiuri internaționale';
+
+  @override
+  String get grapesEmpty => 'Ghidul este deocamdată gol.';
+
+  @override
+  String get grapeRed => 'Roșu';
+
+  @override
+  String get grapeWhite => 'Alb';
+
+  @override
+  String get grapeNativeBadge => 'Soi autohton';
+
+  @override
+  String grapeAliases(String names) {
+    return 'Alte denumiri: $names';
+  }
+
+  @override
+  String get grapeAbout => 'Despre soi';
+
+  @override
+  String get grapeTaste => 'Gust și aromă';
+
+  @override
+  String get grapeWines => 'Vinuri din acest soi';
+
+  @override
+  String get grapeNoWines =>
+      'Deocamdată nu sunt vinuri din acest soi în catalog.';
 }

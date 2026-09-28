@@ -91,5 +91,17 @@
   "wineryPhone": "Telefon",
   "wineryWebsite": "Site web",
   "wineryWines": "Vinurile vinăriei",
-  "openError": "Nu s-a putut deschide"
+  "openError": "Nu s-a putut deschide",
+  "tabGrapes": "Soiuri",
+  "grapesNative": "Soiuri autohtone",
+  "grapesInternational": "Soiuri internaționale",
+  "grapesEmpty": "Ghidul este deocamdată gol.",
+  "grapeRed": "Roșu",
+  "grapeWhite": "Alb",
+  "grapeNativeBadge": "Soi autohton",
+  "grapeAliases": "Alte denumiri: {names}",
+  "grapeAbout": "Despre soi",
+  "grapeTaste": "Gust și aromă",
+  "grapeWines": "Vinuri din acest soi",
+  "grapeNoWines": "Deocamdată nu sunt vinuri din acest soi în catalog."
 }

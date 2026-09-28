@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 
+import '../models/grape.dart';
 import '../models/wine.dart';
 import '../models/winery.dart';
 import 'catalog_cache.dart';
@@ -19,6 +20,7 @@ class CatalogStore extends ChangeNotifier {
 
   List<Wine> wines = const [];
   List<Winery> wineries = const [];
+  List<Grape> grapes = const [];
   bool isLoading = false;
   Object? error;
   bool _loaded = false;
@@ -39,6 +41,7 @@ class CatalogStore extends ChangeNotifier {
     if (cached == null || _loaded) return;
     wines = cached.wines;
     wineries = cached.wineries;
+    grapes = cached.grapes;
     updatedAt = cached.savedAt;
     _loaded = true;
     notifyListeners();
@@ -54,15 +57,21 @@ class CatalogStore extends ChangeNotifier {
       final results = await Future.wait([
         repository.fetchWines(),
         repository.fetchWineries(),
+        // Справочник не критичен: не загрузился — каталог всё равно работает
+        repository.fetchGrapes().catchError((Object e) {
+          debugPrint('Сорта не загрузились: $e');
+          return grapes;
+        }),
       ]).timeout(timeout);
       wines = results[0] as List<Wine>;
       wineries = results[1] as List<Winery>;
+      grapes = results[2] as List<Grape>;
       updatedAt = DateTime.now();
       _loaded = true;
       // Кэш — не критично: если не записался, просто не будет офлайн-копии
       unawaited(
         cache
-            .write(wines, wineries)
+            .write(wines, wineries, grapes)
             .catchError((Object e) => debugPrint('Кэш не сохранён: $e')),
       );
     } catch (e) {
@@ -99,6 +108,19 @@ class CatalogStore extends ChangeNotifier {
     }
     return null;
   }
+
+  /// Сорт по названию с этикетки (учитывает другие названия и диакритики).
+  Grape? grapeByName(String name) {
+    for (final grape in grapes) {
+      if (grape.matchesName(name)) return grape;
+    }
+    return null;
+  }
+
+  /// Вина, в составе которых есть этот сорт.
+  List<Wine> winesOfGrape(Grape grape) => wines
+      .where((w) => splitGrapeVarieties(w.grapeVariety).any(grape.matchesName))
+      .toList();
 
   /// Вина конкретной винодельни.
   List<Wine> winesOf(Winery winery) => wines
