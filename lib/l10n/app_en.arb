@@ -66,5 +66,7 @@
   "sortPriceDesc": "Price: high to low",
   "sortVintage": "Newest vintage",
   "sortName": "Name A–Z",
-  "clearSearch": "Clear search"
+  "clearSearch": "Clear search",
+  "offlineBanner": "Offline · data from {date}",
+  "offlineBannerNoDate": "Offline · showing saved data"
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
 import '../core/locale_controller.dart';
+import '../data/catalog_store.dart';
 import 'catalog_screen.dart';
 import 'cellar_screen.dart';
 import 'map_screen.dart';
@@ -14,8 +15,28 @@ class MainScreen extends StatefulWidget {
   State<MainScreen> createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
   int _currentIndex = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  // Вернулись в приложение, а данные устаревшие — пробуем обновить
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed && catalog.isOffline) {
+      catalog.load();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {

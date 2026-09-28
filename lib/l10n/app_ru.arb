@@ -101,5 +101,14 @@
   "sortPriceDesc": "Сначала дорогие",
   "sortVintage": "Сначала новые урожаи",
   "sortName": "По названию",
-  "clearSearch": "Очистить поиск"
+  "clearSearch": "Очистить поиск",
+  "offlineBanner": "Нет подключения · данные от {date}",
+  "@offlineBanner": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "offlineBannerNoDate": "Нет подключения · показаны сохранённые данные"
 }

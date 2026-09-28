@@ -250,4 +250,13 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get clearSearch => 'Șterge căutarea';
+
+  @override
+  String offlineBanner(String date) {
+    return 'Fără conexiune · date din $date';
+  }
+
+  @override
+  String get offlineBannerNoDate =>
+      'Fără conexiune · se afișează datele salvate';
 }

@@ -246,4 +246,12 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get clearSearch => 'Clear search';
+
+  @override
+  String offlineBanner(String date) {
+    return 'Offline · data from $date';
+  }
+
+  @override
+  String get offlineBannerNoDate => 'Offline · showing saved data';
 }

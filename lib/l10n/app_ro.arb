@@ -66,5 +66,7 @@
   "sortPriceDesc": "Cele mai scumpe",
   "sortVintage": "Recolte noi întâi",
   "sortName": "După nume",
-  "clearSearch": "Șterge căutarea"
+  "clearSearch": "Șterge căutarea",
+  "offlineBanner": "Fără conexiune · date din {date}",
+  "offlineBannerNoDate": "Fără conexiune · se afișează datele salvate"
 }

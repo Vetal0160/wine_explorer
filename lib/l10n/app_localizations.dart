@@ -501,6 +501,18 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Очистить поиск'**
   String get clearSearch;
+
+  /// No description provided for @offlineBanner.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет подключения · данные от {date}'**
+  String offlineBanner(String date);
+
+  /// No description provided for @offlineBannerNoDate.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет подключения · показаны сохранённые данные'**
+  String get offlineBannerNoDate;
 }
 
 class _AppLocalizationsDelegate

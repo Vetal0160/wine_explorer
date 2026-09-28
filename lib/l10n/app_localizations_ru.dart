@@ -250,4 +250,13 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get clearSearch => 'Очистить поиск';
+
+  @override
+  String offlineBanner(String date) {
+    return 'Нет подключения · данные от $date';
+  }
+
+  @override
+  String get offlineBannerNoDate =>
+      'Нет подключения · показаны сохранённые данные';
 }

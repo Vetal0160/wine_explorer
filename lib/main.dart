@@ -29,7 +29,8 @@ Future<void> main() async {
       debugPrint('Supabase не инициализирован, используем тестовые данные: $e');
     }
   }
-  // Не ждём: экраны сами покажут загрузку
+  // Сохранённый каталог показываем сразу, свежий догружаем в фоне
+  await catalog.restoreFromCache();
   catalog.load();
   runApp(const WineExplorerApp());
 }
