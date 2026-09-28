@@ -49,3 +49,8 @@ app.*.map.json
 
 # Ключи Supabase (шаблон — supabase.example.json)
 supabase.json
+
+# Сгенерированный SQL импорта каталога (tool/catalog_sheet.py import)
+data/*.sql
+# Временный файл Excel, пока таблица открыта
+data/~$*
