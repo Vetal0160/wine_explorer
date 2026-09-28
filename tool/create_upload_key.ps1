@@ -1,6 +1,7 @@
 ﻿# Создаёт ключ подписи для Google Play и файл android/key.properties.
-# Запуск (из папки проекта):
-#   powershell -ExecutionPolicy Bypass -File tool\create_upload_key.ps1
+# Если ключ уже создан — проверяет пароль и только дописывает key.properties.
+# Запуск:
+#   powershell -ExecutionPolicy Bypass -File "E:\Projects\wine_explorer\tool\create_upload_key.ps1"
 $ErrorActionPreference = 'Stop'
 
 $keytool = Join-Path $env:ProgramFiles 'Android\Android Studio\jbr\bin\keytool.exe'
@@ -14,8 +15,8 @@ New-Item -ItemType Directory -Force $dir | Out-Null
 $keystore = Join-Path $dir 'wine-explorer-upload.jks'
 $props = Join-Path $PSScriptRoot '..\android\key.properties'
 
-if (Test-Path $keystore) { throw "Ключ уже существует: $keystore — не перезаписываю." }
-if (Test-Path $props) { throw "Файл уже существует: $props — не перезаписываю." }
+if (Test-Path $props) { throw "Файл уже существует: $props — всё уже настроено." }
+$keyExists = Test-Path $keystore
 
 function Read-Password([string]$prompt) {
     $secure = Read-Host $prompt -AsSecureString
@@ -25,19 +26,27 @@ function Read-Password([string]$prompt) {
 }
 
 Write-Host ''
-Write-Host 'Пароль: минимум 6 символов, только латинские буквы и цифры.' -ForegroundColor Yellow
 Write-Host 'При вводе символы не видны — это нормально.' -ForegroundColor Yellow
-$p1 = Read-Password 'Придумайте пароль'
-$p2 = Read-Password 'Повторите пароль'
-if ($p1 -ne $p2) { throw 'Пароли не совпадают. Запустите скрипт ещё раз.' }
-if ($p1.Length -lt 6) { throw 'Пароль короче 6 символов.' }
-if ($p1 -notmatch '^[A-Za-z0-9]+$') { throw 'В пароле допустимы только латинские буквы и цифры.' }
+if ($keyExists) {
+    Write-Host "Ключ уже создан: $keystore" -ForegroundColor Cyan
+    $p1 = Read-Password 'Введите пароль, который задавали для ключа'
+    & $keytool -list -keystore $keystore -storepass $p1 -alias upload *> $null
+    if ($LASTEXITCODE -ne 0) { throw 'Пароль не подходит к ключу. Запустите скрипт ещё раз.' }
+} else {
+    Write-Host 'Пароль: минимум 6 символов, только латинские буквы и цифры.' -ForegroundColor Yellow
+    $p1 = Read-Password 'Придумайте пароль'
+    $p2 = Read-Password 'Повторите пароль'
+    if ($p1 -ne $p2) { throw 'Пароли не совпадают. Запустите скрипт ещё раз.' }
+    if ($p1.Length -lt 6) { throw 'Пароль короче 6 символов.' }
+    if ($p1 -notmatch '^[A-Za-z0-9]+$') { throw 'В пароле допустимы только латинские буквы и цифры.' }
 
-& $keytool -genkeypair -v -keystore $keystore -keyalg RSA -keysize 2048 -validity 10000 `
-    -alias upload -storepass $p1 -keypass $p1 -dname 'CN=Vitali Ermisco, L=Chisinau, C=MD'
-if ($LASTEXITCODE -ne 0) { throw 'keytool завершился с ошибкой.' }
+    & $keytool -genkeypair -v -keystore $keystore -keyalg RSA -keysize 2048 -validity 10000 `
+        -alias upload -storepass $p1 -keypass $p1 -dname 'CN=Vitali Ermisco, L=Chisinau, C=MD'
+    if ($LASTEXITCODE -ne 0) { throw 'keytool завершился с ошибкой.' }
+}
 
-$storeFile = $keystore -replace '\', '/'
+# Gradle понимает путь с прямыми слэшами; обычная замена строки, не регулярное выражение
+$storeFile = $keystore.Replace([string][char]92, '/')
 @(
     "storePassword=$p1"
     "keyPassword=$p1"
