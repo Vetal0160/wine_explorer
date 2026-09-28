@@ -6,6 +6,8 @@ import '../models/winery.dart';
 import 'wine_repository.dart';
 
 /// Каталог из Supabase (таблицы описаны в supabase/migrations).
+// Внимание: в postgrest order() по умолчанию сортирует ПО УБЫВАНИЮ —
+// направление всегда указываем явно.
 class SupabaseWineRepository implements WineRepository {
   SupabaseClient get _db => Supabase.instance.client;
 
@@ -21,13 +23,19 @@ class SupabaseWineRepository implements WineRepository {
 
   @override
   Future<List<Winery>> fetchWineries() async {
-    final rows = await _db.from('wineries').select().order('name');
+    final rows = await _db
+        .from('wineries')
+        .select()
+        .order('name', ascending: true);
     return rows.map(Winery.fromJson).toList();
   }
 
   @override
   Future<List<Grape>> fetchGrapes() async {
-    final rows = await _db.from('grapes').select().order('sort_order');
+    final rows = await _db
+        .from('grapes')
+        .select()
+        .order('sort_order', ascending: true);
     return rows.map(Grape.fromJson).toList();
   }
 }
