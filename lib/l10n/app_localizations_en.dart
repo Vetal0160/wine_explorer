@@ -416,4 +416,35 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get aboutText =>
       'A free guide to Moldovan wines, wineries and grape varieties. The app provides information only and does not sell alcohol.';
+
+  @override
+  String get nearMe => 'Near you';
+
+  @override
+  String get mapWineriesTitle => 'Wineries';
+
+  @override
+  String get myLocation => 'My location';
+
+  @override
+  String distanceKm(String km) {
+    return '$km km';
+  }
+
+  @override
+  String get locationDenied =>
+      'Without location access we can\'t show wineries near you';
+
+  @override
+  String get locationDeniedForever =>
+      'Location access is blocked in the app settings';
+
+  @override
+  String get locationServiceOff => 'Location is turned off on your phone';
+
+  @override
+  String get locationFailed => 'Couldn\'t determine your location';
+
+  @override
+  String get openSettings => 'Settings';
 }

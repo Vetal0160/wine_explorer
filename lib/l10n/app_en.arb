@@ -119,5 +119,14 @@
   "noteSaved": "Note saved, the wine is in your cellar",
   "about": "About",
   "privacyPolicy": "Privacy policy",
-  "aboutText": "A free guide to Moldovan wines, wineries and grape varieties. The app provides information only and does not sell alcohol."
+  "aboutText": "A free guide to Moldovan wines, wineries and grape varieties. The app provides information only and does not sell alcohol.",
+  "nearMe": "Near you",
+  "mapWineriesTitle": "Wineries",
+  "myLocation": "My location",
+  "distanceKm": "{km} km",
+  "locationDenied": "Without location access we can't show wineries near you",
+  "locationDeniedForever": "Location access is blocked in the app settings",
+  "locationServiceOff": "Location is turned off on your phone",
+  "locationFailed": "Couldn't determine your location",
+  "openSettings": "Settings"
 }

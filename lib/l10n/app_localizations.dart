@@ -819,6 +819,60 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Бесплатный гид по винам, винодельням и сортам винограда Молдовы. Приложение носит информационный характер и не продаёт алкоголь.'**
   String get aboutText;
+
+  /// No description provided for @nearMe.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рядом с вами'**
+  String get nearMe;
+
+  /// No description provided for @mapWineriesTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Винодельни'**
+  String get mapWineriesTitle;
+
+  /// No description provided for @myLocation.
+  ///
+  /// In ru, this message translates to:
+  /// **'Где я'**
+  String get myLocation;
+
+  /// No description provided for @distanceKm.
+  ///
+  /// In ru, this message translates to:
+  /// **'{km} км'**
+  String distanceKm(String km);
+
+  /// No description provided for @locationDenied.
+  ///
+  /// In ru, this message translates to:
+  /// **'Без доступа к местоположению не получится показать винодельни рядом'**
+  String get locationDenied;
+
+  /// No description provided for @locationDeniedForever.
+  ///
+  /// In ru, this message translates to:
+  /// **'Доступ к местоположению запрещён в настройках приложения'**
+  String get locationDeniedForever;
+
+  /// No description provided for @locationServiceOff.
+  ///
+  /// In ru, this message translates to:
+  /// **'Геолокация на телефоне выключена'**
+  String get locationServiceOff;
+
+  /// No description provided for @locationFailed.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось определить местоположение'**
+  String get locationFailed;
+
+  /// No description provided for @openSettings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Настройки'**
+  String get openSettings;
 }
 
 class _AppLocalizationsDelegate

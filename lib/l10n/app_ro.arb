@@ -119,5 +119,14 @@
   "noteSaved": "Notița a fost salvată, vinul e în crama ta",
   "about": "Despre aplicație",
   "privacyPolicy": "Politica de confidențialitate",
-  "aboutText": "Ghid gratuit al vinurilor, vinăriilor și soiurilor de struguri din Moldova. Aplicația are caracter informativ și nu vinde alcool."
+  "aboutText": "Ghid gratuit al vinurilor, vinăriilor și soiurilor de struguri din Moldova. Aplicația are caracter informativ și nu vinde alcool.",
+  "nearMe": "Lângă tine",
+  "mapWineriesTitle": "Vinării",
+  "myLocation": "Locația mea",
+  "distanceKm": "{km} km",
+  "locationDenied": "Fără acces la locație nu putem arăta vinăriile din apropiere",
+  "locationDeniedForever": "Accesul la locație este interzis în setările aplicației",
+  "locationServiceOff": "Localizarea este dezactivată pe telefon",
+  "locationFailed": "Locația nu a putut fi determinată",
+  "openSettings": "Setări"
 }

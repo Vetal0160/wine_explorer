@@ -421,4 +421,35 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get aboutText =>
       'Бесплатный гид по винам, винодельням и сортам винограда Молдовы. Приложение носит информационный характер и не продаёт алкоголь.';
+
+  @override
+  String get nearMe => 'Рядом с вами';
+
+  @override
+  String get mapWineriesTitle => 'Винодельни';
+
+  @override
+  String get myLocation => 'Где я';
+
+  @override
+  String distanceKm(String km) {
+    return '$km км';
+  }
+
+  @override
+  String get locationDenied =>
+      'Без доступа к местоположению не получится показать винодельни рядом';
+
+  @override
+  String get locationDeniedForever =>
+      'Доступ к местоположению запрещён в настройках приложения';
+
+  @override
+  String get locationServiceOff => 'Геолокация на телефоне выключена';
+
+  @override
+  String get locationFailed => 'Не удалось определить местоположение';
+
+  @override
+  String get openSettings => 'Настройки';
 }

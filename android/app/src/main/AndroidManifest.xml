@@ -1,10 +1,19 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
     <!-- Тайлы карты и фото вин грузятся из интернета -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- «Рядом со мной»: только приблизительное местоположение и только по нажатию кнопки -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- geolocator добавляет фоновое отслеживание — нам не нужно, и Google Play
+         потребовал бы отдельную декларацию. Убираем разрешение и сервис. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" tools:node="remove"/>
     <application
         android:label="Wine Explorer"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <service
+            android:name="com.baseflow.geolocator.GeolocatorLocationService"
+            tools:node="remove"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -422,4 +422,35 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get aboutText =>
       'Ghid gratuit al vinurilor, vinăriilor și soiurilor de struguri din Moldova. Aplicația are caracter informativ și nu vinde alcool.';
+
+  @override
+  String get nearMe => 'Lângă tine';
+
+  @override
+  String get mapWineriesTitle => 'Vinării';
+
+  @override
+  String get myLocation => 'Locația mea';
+
+  @override
+  String distanceKm(String km) {
+    return '$km km';
+  }
+
+  @override
+  String get locationDenied =>
+      'Fără acces la locație nu putem arăta vinăriile din apropiere';
+
+  @override
+  String get locationDeniedForever =>
+      'Accesul la locație este interzis în setările aplicației';
+
+  @override
+  String get locationServiceOff => 'Localizarea este dezactivată pe telefon';
+
+  @override
+  String get locationFailed => 'Locația nu a putut fi determinată';
+
+  @override
+  String get openSettings => 'Setări';
 }

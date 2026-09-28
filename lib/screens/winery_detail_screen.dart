@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:latlong2/latlong.dart';
+
 import '../core/external_links.dart';
+import '../core/location_controller.dart';
 import '../core/share.dart';
 import '../core/theme.dart';
 import '../data/catalog_store.dart';
@@ -145,6 +148,40 @@ class WineryDetailScreen extends StatelessWidget {
                     ].join(' · '),
                     style: TextStyle(color: Colors.grey[700], fontSize: 15),
                   ),
+                // Расстояние — если пользователь уже нажимал «Где я» на карте
+                ValueListenableBuilder<LatLng?>(
+                  valueListenable: userLocation,
+                  builder: (context, me, _) => me == null
+                      ? const SizedBox.shrink()
+                      : Padding(
+                          padding: const EdgeInsets.only(top: 6),
+                          child: Row(
+                            children: [
+                              const Icon(
+                                Icons.near_me,
+                                size: 16,
+                                color: AppTheme.wineRed,
+                              ),
+                              const SizedBox(width: 4),
+                              Text(
+                                l10n.distanceKm(
+                                  formatKm(
+                                    distanceKm(
+                                      me,
+                                      winery.latitude,
+                                      winery.longitude,
+                                    ),
+                                  ),
+                                ),
+                                style: const TextStyle(
+                                  color: AppTheme.wineRed,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                ),
                 const SizedBox(height: 16),
                 Text(
                   l10n.wineryAbout,
