@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 import '../core/favorites_controller.dart';
 import '../core/theme.dart';
@@ -7,6 +6,7 @@ import '../l10n/app_localizations.dart';
 import '../l10n/wine_type_labels.dart';
 import '../models/wine.dart';
 import '../screens/wine_detail_screen.dart';
+import 'wine_image.dart';
 
 /// Карточка вина в списке. По нажатию открывает детальный экран.
 class WineCard extends StatelessWidget {
@@ -37,15 +37,11 @@ class WineCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 child: Hero(
                   tag: 'wine-image-${wine.id}',
-                  child: CachedNetworkImage(
+                  child: WineImage(
                     imageUrl: wine.imageUrl,
+                    wineType: wine.type,
                     width: 80,
                     height: 100,
-                    fit: BoxFit.cover,
-                    placeholder: (context, url) =>
-                        const Center(child: CircularProgressIndicator()),
-                    errorWidget: (context, url, error) =>
-                        const Icon(Icons.wine_bar, size: 50),
                   ),
                 ),
               ),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 import '../core/favorites_controller.dart';
 import '../core/theme.dart';
 import '../l10n/app_localizations.dart';
 import '../l10n/wine_type_labels.dart';
 import '../models/wine.dart';
+import '../widgets/wine_image.dart';
 
 /// Детальная карточка вина.
 class WineDetailScreen extends StatelessWidget {
@@ -52,16 +52,10 @@ class WineDetailScreen extends StatelessWidget {
                     children: [
                       Hero(
                         tag: 'wine-image-${wine.id}',
-                        child: CachedNetworkImage(
+                        child: WineImage(
                           imageUrl: wine.imageUrl,
-                          fit: BoxFit.cover,
-                          placeholder: (context, url) =>
-                              const Center(child: CircularProgressIndicator()),
-                          errorWidget: (context, url, error) => const Icon(
-                            Icons.wine_bar,
-                            size: 80,
-                            color: Colors.white,
-                          ),
+                          wineType: wine.type,
+                          iconSize: 96,
                         ),
                       ),
                       // Затемнение сверху, чтобы кнопки были видны на светлом фото

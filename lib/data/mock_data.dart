@@ -14,7 +14,7 @@ final List<Wine> mockWines = [
     vintage: 2020,
     rating: 4.8,
     priceLei: 180,
-    imageUrl: 'https://images.unsplash.com/photo-1586370434639-0fe43b2d32e6?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Богатый аромат спелой вишни, чернослива и сафьяновой кожи.',
       'ro': 'Arome bogate de cireșe coapte, prune uscate și piele fină.',
@@ -31,8 +31,7 @@ final List<Wine> mockWines = [
     vintage: 2023,
     rating: 4.9,
     priceLei: 145,
-    imageUrl:
-        'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Свежий вкус с нотами муската, цитрусовых и белых цветов.',
       'ro': 'Gust proaspăt cu note de muscat, citrice și flori albe.',
@@ -49,7 +48,7 @@ final List<Wine> mockWines = [
     vintage: 2019,
     rating: 4.7,
     priceLei: 320,
-    imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Выдержанное вино с оттенками сухофруктов и дуба.',
       'ro': 'Vin maturat cu nuanțe de fructe uscate și stejar.',
@@ -66,8 +65,7 @@ final List<Wine> mockWines = [
     vintage: 2021,
     rating: 4.6,
     priceLei: 210,
-    imageUrl:
-        'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Классическое игристое с тонкой перлажью, нотами яблока и бриоши.',
       'ro': 'Spumant clasic cu perlaj fin, note de măr și brioșă.',
@@ -84,8 +82,7 @@ final List<Wine> mockWines = [
     vintage: 2023,
     rating: 4.5,
     priceLei: 190,
-    imageUrl:
-        'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Лёгкое розовое с ароматом клубники, малины и цветов.',
       'ro': 'Rose ușor cu arome de căpșuni, zmeură și flori.',
@@ -102,8 +99,7 @@ final List<Wine> mockWines = [
     vintage: 2023,
     rating: 4.4,
     priceLei: 130,
-    imageUrl:
-        'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Хрустящее белое с нотами крыжовника, лайма и свежей травы.',
       'ro': 'Alb crocant cu note de agrișe, lime și iarbă proaspătă.',
@@ -120,7 +116,7 @@ final List<Wine> mockWines = [
     vintage: 2020,
     rating: 4.6,
     priceLei: 250,
-    imageUrl: 'https://images.unsplash.com/photo-1586370434639-0fe43b2d32e6?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Мягкое бархатистое красное со спелой сливой и шоколадом.',
       'ro': 'Roșu moale și catifelat, cu prune coapte și ciocolată.',
@@ -137,7 +133,7 @@ final List<Wine> mockWines = [
     vintage: 2018,
     rating: 4.7,
     priceLei: 280,
-    imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600',
+    imageUrl: '',
     description: {
       'ru': 'Выдержанное в подвалах вино с тонами чёрной смородины и табака.',
       'ro': 'Vin maturat în beciuri, cu tonuri de coacăză neagră și tutun.',
