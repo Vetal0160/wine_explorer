@@ -7,7 +7,7 @@ Data safety и политику конфиденциальности нужно 
 - **Политика конфиденциальности:** `https://vetal0160.github.io/wine_explorer/privacy-policy.html`
   (после включения GitHub Pages — см. ниже)
 - **Сайт (необязательно):** `https://vetal0160.github.io/wine_explorer/`
-- **Email для связи:** замените `EMAIL_TODO@example.com` в `docs/privacy-policy.html`
+- **Email для связи:** `wineexplorer.md@gmail.com` (уже в политике)
 
 ---
 
