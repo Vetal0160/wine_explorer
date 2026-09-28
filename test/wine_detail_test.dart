@@ -2,6 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wine_explorer/core/favorites_controller.dart';
 import 'package:wine_explorer/core/locale_controller.dart';
+import 'package:wine_explorer/data/catalog_store.dart';
 import 'package:wine_explorer/main.dart';
 import 'package:wine_explorer/screens/wine_detail_screen.dart';
 
@@ -12,6 +13,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await setAppLocale('ru');
     await loadFavorites();
+    await catalog.load();
 
     await tester.pumpWidget(const WineExplorerApp());
     await tester.tap(find.text('Viorica de Purcari'));

@@ -4,10 +4,11 @@ import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../core/theme.dart';
-import '../data/mock_data.dart';
+import '../data/catalog_store.dart';
 import '../l10n/app_localizations.dart';
 import '../l10n/wine_type_labels.dart';
 import '../models/winery.dart';
+import '../widgets/catalog_builder.dart';
 import 'wine_detail_screen.dart';
 
 /// Карта виноделен (OpenStreetMap, ключ API не нужен).
@@ -20,15 +21,30 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   final _mapController = MapController();
-  final List<Winery> _wineries = mockWineries;
   int? _selectedId;
+
+  // Центр Молдовы — если виноделен пока нет
+  static const _moldova = LatLng(47.0, 28.8);
+
+  List<Winery> get _wineries => catalog.wineries;
 
   LatLng _point(Winery w) => LatLng(w.latitude, w.longitude);
 
-  CameraFit get _fitAll => CameraFit.bounds(
-    bounds: LatLngBounds.fromPoints(_wineries.map(_point).toList()),
-    padding: const EdgeInsets.all(56),
-  );
+  CameraFit? get _fitAll => _wineries.isEmpty
+      ? null
+      : CameraFit.bounds(
+          bounds: LatLngBounds.fromPoints(_wineries.map(_point).toList()),
+          padding: const EdgeInsets.all(56),
+        );
+
+  void _showAll() {
+    final fit = _fitAll;
+    if (fit != null) {
+      _mapController.fitCamera(fit);
+    } else {
+      _mapController.move(_moldova, 7);
+    }
+  }
 
   Future<void> _openWinery(Winery winery) async {
     setState(() => _selectedId = winery.id);
@@ -55,45 +71,54 @@ class _MapScreenState extends State<MapScreen> {
     final l10n = AppLocalizations.of(context)!;
 
     return Scaffold(
-      body: FlutterMap(
-        mapController: _mapController,
-        options: MapOptions(initialCameraFit: _fitAll, minZoom: 6, maxZoom: 18),
-        children: [
-          TileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-            userAgentPackageName: 'com.example.wine_explorer',
+      body: CatalogBuilder(
+        builder: (context, catalog) => FlutterMap(
+          mapController: _mapController,
+          options: MapOptions(
+            initialCameraFit: _fitAll,
+            initialCenter: _moldova,
+            initialZoom: 7,
+            minZoom: 6,
+            maxZoom: 18,
           ),
-          MarkerLayer(
-            markers: [
-              for (final winery in _wineries)
-                Marker(
-                  point: _point(winery),
-                  width: 48,
-                  height: 48,
-                  alignment: Alignment.topCenter,
-                  child: _WineryPin(
-                    selected: winery.id == _selectedId,
-                    tooltip: winery.name,
-                    onTap: () => _openWinery(winery),
+          children: [
+            TileLayer(
+              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              userAgentPackageName: 'com.example.wine_explorer',
+            ),
+            MarkerLayer(
+              markers: [
+                for (final winery in _wineries)
+                  Marker(
+                    point: _point(winery),
+                    width: 48,
+                    height: 48,
+                    alignment: Alignment.topCenter,
+                    child: _WineryPin(
+                      selected: winery.id == _selectedId,
+                      tooltip: winery.name,
+                      onTap: () => _openWinery(winery),
+                    ),
+                  ),
+              ],
+            ),
+            // Атрибуция обязательна по правилам OpenStreetMap
+            RichAttributionWidget(
+              attributions: [
+                TextSourceAttribution(
+                  'OpenStreetMap contributors',
+                  onTap: () => launchUrl(
+                    Uri.parse('https://openstreetmap.org/copyright'),
                   ),
                 ),
-            ],
-          ),
-          // Атрибуция обязательна по правилам OpenStreetMap
-          RichAttributionWidget(
-            attributions: [
-              TextSourceAttribution(
-                'OpenStreetMap contributors',
-                onTap: () =>
-                    launchUrl(Uri.parse('https://openstreetmap.org/copyright')),
-              ),
-            ],
-          ),
-        ],
+              ],
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton.small(
         tooltip: l10n.mapShowAll,
-        onPressed: () => _mapController.fitCamera(_fitAll),
+        onPressed: _showAll,
         child: const Icon(Icons.zoom_out_map),
       ),
     );
@@ -161,7 +186,7 @@ class _WinerySheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final wines = winesOf(winery);
+    final wines = catalog.winesOf(winery);
 
     return SafeArea(
       child: ConstrainedBox(

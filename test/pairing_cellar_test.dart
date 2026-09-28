@@ -3,6 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:wine_explorer/core/favorites_controller.dart';
 import 'package:wine_explorer/core/locale_controller.dart';
+import 'package:wine_explorer/data/catalog_store.dart';
 import 'package:wine_explorer/main.dart';
 
 void main() {
@@ -10,6 +11,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await setAppLocale('ru');
     await loadFavorites();
+    await catalog.load();
   });
 
   testWidgets('подбор: десерты предлагают только игристое', (tester) async {
@@ -24,8 +26,9 @@ void main() {
     expect(find.text('Viorica de Purcari'), findsNothing);
   });
 
-  testWidgets('подвал: пустое состояние, затем добавленное вино',
-      (tester) async {
+  testWidgets('подвал: пустое состояние, затем добавленное вино', (
+    tester,
+  ) async {
     await tester.pumpWidget(const WineExplorerApp());
     await tester.tap(find.text('Подвал'));
     await settle(tester);

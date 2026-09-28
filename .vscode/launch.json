@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Wine Explorer (тестовые данные)",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "Wine Explorer (Supabase)",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--dart-define-from-file=supabase.json"]
+    }
+  ]
+}

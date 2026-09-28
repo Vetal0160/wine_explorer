@@ -51,5 +51,7 @@
   "dishReasonGrill": "Smoky meat from the coals is a classic match for a full-bodied dry red.",
   "dishReasonFish": "River fish and seafood are ideal with a crisp white or a sparkling wine.",
   "dishReasonCheese": "Salty aged sheep's cheese pairs with red; fresh cheeses go with white.",
-  "dishReasonDessert": "Vertută, cozonac and fruit pair nicely with a sparkling wine."
+  "dishReasonDessert": "Vertută, cozonac and fruit pair nicely with a sparkling wine.",
+  "loadError": "Couldn't load the catalog. Check your internet connection.",
+  "retry": "Retry"
 }

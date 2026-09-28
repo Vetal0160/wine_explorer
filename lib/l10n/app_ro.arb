@@ -51,5 +51,7 @@
   "dishReasonGrill": "Carnea afumată de pe jar este clasica pentru un roșu sec corpolent.",
   "dishReasonFish": "Peștele de râu și fructele de mare sunt ideale cu un alb crocant sau un spumant.",
   "dishReasonCheese": "Brânza de oi maturată și sărată merge cu roșu, iar brânzeturile proaspete — cu alb.",
-  "dishReasonDessert": "Vertuta, cozonacul și fructele se potrivesc bine cu un vin spumant."
+  "dishReasonDessert": "Vertuta, cozonacul și fructele se potrivesc bine cu un vin spumant.",
+  "loadError": "Catalogul nu s-a putut încărca. Verificați conexiunea la internet.",
+  "retry": "Reîncearcă"
 }

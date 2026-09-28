@@ -189,4 +189,11 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get dishReasonDessert =>
       'Vertută, cozonac and fruit pair nicely with a sparkling wine.';
+
+  @override
+  String get loadError =>
+      'Couldn\'t load the catalog. Check your internet connection.';
+
+  @override
+  String get retry => 'Retry';
 }

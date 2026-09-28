@@ -411,6 +411,18 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Вертута, куличи и фрукты хорошо сочетаются с игристым вином.'**
   String get dishReasonDessert;
+
+  /// No description provided for @loadError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось загрузить каталог. Проверьте интернет.'**
+  String get loadError;
+
+  /// No description provided for @retry.
+  ///
+  /// In ru, this message translates to:
+  /// **'Повторить'**
+  String get retry;
 }
 
 class _AppLocalizationsDelegate

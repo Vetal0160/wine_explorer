@@ -1,12 +1,13 @@
+// Сгенерировано из одного источника вместе с supabase/seed.sql.
+// Используется, пока Supabase не настроен (и в тестах).
 import '../models/wine.dart';
 import '../models/winery.dart';
-
-// Тестовые данные (позже будут загружаться с вашего API)
 
 final List<Wine> mockWines = [
   Wine(
     id: '1',
     name: 'Fetească Neagră Premium',
+    wineryId: '1',
     wineryName: 'Château Vartely',
     type: 'red_dry',
     grapeVariety: 'Fetească Neagră',
@@ -14,11 +15,16 @@ final List<Wine> mockWines = [
     rating: 4.8,
     priceLei: 180,
     imageUrl: 'https://images.unsplash.com/photo-1586370434639-0fe43b2d32e6?q=80&w=600',
-    description: 'Богатый аромат спелой вишни, чернослива и сафьяновой кожи.',
+    description: {
+      'ru': 'Богатый аромат спелой вишни, чернослива и сафьяновой кожи.',
+      'ro': 'Arome bogate de cireșe coapte, prune uscate și piele fină.',
+      'en': 'Rich aromas of ripe cherry, prunes and fine leather.',
+    },
   ),
   Wine(
     id: '2',
     name: 'Viorica de Purcari',
+    wineryId: '2',
     wineryName: 'Château Purcari',
     type: 'white_dry',
     grapeVariety: 'Viorica',
@@ -27,11 +33,16 @@ final List<Wine> mockWines = [
     priceLei: 145,
     imageUrl:
         'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
-    description: 'Свежий вкус с нотами муската, цитрусовых и белых цветов.',
+    description: {
+      'ru': 'Свежий вкус с нотами муската, цитрусовых и белых цветов.',
+      'ro': 'Gust proaspăt cu note de muscat, citrice și flori albe.',
+      'en': 'Fresh taste with notes of muscat, citrus and white flowers.',
+    },
   ),
   Wine(
     id: '3',
     name: 'Rară Neagră Taraboste',
+    wineryId: '1',
     wineryName: 'Château Vartely',
     type: 'red_dry',
     grapeVariety: 'Rară Neagră',
@@ -39,11 +50,16 @@ final List<Wine> mockWines = [
     rating: 4.7,
     priceLei: 320,
     imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600',
-    description: 'Выдержанное вино с оттенками сухофруктов и дуба.',
+    description: {
+      'ru': 'Выдержанное вино с оттенками сухофруктов и дуба.',
+      'ro': 'Vin maturat cu nuanțe de fructe uscate și stejar.',
+      'en': 'An aged wine with hints of dried fruit and oak.',
+    },
   ),
   Wine(
     id: '4',
     name: 'Cricova Brut',
+    wineryId: '3',
     wineryName: 'Cricova',
     type: 'sparkling',
     grapeVariety: 'Chardonnay, Pinot Noir',
@@ -52,12 +68,16 @@ final List<Wine> mockWines = [
     priceLei: 210,
     imageUrl:
         'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
-    description:
-        'Классическое игристое с тонкой перлажью, нотами яблока и бриоши.',
+    description: {
+      'ru': 'Классическое игристое с тонкой перлажью, нотами яблока и бриоши.',
+      'ro': 'Spumant clasic cu perlaj fin, note de măr și brioșă.',
+      'en': 'A classic sparkling wine with fine bubbles and notes of apple and brioche.',
+    },
   ),
   Wine(
     id: '5',
     name: 'Rosé de Mimi',
+    wineryId: '5',
     wineryName: 'Castel Mimi',
     type: 'rose_dry',
     grapeVariety: 'Pinot Noir',
@@ -66,11 +86,16 @@ final List<Wine> mockWines = [
     priceLei: 190,
     imageUrl:
         'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
-    description: 'Лёгкое розовое с ароматом клубники, малины и цветов.',
+    description: {
+      'ru': 'Лёгкое розовое с ароматом клубники, малины и цветов.',
+      'ro': 'Rose ușor cu arome de căpșuni, zmeură și flori.',
+      'en': 'A light rosé with aromas of strawberry, raspberry and flowers.',
+    },
   ),
   Wine(
     id: '6',
     name: 'Asconi Sauvignon Blanc',
+    wineryId: '6',
     wineryName: 'Asconi',
     type: 'white_dry',
     grapeVariety: 'Sauvignon Blanc',
@@ -79,11 +104,16 @@ final List<Wine> mockWines = [
     priceLei: 130,
     imageUrl:
         'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
-    description: 'Хрустящее белое с нотами крыжовника, лайма и свежей травы.',
+    description: {
+      'ru': 'Хрустящее белое с нотами крыжовника, лайма и свежей травы.',
+      'ro': 'Alb crocant cu note de agrișe, lime și iarbă proaspătă.',
+      'en': 'A crisp white with notes of gooseberry, lime and fresh grass.',
+    },
   ),
   Wine(
     id: '7',
     name: 'Et Cetera Merlot',
+    wineryId: '7',
     wineryName: 'Et Cetera',
     type: 'red_dry',
     grapeVariety: 'Merlot',
@@ -91,11 +121,16 @@ final List<Wine> mockWines = [
     rating: 4.6,
     priceLei: 250,
     imageUrl: 'https://images.unsplash.com/photo-1586370434639-0fe43b2d32e6?q=80&w=600',
-    description: 'Мягкое бархатистое красное со спелой сливой и шоколадом.',
+    description: {
+      'ru': 'Мягкое бархатистое красное со спелой сливой и шоколадом.',
+      'ro': 'Roșu moale și catifelat, cu prune coapte și ciocolată.',
+      'en': 'A soft, velvety red with ripe plum and chocolate.',
+    },
   ),
   Wine(
     id: '8',
     name: 'Mileștii Mici Cabernet Sauvignon',
+    wineryId: '4',
     wineryName: 'Mileștii Mici',
     type: 'red_dry',
     grapeVariety: 'Cabernet Sauvignon',
@@ -103,8 +138,11 @@ final List<Wine> mockWines = [
     rating: 4.7,
     priceLei: 280,
     imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600',
-    description:
-        'Выдержанное в подвалах вино с тонами чёрной смородины и табака.',
+    description: {
+      'ru': 'Выдержанное в подвалах вино с тонами чёрной смородины и табака.',
+      'ro': 'Vin maturat în beciuri, cu tonuri de coacăză neagră și tutun.',
+      'en': 'Aged in underground cellars, with tones of blackcurrant and tobacco.',
+    },
   ),
 ];
 
@@ -120,47 +158,43 @@ const List<Winery> mockWineries = [
   Winery(
     id: 2,
     name: 'Château Purcari',
-    latitude: 46.5250,
-    longitude: 29.8650,
+    latitude: 46.525,
+    longitude: 29.865,
     region: 'Ștefan Vodă · Purcari',
   ),
   Winery(
     id: 3,
     name: 'Cricova',
     latitude: 47.1386,
-    longitude: 28.8620,
+    longitude: 28.862,
     region: 'Codru · Cricova',
   ),
   Winery(
     id: 4,
     name: 'Mileștii Mici',
-    latitude: 46.9050,
-    longitude: 28.8280,
+    latitude: 46.905,
+    longitude: 28.828,
     region: 'Codru · Ialoveni',
   ),
   Winery(
     id: 5,
     name: 'Castel Mimi',
-    latitude: 46.8900,
-    longitude: 29.3050,
+    latitude: 46.89,
+    longitude: 29.305,
     region: 'Codru · Bulboaca',
   ),
   Winery(
     id: 6,
     name: 'Asconi',
-    latitude: 46.8250,
-    longitude: 29.0900,
+    latitude: 46.825,
+    longitude: 29.09,
     region: 'Codru · Puhoi',
   ),
   Winery(
     id: 7,
     name: 'Et Cetera',
-    latitude: 46.4230,
-    longitude: 29.9300,
+    latitude: 46.423,
+    longitude: 29.93,
     region: 'Ștefan Vodă · Crocmaz',
   ),
 ];
-
-/// Вина конкретной винодельни (связь пока по названию).
-List<Wine> winesOf(Winery winery) =>
-    mockWines.where((w) => w.wineryName == winery.name).toList();

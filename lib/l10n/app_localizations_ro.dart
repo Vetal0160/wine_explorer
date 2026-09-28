@@ -192,4 +192,11 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get dishReasonDessert =>
       'Vertuta, cozonacul și fructele se potrivesc bine cu un vin spumant.';
+
+  @override
+  String get loadError =>
+      'Catalogul nu s-a putut încărca. Verificați conexiunea la internet.';
+
+  @override
+  String get retry => 'Reîncearcă';
 }

@@ -192,4 +192,10 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get dishReasonDessert =>
       'Вертута, куличи и фрукты хорошо сочетаются с игристым вином.';
+
+  @override
+  String get loadError => 'Не удалось загрузить каталог. Проверьте интернет.';
+
+  @override
+  String get retry => 'Повторить';
 }

@@ -31,6 +31,7 @@ class WineDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final textTheme = Theme.of(context).textTheme;
+    final languageCode = Localizations.localeOf(context).languageCode;
 
     // Перестраиваем экран при изменении избранного
     return ValueListenableBuilder<Set<String>>(
@@ -165,8 +166,8 @@ class WineDetailScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        wine.description.isNotEmpty
-                            ? wine.description
+                        wine.descriptionFor(languageCode).isNotEmpty
+                            ? wine.descriptionFor(languageCode)
                             : l10n.noDescription,
                         style: textTheme.bodyLarge?.copyWith(height: 1.5),
                       ),

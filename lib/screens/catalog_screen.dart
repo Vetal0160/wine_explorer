@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+
 import '../l10n/app_localizations.dart';
-import '../data/mock_data.dart';
-import '../models/wine.dart';
+import '../widgets/catalog_builder.dart';
 import '../widgets/wine_card.dart';
 
 class CatalogScreen extends StatefulWidget {
@@ -12,18 +12,11 @@ class CatalogScreen extends StatefulWidget {
 }
 
 class _CatalogScreenState extends State<CatalogScreen> {
-  // Тестовые данные (позже будут загружаться с вашего API)
-  final List<Wine> _wines = mockWines;
-
   String _searchQuery = '';
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final filteredWines = _wines.where((wine) {
-      return wine.name.toLowerCase().contains(_searchQuery.toLowerCase()) ||
-          wine.wineryName.toLowerCase().contains(_searchQuery.toLowerCase());
-    }).toList();
 
     return Column(
       children: [
@@ -46,14 +39,33 @@ class _CatalogScreenState extends State<CatalogScreen> {
 
         // Список вин
         Expanded(
-          child: filteredWines.isEmpty
-              ? Center(child: Text(l10n.noResults))
-              : ListView.builder(
-                  padding: const EdgeInsets.symmetric(horizontal: 12),
-                  itemCount: filteredWines.length,
-                  itemBuilder: (context, index) =>
-                      WineCard(wine: filteredWines[index]),
-                ),
+          child: CatalogBuilder(
+            builder: (context, catalog) {
+              final query = _searchQuery.toLowerCase();
+              final filteredWines = catalog.wines.where((wine) {
+                return wine.name.toLowerCase().contains(query) ||
+                    wine.wineryName.toLowerCase().contains(query);
+              }).toList();
+
+              // Потянуть список вниз — перезагрузить каталог
+              return RefreshIndicator(
+                onRefresh: catalog.load,
+                child: filteredWines.isEmpty
+                    ? ListView(
+                        children: [
+                          const SizedBox(height: 80),
+                          Center(child: Text(l10n.noResults)),
+                        ],
+                      )
+                    : ListView.builder(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        itemCount: filteredWines.length,
+                        itemBuilder: (context, index) =>
+                            WineCard(wine: filteredWines[index]),
+                      ),
+              );
+            },
+          ),
         ),
       ],
     );

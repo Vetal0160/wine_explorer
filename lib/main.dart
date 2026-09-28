@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'l10n/app_localizations.dart';
 import 'core/favorites_controller.dart';
+import 'core/supabase_config.dart';
+import 'data/catalog_store.dart';
+import 'data/supabase_wine_repository.dart';
 import 'core/locale_controller.dart';
 import 'core/theme.dart';
 import 'screens/main_screen.dart';
@@ -15,6 +19,18 @@ Future<void> main() async {
     // Настройки не загрузились — стартуем с языком системы и пустым подвалом
     debugPrint('Не удалось загрузить сохранённые настройки: $e');
   }
+
+  // Есть ключи Supabase — берём каталог оттуда, иначе тестовые данные
+  if (isSupabaseConfigured) {
+    try {
+      await Supabase.initialize(url: supabaseUrl, publishableKey: supabaseKey);
+      catalog.repository = SupabaseWineRepository();
+    } catch (e) {
+      debugPrint('Supabase не инициализирован, используем тестовые данные: $e');
+    }
+  }
+  // Не ждём: экраны сами покажут загрузку
+  catalog.load();
   runApp(const WineExplorerApp());
 }
 

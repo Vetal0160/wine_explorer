@@ -14,7 +14,7 @@ class Winery {
   final String? region;
 
   factory Winery.fromJson(Map<String, dynamic> json) => Winery(
-    id: json['id'] as int,
+    id: (json['id'] as num).toInt(),
     name: json['name'] as String,
     latitude: (json['latitude'] as num).toDouble(),
     longitude: (json['longitude'] as num).toDouble(),
