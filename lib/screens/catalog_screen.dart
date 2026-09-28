@@ -91,7 +91,12 @@ class _CatalogScreenState extends State<CatalogScreen> {
         Expanded(
           child: CatalogBuilder(
             builder: (context, catalog) {
-              final wines = _filter.apply(catalog.wines);
+              // Нет ни одной оценки — «По рейтингу» бессмысленно, сортируем по названию
+              final hasRatings = catalog.wines.any((w) => w.hasRating);
+              final sort = !hasRatings && _filter.sort == WineSort.rating
+                  ? WineSort.name
+                  : _filter.sort;
+              final wines = _filter.copyWith(sort: sort).apply(catalog.wines);
               // Цена и винодельни — в панели; типы видны чипами отдельно
               final sheetFilters =
                   _filter.activeCount - (_filter.types.isNotEmpty ? 1 : 0);
@@ -143,16 +148,18 @@ class _CatalogScreenState extends State<CatalogScreen> {
                         ),
                         PopupMenuButton<WineSort>(
                           tooltip: l10n.sortBy,
-                          initialValue: _filter.sort,
+                          initialValue: sort,
                           onSelected: (sort) => setState(
                             () => _filter = _filter.copyWith(sort: sort),
                           ),
                           itemBuilder: (context) => [
-                            for (final sort in WineSort.values)
+                            for (final option in WineSort.values.where(
+                              (o) => hasRatings || o != WineSort.rating,
+                            ))
                               CheckedPopupMenuItem(
-                                value: sort,
-                                checked: sort == _filter.sort,
-                                child: Text(_sortLabel(l10n, sort)),
+                                value: option,
+                                checked: option == sort,
+                                child: Text(_sortLabel(l10n, option)),
                               ),
                           ],
                           child: Padding(
@@ -165,7 +172,7 @@ class _CatalogScreenState extends State<CatalogScreen> {
                               children: [
                                 const Icon(Icons.sort, size: 18),
                                 const SizedBox(width: 4),
-                                Text(_sortLabel(l10n, _filter.sort)),
+                                Text(_sortLabel(l10n, sort)),
                               ],
                             ),
                           ),

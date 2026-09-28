@@ -5,7 +5,7 @@ Google Play не принимает изображения, где длинна�
 
 Запуск: python tool/make_store_screenshots.py <папка_с_сырыми_скринами> [en|ro|ru]
 Сырые скрины (adb exec-out screencap -p > 01_catalog.png) называются
-01_catalog.png, 02_wine.png, 03_map.png, 04_pairing.png, 05_grapes.png, 06_cellar.png.
+01_catalog.png, 02_wine.png, 03_map.png, 04_pairing.png, 05_grapes.png, 06_winery.png.
 """
 import os
 import sys
@@ -27,7 +27,7 @@ CAPTIONS = {
         "03_map": ("Wineries on the map", "Visiting info and directions in one tap"),
         "04_pairing": ("The right wine for your dish", "Plăcinte, tochitură, zeamă and more"),
         "05_grapes": ("Native grape guide", "Fetească Neagră, Rară Neagră, Viorica…"),
-        "06_cellar": ("Your personal cellar", "Save wines, rate them, write notes"),
+        "06_winery": ("Plan your winery visit", "Tastings, contacts, directions and wines"),
     },
     "ro": {
         "01_catalog": ("Descoperă vinurile Moldovei", "Caută, filtrează și sortează catalogul"),
@@ -35,7 +35,7 @@ CAPTIONS = {
         "03_map": ("Vinăriile pe hartă", "Informații de vizită și traseu dintr-o atingere"),
         "04_pairing": ("Vinul potrivit pentru masă", "Plăcinte, tochitură, zeamă și altele"),
         "05_grapes": ("Ghidul soiurilor autohtone", "Fetească Neagră, Rară Neagră, Viorica…"),
-        "06_cellar": ("Crama ta personală", "Salvează vinuri, dă note, scrie impresii"),
+        "06_winery": ("Planifică vizita la vinărie", "Degustări, contacte, traseu și vinuri"),
     },
     "ru": {
         "01_catalog": ("Откройте вина Молдовы", "Поиск, фильтры и сортировка каталога"),
@@ -43,7 +43,7 @@ CAPTIONS = {
         "03_map": ("Винодельни на карте", "Информация для визита и маршрут в одно касание"),
         "04_pairing": ("Вино к вашему блюду", "Плацинды, токана, зама и не только"),
         "05_grapes": ("Справочник местных сортов", "Фетяска Нягрэ, Рарэ Нягрэ, Виорика…"),
-        "06_cellar": ("Ваш личный подвал", "Сохраняйте вина, ставьте оценки, пишите заметки"),
+        "06_winery": ("Спланируйте визит на винодельню", "Дегустации, контакты, маршрут и вина"),
     },
 }
 

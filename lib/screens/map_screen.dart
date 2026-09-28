@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
@@ -5,6 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../core/external_links.dart';
 import '../core/location_controller.dart';
+import '../core/map_clusters.dart';
 import '../core/map_style.dart';
 import '../core/theme.dart';
 import '../data/catalog_store.dart';
@@ -27,6 +30,7 @@ class _MapScreenState extends State<MapScreen> {
   final _mapController = MapController();
   final MapStyle _style = defaultMapStyle;
   int? _selectedId;
+  double _zoom = 7;
   bool _locating = false;
 
   // Центр Молдовы — если виноделен пока нет
@@ -115,6 +119,61 @@ class _MapScreenState extends State<MapScreen> {
       );
   }
 
+  Marker _pinMarker(Winery winery) => Marker(
+    point: _point(winery),
+    width: 48,
+    height: 48,
+    alignment: Alignment.topCenter,
+    child: _WineryPin(
+      selected: winery.id == _selectedId,
+      tooltip: winery.name,
+      onTap: () => _openWinery(winery),
+    ),
+  );
+
+  /// Нажали на кружок: приближаем. Если винодельни почти в одной точке
+  /// (или уже крупный масштаб) — показываем их списком.
+  Future<void> _openCluster(MarkerCluster<Winery> cluster) async {
+    final points = cluster.items.map(_point).toList();
+    var spreadKm = 0.0;
+    for (final p in points) {
+      spreadKm = math.max(
+        spreadKm,
+        distanceKm(cluster.center, p.latitude, p.longitude),
+      );
+    }
+    if (spreadKm > 0.3 && _mapController.camera.zoom < 14) {
+      _mapController.fitCamera(
+        CameraFit.bounds(
+          bounds: LatLngBounds.fromPoints(points),
+          padding: const EdgeInsets.all(80),
+          maxZoom: 15,
+        ),
+      );
+      return;
+    }
+    final picked = await showModalBottomSheet<Winery>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) => SafeArea(
+        child: ListView(
+          shrinkWrap: true,
+          children: [
+            for (final w in cluster.items)
+              ListTile(
+                leading: const Icon(Icons.wine_bar, color: AppTheme.wineRed),
+                title: Text(w.name),
+                subtitle: w.region == null ? null : Text(w.region!),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.pop(context, w),
+              ),
+          ],
+        ),
+      ),
+    );
+    if (picked != null && mounted) await _openWinery(picked);
+  }
+
   Future<void> _openWinery(Winery winery) async {
     setState(() => _selectedId = winery.id);
     _mapController.move(
@@ -158,6 +217,14 @@ class _MapScreenState extends State<MapScreen> {
                       initialZoom: 7,
                       minZoom: 6,
                       maxZoom: 18,
+                      onMapReady: () =>
+                          setState(() => _zoom = _mapController.camera.zoom),
+                      // Перегруппировываем только при заметной смене масштаба
+                      onPositionChanged: (camera, _) {
+                        if ((camera.zoom - _zoom).abs() >= 0.25) {
+                          setState(() => _zoom = camera.zoom);
+                        }
+                      },
                     ),
                     children: [
                       TileLayer(
@@ -182,18 +249,28 @@ class _MapScreenState extends State<MapScreen> {
                         ),
                       MarkerLayer(
                         markers: [
-                          for (final winery in _wineries)
-                            Marker(
-                              point: _point(winery),
-                              width: 48,
-                              height: 48,
-                              alignment: Alignment.topCenter,
-                              child: _WineryPin(
-                                selected: winery.id == _selectedId,
-                                tooltip: winery.name,
-                                onTap: () => _openWinery(winery),
+                          // Близкие винодельни — кружком с числом; выбранная — всегда отдельно
+                          for (final cluster in clusterMarkers(
+                            _wineries.where((w) => w.id != _selectedId),
+                            _point,
+                            _zoom,
+                          ))
+                            if (cluster.isSingle)
+                              _pinMarker(cluster.items.single)
+                            else
+                              Marker(
+                                point: cluster.center,
+                                width: 44,
+                                height: 44,
+                                child: _ClusterBubble(
+                                  count: cluster.items.length,
+                                  onTap: () => _openCluster(cluster),
+                                ),
                               ),
-                            ),
+                          for (final w in _wineries.where(
+                            (w) => w.id == _selectedId,
+                          ))
+                            _pinMarker(w),
                         ],
                       ),
                       // Атрибуция обязательна по правилам поставщиков карты
@@ -417,6 +494,38 @@ class _UserDot extends StatelessWidget {
             color: const Color(0xFF1A73E8),
             border: Border.all(color: Colors.white, width: 3),
             boxShadow: const [BoxShadow(blurRadius: 4, color: Colors.black26)],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Кружок с числом виноделен, которые на этом масштабе слишком близко.
+class _ClusterBubble extends StatelessWidget {
+  final int count;
+  final VoidCallback onTap;
+
+  const _ClusterBubble({required this.count, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppTheme.wineRed,
+          border: Border.all(color: Colors.white, width: 3),
+          boxShadow: const [BoxShadow(blurRadius: 6, color: Colors.black38)],
+        ),
+        alignment: Alignment.center,
+        child: Text(
+          '$count',
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
           ),
         ),
       ),

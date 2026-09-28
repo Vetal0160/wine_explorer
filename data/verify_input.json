@@ -1,0 +1,690 @@
+[
+ {
+  "name": "Château Vartely",
+  "in_db": true,
+  "region": "Codru · Orhei",
+  "websites": [
+   "https://vartely.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 68 500 555",
+    "hours": "Пн–Вс 10:00–22:00",
+    "tasting_price_lei": 200.0,
+    "address": "str. Eliberării 170/b, Orhei, MD-3500"
+   },
+   "agent2": {
+    "phone": "+373 68 500 555",
+    "hours": "Пн–Вс 10:00–19:00",
+    "tasting_price_lei": "250",
+    "address": "str. Eliberării 170/B, Orhei, MD-3501"
+   }
+  }
+ },
+ {
+  "name": "Château Purcari",
+  "in_db": true,
+  "region": "Ștefan Vodă · Purcari",
+  "websites": [
+   "https://purcari.wine"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 242 30 411",
+    "hours": "Пн–Вс 09:00–20:00",
+    "tasting_price_lei": 350.0,
+    "address": "s. Purcari, r-nul Ștefan Vodă, MD-4229"
+   },
+   "agent2": {
+    "phone": "+373 60 121 221",
+    "hours": "Пн–Вс 08:00–22:00",
+    "tasting_price_lei": "300",
+    "address": "s. Purcari, r. Ștefan Vodă, MD-4229"
+   }
+  }
+ },
+ {
+  "name": "Cricova",
+  "in_db": true,
+  "region": "Codru · Cricova",
+  "websites": [
+   "https://cricova.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 427 777",
+    "hours": "Пн–Вс 10:00–20:00",
+    "tasting_price_lei": 250.0,
+    "address": "str. Chișinăului 124, Cricova, MD-2084"
+   },
+   "agent2": {
+    "phone": "+373 22 427 777",
+    "hours": "Пн–Пт 09:00–21:00; Сб–Вс 10:00–18:00",
+    "tasting_price_lei": "350",
+    "address": "str. Chișinăului 124, Cricova, MD-2084"
+   }
+  }
+ },
+ {
+  "name": "Mileștii Mici",
+  "in_db": true,
+  "region": "Codru · Mileștii Mici",
+  "websites": [
+   "https://milestii-mici.md",
+   "https://www.milestii-mici.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 382 336",
+    "hours": "Пн–Вс 09:00–21:00",
+    "tasting_price_lei": 350.0,
+    "address": "s. Mileștii Mici, r-nul Ialoveni, MD-6819"
+   },
+   "agent2": {
+    "phone": "+373 67 121 121",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "300",
+    "address": "com. Mileștii Mici, r. Ialoveni, MD-6819"
+   }
+  }
+ },
+ {
+  "name": "Castel Mimi",
+  "in_db": true,
+  "region": "Codru · Bulboaca",
+  "websites": [
+   "https://castelmimi.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 265 01 893",
+    "hours": "Пн–Вс 10:00–20:00",
+    "tasting_price_lei": 400.0,
+    "address": "str. Dacia 1, s. Bulboaca, r-nul Anenii Noi, MD-6512"
+   },
+   "agent2": {
+    "phone": "+373 265 0 1893",
+    "hours": "Ср–Вс 12:00–18:00",
+    "tasting_price_lei": "350",
+    "address": "str. Dacia 1, Bulboaca, r. Anenii Noi, MD-6512"
+   }
+  }
+ },
+ {
+  "name": "Asconi",
+  "in_db": true,
+  "region": "Codru · Puhoi",
+  "websites": [
+   "https://asconi.md",
+   "https://asconiwinery.com"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 799 88 633",
+    "hours": "Пн–Вс 11:00–22:00",
+    "tasting_price_lei": 250.0,
+    "address": "str. Ștefan cel Mare 1, s. Puhoi, r-nul Ialoveni, MD-6824"
+   },
+   "agent2": {
+    "phone": "+373 79 988 642",
+    "hours": "Пн–Вс 11:00–17:00",
+    "tasting_price_lei": "200",
+    "address": "str. Ștefan cel Mare 1, s. Puhoi, r. Ialoveni, MD-6824"
+   }
+  }
+ },
+ {
+  "name": "Et Cetera",
+  "in_db": true,
+  "region": "Ștefan Vodă · Crocmaz",
+  "websites": [
+   "https://etcetera.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 794 45 010",
+    "hours": "Вт–Вс 10:00–19:00",
+    "tasting_price_lei": 350.0,
+    "address": "s. Crocmaz, r-nul Ștefan Vodă, MD-4218"
+   },
+   "agent2": {
+    "phone": "+373 79 050 587",
+    "hours": "Чт–Вс 09:00–21:00",
+    "tasting_price_lei": "250",
+    "address": "s. Crocmaz, r. Ștefan Vodă, MD-4218"
+   }
+  }
+ },
+ {
+  "name": "Gitana Winery",
+  "in_db": true,
+  "region": "Valul lui Traian · Plopi",
+  "websites": [
+   "https://gitana.md",
+   "https://gitanawinery.com"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 691 23 563",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "s. Plopi, r-nul Cantemir, MD-7331"
+   },
+   "agent2": {
+    "phone": "+373 69 122 504",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "s. Plopi, r. Cantemir, MD-7332"
+   }
+  }
+ },
+ {
+  "name": "Fautor Winery",
+  "in_db": true,
+  "region": "Valul lui Traian · Tigheci",
+  "websites": [
+   "https://fautor.wine"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 235 656",
+    "hours": "Пн–Пт 09:00–17:00",
+    "tasting_price_lei": null,
+    "address": "s. Tigheci, r-nul Leova, MD-6329"
+   },
+   "agent2": {
+    "phone": "+373 22 233 393",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": "250",
+    "address": "s. Tigheci, r. Leova, MD-6818"
+   }
+  }
+ },
+ {
+  "name": "Radacini Wines",
+  "in_db": true,
+  "region": "Codru · Cricova",
+  "websites": [
+   "https://radacini.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 108 000",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "str. Vasile Alecsandri 62, Cricova, MD-2084"
+   },
+   "agent2": {
+    "phone": "+373 22 856 501",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. P. Ungureanu 3, Cricova, MD-2084"
+   }
+  }
+ },
+ {
+  "name": "Crama Mircești",
+  "in_db": true,
+  "region": "Codru · Mircești",
+  "websites": [
+   "https://cramamircesti.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 60 111 170",
+    "hours": "Пн–Вс 11:00–16:00",
+    "tasting_price_lei": 300.0,
+    "address": "s. Mircești, r-nul Ungheni, MD-3613"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Kara Gani",
+  "in_db": true,
+  "region": "Valul lui Traian · Vulcănești",
+  "websites": [
+   "https://karagani.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 124 996",
+    "hours": "Пн–Вс 10:00–17:30",
+    "tasting_price_lei": 250.0,
+    "address": "str. Krupskaia 31, Vulcănești, MD-5301"
+   },
+   "agent2": {
+    "phone": "+373 69 124 996",
+    "hours": "Пн–Вс 10:00–22:00",
+    "tasting_price_lei": "200",
+    "address": "str. Krupskaia 31, Vulcănești, MD-5301"
+   }
+  }
+ },
+ {
+  "name": "Poiana Winery",
+  "in_db": true,
+  "region": "Codru · Ulmu",
+  "websites": [
+   "https://poiana.wine",
+   "https://vinariapoiana.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 76 711 111",
+    "hours": "Пн–Пт 10:00–18:00, Сб–Вс 11:00–20:00",
+    "tasting_price_lei": 350.0,
+    "address": "s. Ulmu, r-nul Ialoveni, MD-6829"
+   },
+   "agent2": {
+    "phone": "+373 79 450 793",
+    "hours": "Пн–Пт 10:00–18:00; Сб–Вс 11:00–20:00",
+    "tasting_price_lei": "250",
+    "address": "s. Ulmu, r. Strășeni"
+   }
+  }
+ },
+ {
+  "name": "Gogu Winery",
+  "in_db": true,
+  "region": "Ștefan Vodă · Căușeni",
+  "websites": [
+   "https://goguwinery.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 79 825 409",
+    "hours": "Пн–Вс 10:00–22:00",
+    "tasting_price_lei": 300.0,
+    "address": "str. Mihai Eminescu 35, Căușeni, MD-4301"
+   },
+   "agent2": {
+    "phone": "+373 79 825 409",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. Păcii 87, Căușeni, MD-4301"
+   }
+  }
+ },
+ {
+  "name": "Leuntea-Vin",
+  "in_db": true,
+  "region": "Ștefan Vodă · Leuntea",
+  "websites": [
+   "https://leuntea-vin.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 023 001",
+    "hours": "Пн–Вс 10:00–19:00",
+    "tasting_price_lei": 250.0,
+    "address": "s. Leuntea, r-nul Căușeni, MD-4225"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "NOVAK Winery",
+  "in_db": true,
+  "region": "Valul lui Traian · Comrat",
+  "websites": [
+   "https://novak.md",
+   "https://novakwinery.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 68 888 842",
+    "hours": "Пт–Вс 11:00–19:00",
+    "tasting_price_lei": 250.0,
+    "address": "str. Tretiakov 43, Comrat, MD-3805"
+   },
+   "agent2": {
+    "phone": "+373 68 888 814",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "s. Tartaul, r. Cantemir, MD-7321"
+   }
+  }
+ },
+ {
+  "name": "Pivnițele Brănești",
+  "in_db": true,
+  "region": "Codru · Brănești",
+  "websites": [
+   "http://mouldwine.com"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 164 445",
+    "hours": "Пн–Вс 09:00–18:00",
+    "tasting_price_lei": 250.0,
+    "address": "s. Brănești, r-nul Orhei, MD-3515"
+   },
+   "agent2": {
+    "phone": "+373 69 164 445",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "s. Branesti, r. Orhei, MD-3515"
+   }
+  }
+ },
+ {
+  "name": "Château Cojușna",
+  "in_db": true,
+  "region": "Codru · Cojușna",
+  "websites": [
+   "https://cojusna.com",
+   "https://migdal.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 68 969 981",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": 200.0,
+    "address": "str. Mecanizatorilor 1, s. Cojușna, r-nul Strășeni, MD-3715"
+   },
+   "agent2": {
+    "phone": "+373 68 969 981",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "str. Mecanizatorilor 1, s. Cojusna, r. Strășeni, MD-3715"
+   }
+  }
+ },
+ {
+  "name": "ATU Winery",
+  "in_db": true,
+  "region": "Codru · Chișinău",
+  "websites": [
+   "https://atu.wine"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 222 237",
+    "hours": "Пн–Вс 11:00–17:00",
+    "tasting_price_lei": 250.0,
+    "address": "bd. Dacia 58/1, Chișinău, MD-2062"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Timbrus Purcari Estate",
+  "in_db": true,
+  "region": "Ștefan Vodă · Purcari",
+  "websites": [
+   "https://timbrus.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 835 300",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "s. Purcari, r-nul Ștefan Vodă, MD-4229"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Domeniile Pripa",
+  "in_db": true,
+  "region": "Ștefan Vodă · Hamcearca",
+  "websites": [
+   "https://pripa.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 108 550",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": 300.0,
+    "address": "s. Purcari, r-nul Ștefan Vodă, MD-4229"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Equinox Winery",
+  "in_db": true,
+  "region": "Ștefan Vodă · Olănești",
+  "websites": [
+   "https://equinox.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 111 602",
+    "hours": "Пн–Пт 09:00–17:00",
+    "tasting_price_lei": null,
+    "address": "s. Olănești, r-nul Ștefan Vodă, MD-4226"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Minis Terrios",
+  "in_db": true,
+  "region": "Codru · Chișinău",
+  "websites": [
+   "https://ministerrios.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 113 230",
+    "hours": "Пн–Пт 10:00–18:00",
+    "tasting_price_lei": null,
+    "address": "str. Columna 104, Chișinău, MD-2012"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Domeniile Davidescu",
+  "in_db": true,
+  "region": "Valul lui Traian · Slobozia Mare",
+  "websites": [
+   "https://domeniiledavidescu.ro"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 388 515",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "str. Unirii 1, s. Slobozia Mare, r-nul Cahul, MD-3929"
+   },
+   "agent2": null
+  }
+ },
+ {
+  "name": "Vinuri de Comrat",
+  "in_db": true,
+  "region": "Valul lui Traian · Comrat",
+  "websites": [
+   "https://vinuridecomrat.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 69 113 230",
+    "hours": "Пн–Вс 08:00–17:00",
+    "tasting_price_lei": 200.0,
+    "address": "str. Vinzavodscaia 1, Comrat, MD-3800"
+   },
+   "agent2": {
+    "phone": "+373 69 113 230",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. Vinzavodscaia 1, Comrat, MD-3801"
+   }
+  }
+ },
+ {
+  "name": "Aurelius Winery",
+  "in_db": true,
+  "region": "Codru · Nisporeni",
+  "websites": [
+   "https://aurelius.md"
+  ],
+  "claims": {
+   "agent1": {
+    "phone": "+373 22 871 321",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": null,
+    "address": "or. Nisporeni, r-nul Nisporeni, MD-6401"
+   },
+   "agent2": {
+    "phone": "",
+    "hours": "",
+    "tasting_price_lei": "да",
+    "address": "or. Nisporeni, str. Alexandru cel Bun 83"
+   }
+  }
+ },
+ {
+  "name": "BASAVIN Winery",
+  "in_db": false,
+  "region": "Valul lui Traian · Basarabeasca",
+  "websites": [
+   "https://basavin.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 60 650 052",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "str. Karl Marx 205, Basarabeasca, MD-6700"
+   }
+  }
+ },
+ {
+  "name": "Carlevana Winery",
+  "in_db": false,
+  "region": "Codru · Merenii Noi",
+  "websites": [
+   "https://carlevana.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 767 555 50",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "str. Ștefan cel Mare 9, s. Merenii Noi, r. Anenii Noi, MD-6527"
+   }
+  }
+ },
+ {
+  "name": "Crama Tudor",
+  "in_db": false,
+  "region": "Codru · Sadova",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 69 763 771",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "s. Sadova, r. Călărași, MD-4436"
+   }
+  }
+ },
+ {
+  "name": "Doina Vin",
+  "in_db": false,
+  "region": "Codru · Răzeni",
+  "websites": [
+   "https://doinavin.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 60 213 339",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "280",
+    "address": "s. Răzeni, r. Ialoveni, MD-7721"
+   }
+  }
+ },
+ {
+  "name": "Javgur Winery",
+  "in_db": false,
+  "region": "Valul lui Traian · Ialpujeni",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 69 500 300",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "150",
+    "address": "s. Ialpujeni, r. Cimișlia, MD-4121"
+   }
+  }
+ },
+ {
+  "name": "Kazayak-Vin",
+  "in_db": false,
+  "region": "Valul lui Traian · Cazaclia",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 22 229 193",
+    "hours": "Пн–Пт 09:00–18:00",
+    "tasting_price_lei": "",
+    "address": "str. Lenin 2, s. Cazaclia, r. Ceadîr-Lunga, MD-6113"
+   }
+  }
+ },
+ {
+  "name": "Mihai Sava Winery",
+  "in_db": false,
+  "region": "Codru · Costești",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 69 917 003",
+    "hours": "Пн–Вс 14:00–20:00",
+    "tasting_price_lei": "200",
+    "address": "s. Costești, r. Ialoveni, MD-6813"
+   }
+  }
+ },
+ {
+  "name": "Salcuta Winery",
+  "in_db": false,
+  "region": "Ștefan Vodă · Sălcuța",
+  "websites": [
+   "https://salcutawine.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 22 245 252",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "s. Sălcuța, r. Căușeni, MD-4323"
+   }
+  }
+ },
+ {
+  "name": "Tronciu Wines",
+  "in_db": false,
+  "region": "Codru · Pereni",
+  "websites": [],
+  "claims": {
+   "agent2": {
+    "phone": "+373 68 056 213",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "s. Pereni, r. Hîncești"
+   }
+  }
+ },
+ {
+  "name": "Vinaria din Vale",
+  "in_db": false,
+  "region": "Valul lui Traian · Slobozia Mare",
+  "websites": [
+   "https://vinaria.md"
+  ],
+  "claims": {
+   "agent2": {
+    "phone": "+373 22 227 442",
+    "hours": "Пн–Вс 10:00–18:00",
+    "tasting_price_lei": "200",
+    "address": "str. Unirii 61, s. Slobozia Mare, r. Cahul, MD-7311"
+   }
+  }
+ }
+]
