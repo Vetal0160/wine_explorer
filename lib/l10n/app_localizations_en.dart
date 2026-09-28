@@ -254,4 +254,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get offlineBannerNoDate => 'Offline · showing saved data';
+
+  @override
+  String get ageTitle => 'Are you 18 or older?';
+
+  @override
+  String get ageText =>
+      'This app contains information about alcoholic beverages and is intended for adults only.';
+
+  @override
+  String get ageYes => 'Yes, I\'m 18+';
+
+  @override
+  String get ageNo => 'No';
+
+  @override
+  String get ageDeniedTitle => 'This app is for adults only';
+
+  @override
+  String get ageDeniedText => 'Come back when you turn 18.';
+
+  @override
+  String get ageBack => 'Back';
+
+  @override
+  String get ageHealthWarning =>
+      'Excessive alcohol consumption is harmful to your health.';
 }

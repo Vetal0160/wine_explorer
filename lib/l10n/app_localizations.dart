@@ -513,6 +513,54 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Нет подключения · показаны сохранённые данные'**
   String get offlineBannerNoDate;
+
+  /// No description provided for @ageTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вам есть 18 лет?'**
+  String get ageTitle;
+
+  /// No description provided for @ageText.
+  ///
+  /// In ru, this message translates to:
+  /// **'В приложении есть информация об алкогольной продукции. Оно предназначено только для совершеннолетних.'**
+  String get ageText;
+
+  /// No description provided for @ageYes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Да, мне есть 18'**
+  String get ageYes;
+
+  /// No description provided for @ageNo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нет'**
+  String get ageNo;
+
+  /// No description provided for @ageDeniedTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Приложение доступно с 18 лет'**
+  String get ageDeniedTitle;
+
+  /// No description provided for @ageDeniedText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Возвращайтесь, когда вам исполнится 18.'**
+  String get ageDeniedText;
+
+  /// No description provided for @ageBack.
+  ///
+  /// In ru, this message translates to:
+  /// **'Назад'**
+  String get ageBack;
+
+  /// No description provided for @ageHealthWarning.
+  ///
+  /// In ru, this message translates to:
+  /// **'Чрезмерное употребление алкоголя вредит вашему здоровью.'**
+  String get ageHealthWarning;
 }
 
 class _AppLocalizationsDelegate

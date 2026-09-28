@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:wine_explorer/core/age_gate_controller.dart';
 import 'package:wine_explorer/core/favorites_controller.dart';
 import 'package:wine_explorer/core/locale_controller.dart';
 import 'package:wine_explorer/data/catalog_store.dart';
@@ -13,6 +14,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     await setAppLocale('ru');
     await loadFavorites();
+    await confirmAge();
     await catalog.load();
 
     await tester.pumpWidget(const WineExplorerApp());

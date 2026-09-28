@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../l10n/app_localizations.dart';
-import '../core/locale_controller.dart';
 import '../data/catalog_store.dart';
 import 'catalog_screen.dart';
 import 'cellar_screen.dart';
 import 'map_screen.dart';
 import 'pairing_screen.dart';
+import '../widgets/language_menu_button.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -44,22 +44,7 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.appTitle),
-        actions: [
-          PopupMenuButton<String>(
-            icon: const Icon(Icons.language),
-            tooltip: l10n.language,
-            onSelected: setAppLocale,
-            itemBuilder: (context) => [
-              for (final entry in supportedLanguages.entries)
-                CheckedPopupMenuItem(
-                  value: entry.key,
-                  checked:
-                      Localizations.localeOf(context).languageCode == entry.key,
-                  child: Text(entry.value),
-                ),
-            ],
-          ),
-        ],
+        actions: [const LanguageMenuButton()],
       ),
       body: switch (_currentIndex) {
         0 => const CatalogScreen(),

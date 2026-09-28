@@ -30,6 +30,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/icon/splash.png
 
 # Иконка: python tool/make_icon.py, затем dart run flutter_launcher_icons
 flutter_launcher_icons:

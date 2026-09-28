@@ -259,4 +259,30 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get offlineBannerNoDate =>
       'Fără conexiune · se afișează datele salvate';
+
+  @override
+  String get ageTitle => 'Ai împlinit 18 ani?';
+
+  @override
+  String get ageText =>
+      'Aplicația conține informații despre băuturi alcoolice și este destinată doar persoanelor majore.';
+
+  @override
+  String get ageYes => 'Da, am peste 18 ani';
+
+  @override
+  String get ageNo => 'Nu';
+
+  @override
+  String get ageDeniedTitle => 'Aplicația este disponibilă de la 18 ani';
+
+  @override
+  String get ageDeniedText => 'Revino când vei împlini 18 ani.';
+
+  @override
+  String get ageBack => 'Înapoi';
+
+  @override
+  String get ageHealthWarning =>
+      'Consumul excesiv de alcool dăunează sănătății.';
 }

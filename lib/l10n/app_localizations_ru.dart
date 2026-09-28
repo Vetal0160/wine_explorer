@@ -259,4 +259,30 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get offlineBannerNoDate =>
       'Нет подключения · показаны сохранённые данные';
+
+  @override
+  String get ageTitle => 'Вам есть 18 лет?';
+
+  @override
+  String get ageText =>
+      'В приложении есть информация об алкогольной продукции. Оно предназначено только для совершеннолетних.';
+
+  @override
+  String get ageYes => 'Да, мне есть 18';
+
+  @override
+  String get ageNo => 'Нет';
+
+  @override
+  String get ageDeniedTitle => 'Приложение доступно с 18 лет';
+
+  @override
+  String get ageDeniedText => 'Возвращайтесь, когда вам исполнится 18.';
+
+  @override
+  String get ageBack => 'Назад';
+
+  @override
+  String get ageHealthWarning =>
+      'Чрезмерное употребление алкоголя вредит вашему здоровью.';
 }

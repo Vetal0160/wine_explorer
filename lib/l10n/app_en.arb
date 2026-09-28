@@ -68,5 +68,13 @@
   "sortName": "Name A–Z",
   "clearSearch": "Clear search",
   "offlineBanner": "Offline · data from {date}",
-  "offlineBannerNoDate": "Offline · showing saved data"
+  "offlineBannerNoDate": "Offline · showing saved data",
+  "ageTitle": "Are you 18 or older?",
+  "ageText": "This app contains information about alcoholic beverages and is intended for adults only.",
+  "ageYes": "Yes, I'm 18+",
+  "ageNo": "No",
+  "ageDeniedTitle": "This app is for adults only",
+  "ageDeniedText": "Come back when you turn 18.",
+  "ageBack": "Back",
+  "ageHealthWarning": "Excessive alcohol consumption is harmful to your health."
 }

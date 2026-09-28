@@ -68,5 +68,13 @@
   "sortName": "După nume",
   "clearSearch": "Șterge căutarea",
   "offlineBanner": "Fără conexiune · date din {date}",
-  "offlineBannerNoDate": "Fără conexiune · se afișează datele salvate"
+  "offlineBannerNoDate": "Fără conexiune · se afișează datele salvate",
+  "ageTitle": "Ai împlinit 18 ani?",
+  "ageText": "Aplicația conține informații despre băuturi alcoolice și este destinată doar persoanelor majore.",
+  "ageYes": "Da, am peste 18 ani",
+  "ageNo": "Nu",
+  "ageDeniedTitle": "Aplicația este disponibilă de la 18 ani",
+  "ageDeniedText": "Revino când vei împlini 18 ani.",
+  "ageBack": "Înapoi",
+  "ageHealthWarning": "Consumul excesiv de alcool dăunează sănătății."
 }
