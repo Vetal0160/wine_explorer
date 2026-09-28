@@ -8,6 +8,7 @@ import 'grapes_screen.dart';
 import 'map_screen.dart';
 import 'pairing_screen.dart';
 import '../widgets/language_menu_button.dart';
+import '../core/external_links.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -39,13 +40,53 @@ class _MainScreenState extends State<MainScreen> with WidgetsBindingObserver {
     }
   }
 
+  void _showAbout(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    showAboutDialog(
+      context: context,
+      applicationName: l10n.appTitle,
+      applicationIcon: Image.asset(
+        'assets/icon/splash.png',
+        width: 48,
+        height: 48,
+      ),
+      applicationLegalese: '© 2026 Vitali Ermisco',
+      children: [
+        const SizedBox(height: 16),
+        Text(l10n.aboutText),
+        const SizedBox(height: 8),
+        Text(l10n.ageHealthWarning, style: const TextStyle(fontSize: 12)),
+        const SizedBox(height: 8),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton.icon(
+            onPressed: () => openExternal(
+              context,
+              Uri.parse(privacyPolicyUrl),
+              errorText: l10n.openError,
+            ),
+            icon: const Icon(Icons.privacy_tip_outlined),
+            label: Text(l10n.privacyPolicy),
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.appTitle),
-        actions: [const LanguageMenuButton()],
+        actions: [
+          IconButton(
+            tooltip: l10n.about,
+            icon: const Icon(Icons.info_outline),
+            onPressed: () => _showAbout(context),
+          ),
+          const LanguageMenuButton(),
+        ],
       ),
       body: switch (_currentIndex) {
         0 => const CatalogScreen(),

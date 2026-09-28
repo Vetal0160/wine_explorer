@@ -801,6 +801,24 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Заметка сохранена, вино — в вашем подвале'**
   String get noteSaved;
+
+  /// No description provided for @about.
+  ///
+  /// In ru, this message translates to:
+  /// **'О приложении'**
+  String get about;
+
+  /// No description provided for @privacyPolicy.
+  ///
+  /// In ru, this message translates to:
+  /// **'Политика конфиденциальности'**
+  String get privacyPolicy;
+
+  /// No description provided for @aboutText.
+  ///
+  /// In ru, this message translates to:
+  /// **'Бесплатный гид по винам, винодельням и сортам винограда Молдовы. Приложение носит информационный характер и не продаёт алкоголь.'**
+  String get aboutText;
 }
 
 class _AppLocalizationsDelegate

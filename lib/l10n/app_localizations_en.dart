@@ -406,4 +406,14 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get noteSaved => 'Note saved, the wine is in your cellar';
+
+  @override
+  String get about => 'About';
+
+  @override
+  String get privacyPolicy => 'Privacy policy';
+
+  @override
+  String get aboutText =>
+      'A free guide to Moldovan wines, wineries and grape varieties. The app provides information only and does not sell alcohol.';
 }

@@ -18,6 +18,10 @@ Future<void> openExternal(
   if (!ok) messenger.showSnackBar(SnackBar(content: Text(errorText)));
 }
 
+/// Политика конфиденциальности (GitHub Pages, папка docs/).
+const privacyPolicyUrl =
+    'https://vetal0160.github.io/wine_explorer/privacy-policy.html';
+
 /// Маршрут до точки в Google Картах (или в браузере).
 Uri routeUri(double latitude, double longitude) => Uri.parse(
   'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude',

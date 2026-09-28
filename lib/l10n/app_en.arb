@@ -116,5 +116,8 @@
   "notePlaceHint": "Shop, winery, restaurant",
   "noteSave": "Save",
   "noteDelete": "Delete",
-  "noteSaved": "Note saved, the wine is in your cellar"
+  "noteSaved": "Note saved, the wine is in your cellar",
+  "about": "About",
+  "privacyPolicy": "Privacy policy",
+  "aboutText": "A free guide to Moldovan wines, wineries and grape varieties. The app provides information only and does not sell alcohol."
 }

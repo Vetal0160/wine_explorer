@@ -412,4 +412,14 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get noteSaved => 'Notița a fost salvată, vinul e în crama ta';
+
+  @override
+  String get about => 'Despre aplicație';
+
+  @override
+  String get privacyPolicy => 'Politica de confidențialitate';
+
+  @override
+  String get aboutText =>
+      'Ghid gratuit al vinurilor, vinăriilor și soiurilor de struguri din Moldova. Aplicația are caracter informativ și nu vinde alcool.';
 }

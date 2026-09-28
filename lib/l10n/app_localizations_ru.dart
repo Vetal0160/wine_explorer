@@ -411,4 +411,14 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get noteSaved => 'Заметка сохранена, вино — в вашем подвале';
+
+  @override
+  String get about => 'О приложении';
+
+  @override
+  String get privacyPolicy => 'Политика конфиденциальности';
+
+  @override
+  String get aboutText =>
+      'Бесплатный гид по винам, винодельням и сортам винограда Молдовы. Приложение носит информационный характер и не продаёт алкоголь.';
 }
