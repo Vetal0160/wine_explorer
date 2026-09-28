@@ -128,5 +128,16 @@
   "locationDeniedForever": "Accesul la locație este interzis în setările aplicației",
   "locationServiceOff": "Localizarea este dezactivată pe telefon",
   "locationFailed": "Locația nu a putut fi determinată",
-  "openSettings": "Setări"
+  "openSettings": "Setări",
+  "routes": "Trasee",
+  "wineRoutes": "Trasee ale vinului",
+  "routesEmpty": "Deocamdată nu sunt trasee.",
+  "routeStops": "{count, plural, one{o oprire} few{{count} opriri} other{{count} de opriri}}",
+  "routeDistance": "≈ {km} km în linie dreaptă",
+  "routeFromPrevious": "{km} km de la precedenta (în linie dreaptă)",
+  "routeOpenInMaps": "Deschide traseul în Google Maps",
+  "routeDriverNote": "Degustările și volanul nu merg împreună: stabiliți un șofer treaz, luați un taxi sau o excursie.",
+  "routeCheckHours": "Programul și degustările e bine să le confirmați din timp la telefon.",
+  "routeStopsTitle": "Opriri",
+  "routeIncludedIn": "Face parte din trasee"
 }

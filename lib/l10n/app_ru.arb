@@ -198,5 +198,37 @@
         "type": "String"
       }
     }
-  }
+  },
+  "routes": "Маршруты",
+  "wineRoutes": "Винные маршруты",
+  "routesEmpty": "Маршрутов пока нет.",
+  "routeStops": "{count, plural, one{{count} остановка} few{{count} остановки} many{{count} остановок} other{{count} остановки}}",
+  "@routeStops": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "routeDistance": "≈ {km} км по прямой",
+  "@routeDistance": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "routeFromPrevious": "{km} км от предыдущей (по прямой)",
+  "@routeFromPrevious": {
+    "placeholders": {
+      "km": {
+        "type": "String"
+      }
+    }
+  },
+  "routeOpenInMaps": "Открыть маршрут в Google Картах",
+  "routeDriverNote": "Дегустации и руль несовместимы: договоритесь о трезвом водителе, возьмите такси или экскурсию.",
+  "routeCheckHours": "Часы работы и дегустации лучше заранее уточнить по телефону.",
+  "routeStopsTitle": "Остановки",
+  "routeIncludedIn": "Входит в маршруты"
 }

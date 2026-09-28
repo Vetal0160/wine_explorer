@@ -452,4 +452,53 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get openSettings => 'Настройки';
+
+  @override
+  String get routes => 'Маршруты';
+
+  @override
+  String get wineRoutes => 'Винные маршруты';
+
+  @override
+  String get routesEmpty => 'Маршрутов пока нет.';
+
+  @override
+  String routeStops(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count остановки',
+      many: '$count остановок',
+      few: '$count остановки',
+      one: '$count остановка',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String routeDistance(String km) {
+    return '≈ $km км по прямой';
+  }
+
+  @override
+  String routeFromPrevious(String km) {
+    return '$km км от предыдущей (по прямой)';
+  }
+
+  @override
+  String get routeOpenInMaps => 'Открыть маршрут в Google Картах';
+
+  @override
+  String get routeDriverNote =>
+      'Дегустации и руль несовместимы: договоритесь о трезвом водителе, возьмите такси или экскурсию.';
+
+  @override
+  String get routeCheckHours =>
+      'Часы работы и дегустации лучше заранее уточнить по телефону.';
+
+  @override
+  String get routeStopsTitle => 'Остановки';
+
+  @override
+  String get routeIncludedIn => 'Входит в маршруты';
 }

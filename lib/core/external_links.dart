@@ -27,6 +27,22 @@ Uri routeUri(double latitude, double longitude) => Uri.parse(
   'https://www.google.com/maps/dir/?api=1&destination=$latitude,$longitude',
 );
 
+/// Маршрут через несколько точек: старт — где пользователь сейчас
+/// (Google Карты подставят сами), дальше остановки по порядку.
+Uri routeWithStopsUri(List<({double lat, double lng})> stops) {
+  final last = stops.last;
+  final waypoints = stops
+      .sublist(0, stops.length - 1)
+      .map((p) => '${p.lat},${p.lng}')
+      .join('|');
+  return Uri.https('www.google.com', '/maps/dir/', {
+    'api': '1',
+    'destination': '${last.lat},${last.lng}',
+    if (waypoints.isNotEmpty) 'waypoints': waypoints,
+    'travelmode': 'driving',
+  });
+}
+
 /// Звонок: убираем пробелы и скобки, оставляем + и цифры.
 Uri phoneUri(String phone) =>
     Uri(scheme: 'tel', path: phone.replaceAll(RegExp(r'[^\d+]'), ''));

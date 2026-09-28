@@ -453,4 +453,52 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get openSettings => 'Setări';
+
+  @override
+  String get routes => 'Trasee';
+
+  @override
+  String get wineRoutes => 'Trasee ale vinului';
+
+  @override
+  String get routesEmpty => 'Deocamdată nu sunt trasee.';
+
+  @override
+  String routeStops(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count de opriri',
+      few: '$count opriri',
+      one: 'o oprire',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String routeDistance(String km) {
+    return '≈ $km km în linie dreaptă';
+  }
+
+  @override
+  String routeFromPrevious(String km) {
+    return '$km km de la precedenta (în linie dreaptă)';
+  }
+
+  @override
+  String get routeOpenInMaps => 'Deschide traseul în Google Maps';
+
+  @override
+  String get routeDriverNote =>
+      'Degustările și volanul nu merg împreună: stabiliți un șofer treaz, luați un taxi sau o excursie.';
+
+  @override
+  String get routeCheckHours =>
+      'Programul și degustările e bine să le confirmați din timp la telefon.';
+
+  @override
+  String get routeStopsTitle => 'Opriri';
+
+  @override
+  String get routeIncludedIn => 'Face parte din trasee';
 }

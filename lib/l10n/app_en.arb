@@ -128,5 +128,16 @@
   "locationDeniedForever": "Location access is blocked in the app settings",
   "locationServiceOff": "Location is turned off on your phone",
   "locationFailed": "Couldn't determine your location",
-  "openSettings": "Settings"
+  "openSettings": "Settings",
+  "routes": "Routes",
+  "wineRoutes": "Wine routes",
+  "routesEmpty": "No routes yet.",
+  "routeStops": "{count, plural, one{1 stop} other{{count} stops}}",
+  "routeDistance": "≈ {km} km as the crow flies",
+  "routeFromPrevious": "{km} km from the previous stop (straight line)",
+  "routeOpenInMaps": "Open route in Google Maps",
+  "routeDriverNote": "Tastings and driving don't mix: arrange a sober driver, take a taxi or join a tour.",
+  "routeCheckHours": "It's best to confirm opening hours and tastings by phone in advance.",
+  "routeStopsTitle": "Stops",
+  "routeIncludedIn": "Part of routes"
 }

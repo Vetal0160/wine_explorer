@@ -2,6 +2,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../models/grape.dart';
 import '../models/wine.dart';
+import '../models/wine_route.dart';
 import '../models/winery.dart';
 import 'wine_repository.dart';
 
@@ -37,5 +38,14 @@ class SupabaseWineRepository implements WineRepository {
         .select()
         .order('sort_order', ascending: true);
     return rows.map(Grape.fromJson).toList();
+  }
+
+  @override
+  Future<List<WineRoute>> fetchRoutes() async {
+    final rows = await _db
+        .from('routes')
+        .select()
+        .order('sort_order', ascending: true);
+    return rows.map(WineRoute.fromJson).toList();
   }
 }

@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/grape.dart';
 import '../models/wine.dart';
+import '../models/wine_route.dart';
 import '../models/winery.dart';
 
 /// Сохранённая копия каталога.
@@ -11,12 +12,14 @@ class CachedCatalog {
   final List<Wine> wines;
   final List<Winery> wineries;
   final List<Grape> grapes;
+  final List<WineRoute> routes;
   final DateTime savedAt;
 
   const CachedCatalog({
     required this.wines,
     required this.wineries,
     this.grapes = const [],
+    this.routes = const [],
     required this.savedAt,
   });
 }
@@ -44,6 +47,9 @@ class CatalogCache {
         grapes: ((json['grapes'] as List?) ?? const [])
             .map((e) => Grape.fromJson(e as Map<String, dynamic>))
             .toList(),
+        routes: ((json['routes'] as List?) ?? const [])
+            .map((e) => WineRoute.fromJson(e as Map<String, dynamic>))
+            .toList(),
         savedAt: DateTime.parse(json['savedAt'] as String),
       );
     } catch (_) {
@@ -56,6 +62,7 @@ class CatalogCache {
     List<Wine> wines,
     List<Winery> wineries, [
     List<Grape> grapes = const [],
+    List<WineRoute> routes = const [],
   ]) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString(
@@ -65,6 +72,7 @@ class CatalogCache {
         'wines': wines.map((w) => w.toJson()).toList(),
         'wineries': wineries.map((w) => w.toJson()).toList(),
         'grapes': grapes.map((g) => g.toJson()).toList(),
+        'routes': routes.map((r) => r.toJson()).toList(),
       }),
     );
   }

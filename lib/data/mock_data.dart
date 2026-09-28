@@ -2,6 +2,7 @@
 // Не правьте вручную — меняйте скрипт и запускайте заново.
 // Используется, пока Supabase не настроен (и в тестах).
 import '../models/grape.dart';
+import '../models/wine_route.dart';
 import '../models/wine.dart';
 import '../models/winery.dart';
 
@@ -661,5 +662,53 @@ const List<Grape> mockGrapes = [
       'ro': 'Fructe roșii, vișine, note ușor teroase.',
       'en': 'Red berries, cherry, light earthy notes.',
     },
+  ),
+];
+
+const List<WineRoute> mockRoutes = [
+  WineRoute(
+    id: 'codru-cellars',
+    title: {
+      'ru': 'Подземные галереи Кодр',
+      'ro': 'Galeriile subterane din Codru',
+      'en': 'Underground cellars of Codru',
+    },
+    description: {
+      'ru': 'Три винодельни в получасе от Кишинёва. Крикова и Милештий Мичь знамениты подземными винными городами, а Кожушна — уютными подвалами и коллекцией вин.',
+      'ro': 'Trei vinării la jumătate de oră de Chișinău. Cricova și Mileștii Mici sunt renumite pentru orașele subterane ale vinului, iar Cojușna — pentru cramele primitoare și colecția de vinuri.',
+      'en': 'Three wineries within half an hour of Chișinău. Cricova and Mileștii Mici are famous for their underground wine cities, Cojușna for its cosy cellars and wine collection.',
+    },
+    duration: {'ru': '1 день', 'ro': '1 zi', 'en': '1 day'},
+    wineryIds: [3, 4],
+  ),
+  WineRoute(
+    id: 'castles-near-chisinau',
+    title: {
+      'ru': 'Замки и шато у Кишинёва',
+      'ro': 'Castele și conace lângă Chișinău',
+      'en': 'Castles and estates near Chișinău',
+    },
+    description: {
+      'ru': 'Замок Мими конца XIX века, семейная Carlevana с дегустациями по сеансам и Asconi с рестораном в традиционном стиле — всё в пределах часа езды.',
+      'ro': 'Castelul Mimi de la sfârșitul secolului XIX, vinăria de familie Carlevana cu degustări pe ore fixe și Asconi cu restaurant în stil tradițional — toate la mai puțin de o oră de drum.',
+      'en': 'The late-19th-century Mimi castle, the family-run Carlevana with scheduled tastings, and Asconi with its traditional-style restaurant — all within an hour\'s drive.',
+    },
+    duration: {'ru': '1 день', 'ro': '1 zi', 'en': '1 day'},
+    wineryIds: [5, 6],
+  ),
+  WineRoute(
+    id: 'south-purcari',
+    title: {
+      'ru': 'Юг: Пуркарь и Штефан-Водэ',
+      'ro': 'Sudul: Purcari și Ștefan Vodă',
+      'en': 'The south: Purcari and Ștefan Vodă',
+    },
+    description: {
+      'ru': 'Историческое шато Пуркарь, соседние винодельни села Пуркарь и семейная Et Cetera в Крокмазе. Около двух часов от Кишинёва — удобнее с ночёвкой.',
+      'ro': 'Istoricul Château Purcari, vinăriile vecine din satul Purcari și vinăria de familie Et Cetera din Crocmaz. Circa două ore de Chișinău — mai comod cu înnoptare.',
+      'en': 'The historic Château Purcari, neighbouring wineries in Purcari village and the family-run Et Cetera in Crocmaz. About two hours from Chișinău, best with an overnight stay.',
+    },
+    duration: {'ru': '1–2 дня', 'ro': '1–2 zile', 'en': '1–2 days'},
+    wineryIds: [2, 7],
   ),
 ];

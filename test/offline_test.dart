@@ -10,6 +10,7 @@ import 'package:wine_explorer/data/wine_repository.dart';
 import 'package:wine_explorer/main.dart';
 import 'package:wine_explorer/models/grape.dart';
 import 'package:wine_explorer/models/wine.dart';
+import 'package:wine_explorer/models/wine_route.dart';
 import 'package:wine_explorer/models/winery.dart';
 
 /// Имитирует отсутствие интернета.
@@ -22,6 +23,9 @@ class _OfflineRepository implements WineRepository {
 
   @override
   Future<List<Grape>> fetchGrapes() async => throw Exception('нет сети');
+
+  @override
+  Future<List<WineRoute>> fetchRoutes() async => throw Exception('нет сети');
 }
 
 Future<void> settle(WidgetTester tester) async {
@@ -107,4 +111,8 @@ class _HangingRepository implements WineRepository {
 
   @override
   Future<List<Grape>> fetchGrapes() => Future.delayed(const Duration(hours: 1));
+
+  @override
+  Future<List<WineRoute>> fetchRoutes() =>
+      Future.delayed(const Duration(hours: 1));
 }

@@ -15,6 +15,7 @@ import '../l10n/app_localizations.dart';
 import '../l10n/wine_type_labels.dart';
 import '../models/winery.dart';
 import '../widgets/catalog_builder.dart';
+import 'routes_screen.dart';
 import 'wine_detail_screen.dart';
 import 'winery_detail_screen.dart';
 
@@ -288,6 +289,25 @@ class _MapScreenState extends State<MapScreen> {
                       ),
                     ],
                   ),
+                  if (catalog.visibleRoutes.isNotEmpty)
+                    Positioned(
+                      left: 12,
+                      top: 12,
+                      child: FilledButton.icon(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const RoutesScreen(),
+                          ),
+                        ),
+                        icon: const Icon(Icons.route),
+                        label: Text(l10n.routes),
+                        style: FilledButton.styleFrom(
+                          elevation: 3,
+                          shadowColor: Colors.black45,
+                        ),
+                      ),
+                    ),
                   Positioned(
                     right: 12,
                     bottom: 12,

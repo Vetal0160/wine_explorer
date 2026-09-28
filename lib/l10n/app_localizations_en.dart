@@ -447,4 +447,51 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get openSettings => 'Settings';
+
+  @override
+  String get routes => 'Routes';
+
+  @override
+  String get wineRoutes => 'Wine routes';
+
+  @override
+  String get routesEmpty => 'No routes yet.';
+
+  @override
+  String routeStops(int count) {
+    String _temp0 = intl.Intl.pluralLogic(
+      count,
+      locale: localeName,
+      other: '$count stops',
+      one: '1 stop',
+    );
+    return '$_temp0';
+  }
+
+  @override
+  String routeDistance(String km) {
+    return '≈ $km km as the crow flies';
+  }
+
+  @override
+  String routeFromPrevious(String km) {
+    return '$km km from the previous stop (straight line)';
+  }
+
+  @override
+  String get routeOpenInMaps => 'Open route in Google Maps';
+
+  @override
+  String get routeDriverNote =>
+      'Tastings and driving don\'t mix: arrange a sober driver, take a taxi or join a tour.';
+
+  @override
+  String get routeCheckHours =>
+      'It\'s best to confirm opening hours and tastings by phone in advance.';
+
+  @override
+  String get routeStopsTitle => 'Stops';
+
+  @override
+  String get routeIncludedIn => 'Part of routes';
 }

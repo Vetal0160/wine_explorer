@@ -873,6 +873,72 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Настройки'**
   String get openSettings;
+
+  /// No description provided for @routes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Маршруты'**
+  String get routes;
+
+  /// No description provided for @wineRoutes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Винные маршруты'**
+  String get wineRoutes;
+
+  /// No description provided for @routesEmpty.
+  ///
+  /// In ru, this message translates to:
+  /// **'Маршрутов пока нет.'**
+  String get routesEmpty;
+
+  /// No description provided for @routeStops.
+  ///
+  /// In ru, this message translates to:
+  /// **'{count, plural, one{{count} остановка} few{{count} остановки} many{{count} остановок} other{{count} остановки}}'**
+  String routeStops(int count);
+
+  /// No description provided for @routeDistance.
+  ///
+  /// In ru, this message translates to:
+  /// **'≈ {km} км по прямой'**
+  String routeDistance(String km);
+
+  /// No description provided for @routeFromPrevious.
+  ///
+  /// In ru, this message translates to:
+  /// **'{km} км от предыдущей (по прямой)'**
+  String routeFromPrevious(String km);
+
+  /// No description provided for @routeOpenInMaps.
+  ///
+  /// In ru, this message translates to:
+  /// **'Открыть маршрут в Google Картах'**
+  String get routeOpenInMaps;
+
+  /// No description provided for @routeDriverNote.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дегустации и руль несовместимы: договоритесь о трезвом водителе, возьмите такси или экскурсию.'**
+  String get routeDriverNote;
+
+  /// No description provided for @routeCheckHours.
+  ///
+  /// In ru, this message translates to:
+  /// **'Часы работы и дегустации лучше заранее уточнить по телефону.'**
+  String get routeCheckHours;
+
+  /// No description provided for @routeStopsTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Остановки'**
+  String get routeStopsTitle;
+
+  /// No description provided for @routeIncludedIn.
+  ///
+  /// In ru, this message translates to:
+  /// **'Входит в маршруты'**
+  String get routeIncludedIn;
 }
 
 class _AppLocalizationsDelegate

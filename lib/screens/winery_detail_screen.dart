@@ -10,6 +10,7 @@ import '../data/catalog_store.dart';
 import '../l10n/app_localizations.dart';
 import '../models/winery.dart';
 import '../widgets/wine_card.dart';
+import 'route_detail_screen.dart';
 import '../widgets/wine_image.dart';
 
 /// Страница винодельни: описание, дегустации, контакты и её вина.
@@ -212,6 +213,34 @@ class WineryDetailScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                if (catalog.routesWith(winery).isNotEmpty) ...[
+                  const SizedBox(height: 20),
+                  Text(
+                    l10n.routeIncludedIn,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: [
+                      for (final r in catalog.routesWith(winery))
+                        ActionChip(
+                          avatar: const Icon(Icons.route, size: 18),
+                          label: Text(r.titleFor(lang)),
+                          onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RouteDetailScreen(route: r),
+                            ),
+                          ),
+                        ),
+                    ],
+                  ),
+                ],
                 if (wines.isNotEmpty) ...[
                   const SizedBox(height: 24),
                   Text(

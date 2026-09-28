@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 
 import '../models/grape.dart';
 import '../models/wine.dart';
+import '../models/wine_route.dart';
 import '../models/winery.dart';
 import 'catalog_cache.dart';
 import 'wine_repository.dart';
@@ -21,6 +22,7 @@ class CatalogStore extends ChangeNotifier {
   List<Wine> wines = const [];
   List<Winery> wineries = const [];
   List<Grape> grapes = const [];
+  List<WineRoute> routes = const [];
   bool isLoading = false;
   Object? error;
   bool _loaded = false;
@@ -42,6 +44,7 @@ class CatalogStore extends ChangeNotifier {
     wines = cached.wines;
     wineries = cached.wineries;
     grapes = cached.grapes;
+    routes = cached.routes;
     updatedAt = cached.savedAt;
     _loaded = true;
     notifyListeners();
@@ -62,16 +65,21 @@ class CatalogStore extends ChangeNotifier {
           debugPrint('Сорта не загрузились: $e');
           return grapes;
         }),
+        repository.fetchRoutes().catchError((Object e) {
+          debugPrint('Маршруты не загрузились: $e');
+          return routes;
+        }),
       ]).timeout(timeout);
       wines = results[0] as List<Wine>;
       wineries = results[1] as List<Winery>;
       grapes = results[2] as List<Grape>;
+      routes = results[3] as List<WineRoute>;
       updatedAt = DateTime.now();
       _loaded = true;
       // Кэш — не критично: если не записался, просто не будет офлайн-копии
       unawaited(
         cache
-            .write(wines, wineries, grapes)
+            .write(wines, wineries, grapes, routes)
             .catchError((Object e) => debugPrint('Кэш не сохранён: $e')),
       );
     } catch (e) {
@@ -121,6 +129,20 @@ class CatalogStore extends ChangeNotifier {
   List<Wine> winesOfGrape(Grape grape) => wines
       .where((w) => splitGrapeVarieties(w.grapeVariety).any(grape.matchesName))
       .toList();
+
+  /// Остановки маршрута по порядку (удалённые винодельни пропускаются).
+  List<Winery> stopsOf(WineRoute route) => [
+    for (final id in route.wineryIds) ?wineryById(id),
+  ];
+
+  /// Маршруты, в которые входит винодельня (с хотя бы двумя остановками).
+  List<WineRoute> routesWith(Winery winery) => routes
+      .where((r) => r.wineryIds.contains(winery.id) && stopsOf(r).length >= 2)
+      .toList();
+
+  /// Маршруты, которые можно показать: хотя бы две найденные остановки.
+  List<WineRoute> get visibleRoutes =>
+      routes.where((r) => stopsOf(r).length >= 2).toList();
 
   /// Вина конкретной винодельни.
   List<Wine> winesOf(Winery winery) => wines

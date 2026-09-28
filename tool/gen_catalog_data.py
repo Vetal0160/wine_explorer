@@ -249,6 +249,48 @@ def grape_sql_rows():
                     f"{sql_text_array(aliases)},\n   {sql_json(desc)},\n   {sql_json(taste)}, {(n + 1) * 10})")
     return rows
 
+# Винные маршруты: id, винодельни по порядку (по названию), название, описание, продолжительность
+ROUTES = [
+    ("codru-cellars", ["Cricova", "Château Cojușna", "Mileștii Mici"], {
+        "ru": "Подземные галереи Кодр", "ro": "Galeriile subterane din Codru", "en": "Underground cellars of Codru"}, {
+        "ru": "Три винодельни в получасе от Кишинёва. Крикова и Милештий Мичь знамениты подземными винными городами, а Кожушна — уютными подвалами и коллекцией вин.",
+        "ro": "Trei vinării la jumătate de oră de Chișinău. Cricova și Mileștii Mici sunt renumite pentru orașele subterane ale vinului, iar Cojușna — pentru cramele primitoare și colecția de vinuri.",
+        "en": "Three wineries within half an hour of Chișinău. Cricova and Mileștii Mici are famous for their underground wine cities, Cojușna for its cosy cellars and wine collection."}, {
+        "ru": "1 день", "ro": "1 zi", "en": "1 day"}),
+    ("castles-near-chisinau", ["Castel Mimi", "Carlevana Winery", "Asconi"], {
+        "ru": "Замки и шато у Кишинёва", "ro": "Castele și conace lângă Chișinău", "en": "Castles and estates near Chișinău"}, {
+        "ru": "Замок Мими конца XIX века, семейная Carlevana с дегустациями по сеансам и Asconi с рестораном в традиционном стиле — всё в пределах часа езды.",
+        "ro": "Castelul Mimi de la sfârșitul secolului XIX, vinăria de familie Carlevana cu degustări pe ore fixe și Asconi cu restaurant în stil tradițional — toate la mai puțin de o oră de drum.",
+        "en": "The late-19th-century Mimi castle, the family-run Carlevana with scheduled tastings, and Asconi with its traditional-style restaurant — all within an hour's drive."}, {
+        "ru": "1 день", "ro": "1 zi", "en": "1 day"}),
+    ("orhei", ["Château Vartely", "Pivnițele Brănești"], {
+        "ru": "Орхей: Вартели и Бранешть", "ro": "Orhei: Vartely și Brănești", "en": "Orhei: Vartely and Brănești"}, {
+        "ru": "Современный комплекс Château Vartely и подвалы Бранешть в бывших известняковых выработках. Поездку легко совместить с Орхеюл Векь.",
+        "ro": "Complexul modern Château Vartely și cramele Brănești din fostele mine de calcar. Excursia se combină ușor cu Orheiul Vechi.",
+        "en": "The modern Château Vartely complex and the Brănești cellars in former limestone mines. Easy to combine with Orheiul Vechi."}, {
+        "ru": "Полдня", "ro": "O jumătate de zi", "en": "Half a day"}),
+    ("south-purcari", ["Château Purcari", "Timbrus Purcari Estate", "Domeniile Pripa", "Et Cetera"], {
+        "ru": "Юг: Пуркарь и Штефан-Водэ", "ro": "Sudul: Purcari și Ștefan Vodă", "en": "The south: Purcari and Ștefan Vodă"}, {
+        "ru": "Историческое шато Пуркарь, соседние винодельни села Пуркарь и семейная Et Cetera в Крокмазе. Около двух часов от Кишинёва — удобнее с ночёвкой.",
+        "ro": "Istoricul Château Purcari, vinăriile vecine din satul Purcari și vinăria de familie Et Cetera din Crocmaz. Circa două ore de Chișinău — mai comod cu înnoptare.",
+        "en": "The historic Château Purcari, neighbouring wineries in Purcari village and the family-run Et Cetera in Crocmaz. About two hours from Chișinău, best with an overnight stay."}, {
+        "ru": "1–2 дня", "ro": "1–2 zile", "en": "1–2 days"}),
+    ("valul-lui-traian", ["Fautor Winery", "Gitana Winery", "NOVAK Winery"], {
+        "ru": "Валул луй Траян: юго-запад", "ro": "Valul lui Traian: sud-vest", "en": "Valul lui Traian: the south-west"}, {
+        "ru": "Винодельни исторического региона Валул луй Траян у реки Прут: Fautor в Тигечь, Gitana в Плопь и NOVAK в Лингуре. Посещения — по договорённости, звоните заранее.",
+        "ro": "Vinăriile regiunii istorice Valul lui Traian, lângă Prut: Fautor la Tigheci, Gitana la Plopi și NOVAK la Lingura. Vizitele — cu programare, sunați din timp.",
+        "en": "Wineries of the historic Valul lui Traian region near the Prut: Fautor in Tigheci, Gitana in Plopi and NOVAK in Lingura. Visits by arrangement — call ahead."}, {
+        "ru": "1 день", "ro": "1 zi", "en": "1 day"}),
+]
+
+
+def routes_sql_rows():
+    rows = []
+    for n, (rid, names, title, desc, dur) in enumerate(ROUTES):
+        ids = ", ".join(f"(select id from public.wineries where name = {sql_str(x)})" for x in names)
+        rows.append(f"  ({sql_str(rid)}, {sql_json(title)},\n   {sql_json(desc)},\n   {sql_json(dur)}, array[{ids}]::bigint[], {(n + 1) * 10})")
+    return rows
+
 
 def dart_map(d):
     return "{" + ", ".join(f"{dart_str(k)}: {dart_str(v)}" for k, v in d.items()) + "}"
@@ -307,6 +349,7 @@ out = ["// Сгенерировано скриптом tool/gen_catalog_data.py 
        "// Не правьте вручную — меняйте скрипт и запускайте заново.",
        "// Используется, пока Supabase не настроен (и в тестах).",
        "import '../models/grape.dart';",
+       "import '../models/wine_route.dart';",
        "import '../models/wine.dart';",
        "import '../models/winery.dart';",
        "",
@@ -350,6 +393,19 @@ for gid, name, color, native, aliases, desc, taste in GRAPES:
     description: {dart_map(desc)},
     taste: {dart_map(taste)},
   ),""")
+out += ["];", "", "const List<WineRoute> mockRoutes = ["]
+mock_ids = {name: i for i, name, *_ in WINERIES}
+for rid, names, title, desc, dur in ROUTES:
+    ids = [mock_ids[x] for x in names if x in mock_ids]
+    if len(ids) < 2:
+        continue  # в тестовых данных только 7 виноделен — маршрут без остановок не нужен
+    out.append(f"""  WineRoute(
+    id: '{rid}',
+    title: {dart_map(title)},
+    description: {dart_map(desc)},
+    duration: {dart_map(dur)},
+    wineryIds: [{", ".join(map(str, ids))}],
+  ),""")
 out += ["];", ""]
 open(ROOT + "lib/data/mock_data.dart", "w", encoding="utf-8", newline="\n").write("\n".join(out))
 
@@ -370,6 +426,8 @@ for i, wid, name, typ, grape, vintage, rating, price, img, desc in WINES:
 sql.append(",\n".join(rows) + "\non conflict (id) do nothing;")
 sql += ["", "insert into public.grapes (id, name, color, is_native, aliases, description, taste, sort_order) values"]
 sql.append(",\n".join(grape_sql_rows()) + "\non conflict (id) do nothing;")
+sql += ["", "insert into public.routes (id, title, description, duration, winery_ids, sort_order) values"]
+sql.append(",\n".join(routes_sql_rows()) + "\non conflict (id) do nothing;")
 sql += ["",
         "-- id заданы вручную — сдвигаем счётчики, чтобы новые записи не конфликтовали",
         "select setval(pg_get_serial_sequence('public.wineries', 'id'), (select max(id) from public.wineries));",
