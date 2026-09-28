@@ -2,12 +2,22 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Wine Explorer (тестовые данные)",
+      // deviceId "emulator" — первый запущенный Android-эмулятор (emulator-5554 и т.п.)
+      "name": "Wine Explorer (Supabase, эмулятор)",
       "request": "launch",
-      "type": "dart"
+      "type": "dart",
+      "deviceId": "emulator",
+      "args": ["--dart-define-from-file=supabase.json"]
     },
     {
-      "name": "Wine Explorer (Supabase)",
+      "name": "Wine Explorer (тестовые данные, эмулятор)",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "emulator"
+    },
+    {
+      // Без deviceId — устройство, выбранное в строке состояния VS Code
+      "name": "Wine Explorer (Supabase, любое устройство)",
       "request": "launch",
       "type": "dart",
       "args": ["--dart-define-from-file=supabase.json"]
