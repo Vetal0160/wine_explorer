@@ -1,3 +1,5 @@
+import 'localized_text.dart';
+
 class Wine {
   final String id;
   final String name;
@@ -11,7 +13,7 @@ class Wine {
   final String imageUrl;
 
   /// Описание на разных языках: {'ru': ..., 'ro': ..., 'en': ...}.
-  final Map<String, String> description;
+  final LocalizedText description;
 
   Wine({
     required this.id,
@@ -27,16 +29,12 @@ class Wine {
     required this.description,
   });
 
-  /// Описание на нужном языке; если перевода нет — русское или любое другое.
   String descriptionFor(String languageCode) =>
-      description[languageCode] ??
-      description['ru'] ??
-      (description.isNotEmpty ? description.values.first : '');
+      localizedFor(description, languageCode);
 
   // Фабричный конструктор для парсинга JSON из API (Supabase)
   factory Wine.fromJson(Map<String, dynamic> json) {
     final winery = json['winery'];
-    final rawDescription = json['description'];
 
     return Wine(
       id: json['id']?.toString() ?? '',
@@ -54,11 +52,7 @@ class Wine {
       rating: _toDouble(json['rating']),
       priceLei: _toDouble(json['avg_price_lei'] ?? json['priceLei']),
       imageUrl: json['image_url'] ?? json['imageUrl'] ?? '',
-      description: rawDescription is Map
-          ? rawDescription.map((k, v) => MapEntry(k.toString(), v.toString()))
-          : rawDescription is String && rawDescription.isNotEmpty
-          ? {'ru': rawDescription}
-          : {},
+      description: parseLocalizedText(json['description']),
     );
   }
 

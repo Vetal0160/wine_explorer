@@ -285,4 +285,53 @@ class AppLocalizationsRo extends AppLocalizations {
   @override
   String get ageHealthWarning =>
       'Consumul excesiv de alcool dăunează sănătății.';
+
+  @override
+  String get wineryMore => 'Detalii';
+
+  @override
+  String get wineryAbout => 'Despre vinărie';
+
+  @override
+  String wineryFounded(int year) {
+    return 'Fondată în $year';
+  }
+
+  @override
+  String get wineryNoInfo => 'Informațiile detaliate nu au fost încă adăugate.';
+
+  @override
+  String get wineryTastings => 'Degustări';
+
+  @override
+  String get wineryTastingsYes => 'Disponibile';
+
+  @override
+  String get wineryTastingsNo => 'Nu sunt disponibile';
+
+  @override
+  String wineryTastingFrom(int price) {
+    return 'de la $price MDL';
+  }
+
+  @override
+  String get wineryBookingRequired => 'Este necesară rezervarea';
+
+  @override
+  String get wineryHours => 'Program';
+
+  @override
+  String get wineryAddress => 'Adresa';
+
+  @override
+  String get wineryPhone => 'Telefon';
+
+  @override
+  String get wineryWebsite => 'Site web';
+
+  @override
+  String get wineryWines => 'Vinurile vinăriei';
+
+  @override
+  String get openError => 'Nu s-a putut deschide';
 }

@@ -10,6 +10,8 @@ import '../l10n/wine_type_labels.dart';
 import '../models/winery.dart';
 import '../widgets/catalog_builder.dart';
 import 'wine_detail_screen.dart';
+import 'winery_detail_screen.dart';
+import '../core/external_links.dart';
 
 /// Карта виноделен (OpenStreetMap, ключ API не нужен).
 class MapScreen extends StatefulWidget {
@@ -167,23 +169,11 @@ class _WinerySheet extends StatelessWidget {
 
   const _WinerySheet({required this.winery});
 
-  Future<void> _openRoute(BuildContext context) async {
-    final l10n = AppLocalizations.of(context)!;
-    final messenger = ScaffoldMessenger.of(context);
-    final uri = Uri.parse(
-      'https://www.google.com/maps/dir/?api=1'
-      '&destination=${winery.latitude},${winery.longitude}',
-    );
-    bool ok;
-    try {
-      ok = await launchUrl(uri, mode: LaunchMode.externalApplication);
-    } catch (_) {
-      ok = false;
-    }
-    if (!ok) {
-      messenger.showSnackBar(SnackBar(content: Text(l10n.mapRouteError)));
-    }
-  }
+  void _openRoute(BuildContext context) => openExternal(
+    context,
+    routeUri(winery.latitude, winery.longitude),
+    errorText: AppLocalizations.of(context)!.mapRouteError,
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -262,13 +252,36 @@ class _WinerySheet extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 8, 20, 12),
-              child: FilledButton.icon(
-                onPressed: () => _openRoute(context),
-                icon: const Icon(Icons.directions),
-                label: Text(l10n.mapRoute),
-                style: FilledButton.styleFrom(
-                  minimumSize: const Size.fromHeight(48),
-                ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              WineryDetailScreen(winery: winery),
+                        ),
+                      ),
+                      icon: const Icon(Icons.info_outline),
+                      label: Text(l10n.wineryMore),
+                      style: OutlinedButton.styleFrom(
+                        minimumSize: const Size.fromHeight(48),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: FilledButton.icon(
+                      onPressed: () => _openRoute(context),
+                      icon: const Icon(Icons.directions),
+                      label: Text(l10n.mapRoute),
+                      style: FilledButton.styleFrom(
+                        minimumSize: const Size.fromHeight(48),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

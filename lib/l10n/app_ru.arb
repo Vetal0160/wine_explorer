@@ -118,5 +118,34 @@
   "ageDeniedTitle": "Приложение доступно с 18 лет",
   "ageDeniedText": "Возвращайтесь, когда вам исполнится 18.",
   "ageBack": "Назад",
-  "ageHealthWarning": "Чрезмерное употребление алкоголя вредит вашему здоровью."
+  "ageHealthWarning": "Чрезмерное употребление алкоголя вредит вашему здоровью.",
+  "wineryMore": "Подробнее",
+  "wineryAbout": "О винодельне",
+  "wineryFounded": "Основана в {year} году",
+  "@wineryFounded": {
+    "placeholders": {
+      "year": {
+        "type": "int"
+      }
+    }
+  },
+  "wineryNoInfo": "Подробная информация пока не добавлена.",
+  "wineryTastings": "Дегустации",
+  "wineryTastingsYes": "Проводятся",
+  "wineryTastingsNo": "Не проводятся",
+  "wineryTastingFrom": "от {price} MDL",
+  "@wineryTastingFrom": {
+    "placeholders": {
+      "price": {
+        "type": "int"
+      }
+    }
+  },
+  "wineryBookingRequired": "Нужна предварительная запись",
+  "wineryHours": "Часы работы",
+  "wineryAddress": "Адрес",
+  "wineryPhone": "Телефон",
+  "wineryWebsite": "Сайт",
+  "wineryWines": "Вина винодельни",
+  "openError": "Не удалось открыть"
 }

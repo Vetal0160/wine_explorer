@@ -27,6 +27,9 @@ class WineImage extends StatelessWidget {
   final double? height;
   final double iconSize;
 
+  /// Иконка на заглушке; по умолчанию — бокал (или хлопушка для игристого).
+  final IconData? placeholderIcon;
+
   const WineImage({
     super.key,
     required this.imageUrl,
@@ -34,6 +37,7 @@ class WineImage extends StatelessWidget {
     this.width,
     this.height,
     this.iconSize = 40,
+    this.placeholderIcon,
   });
 
   @override
@@ -41,6 +45,7 @@ class WineImage extends StatelessWidget {
     final url = resolveWineImageUrl(imageUrl);
     final placeholder = _WinePlaceholder(
       wineType: wineType,
+      icon: placeholderIcon,
       width: width,
       height: height,
       iconSize: iconSize,
@@ -64,9 +69,11 @@ class _WinePlaceholder extends StatelessWidget {
   final double? width;
   final double? height;
   final double iconSize;
+  final IconData? icon;
 
   const _WinePlaceholder({
     required this.wineType,
+    this.icon,
     this.width,
     this.height,
     required this.iconSize,
@@ -102,7 +109,7 @@ class _WinePlaceholder extends StatelessWidget {
         ),
       ),
       child: Icon(
-        wineType == 'sparkling' ? Icons.celebration : Icons.wine_bar,
+        icon ?? (wineType == 'sparkling' ? Icons.celebration : Icons.wine_bar),
         size: iconSize,
         color: dark ? Colors.white70 : Colors.black45,
       ),

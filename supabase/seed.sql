@@ -1,14 +1,21 @@
 -- Начальные данные. Выполняется после миграции (или автоматически через `supabase db reset`).
 -- Сгенерировано скриптом tool/gen_catalog_data.py (вместе с lib/data/mock_data.dart).
 
-insert into public.wineries (id, name, latitude, longitude, region) values
-  (1, 'Château Vartely', 47.3833, 28.8167, 'Codru · Orhei'),
-  (2, 'Château Purcari', 46.525, 29.865, 'Ștefan Vodă · Purcari'),
-  (3, 'Cricova', 47.1386, 28.862, 'Codru · Cricova'),
-  (4, 'Mileștii Mici', 46.905, 28.828, 'Codru · Ialoveni'),
-  (5, 'Castel Mimi', 46.89, 29.305, 'Codru · Bulboaca'),
-  (6, 'Asconi', 46.825, 29.09, 'Codru · Puhoi'),
-  (7, 'Et Cetera', 46.423, 29.93, 'Ștefan Vodă · Crocmaz')
+insert into public.wineries (id, name, latitude, longitude, region, founded_year, description) values
+  (1, 'Château Vartely', 47.3833, 28.8167, 'Codru · Orhei', null,
+   jsonb_build_object('ru', 'Современная винодельня у Орхея, в зоне Кодру. При ней работает туристический комплекс с гостиницей и рестораном.', 'ro', 'Vinărie modernă lângă Orhei, în zona Codru, cu un complex turistic care include hotel și restaurant.', 'en', 'A modern winery near Orhei in the Codru region, with a tourist complex that includes a hotel and a restaurant.')),
+  (2, 'Château Purcari', 46.525, 29.865, 'Ștefan Vodă · Purcari', 1827,
+   jsonb_build_object('ru', 'Одна из старейших виноделен Молдовы, основана в 1827 году на юге страны. Известна красным купажом Negru de Purcari.', 'ro', 'Una dintre cele mai vechi vinării din Moldova, fondată în 1827 în sudul țării. Cunoscută pentru cupajul roșu Negru de Purcari.', 'en', 'One of Moldova''s oldest wineries, founded in 1827 in the south of the country. Known for its red blend Negru de Purcari.')),
+  (3, 'Cricova', 47.1386, 28.862, 'Codru · Cricova', 1952,
+   jsonb_build_object('ru', 'Знаменита подземными винными галереями протяжённостью более 100 километров — настоящий винный город под землёй.', 'ro', 'Renumită pentru galeriile subterane de peste 100 de kilometri — un adevărat oraș al vinului sub pământ.', 'en', 'Famous for its underground wine galleries stretching over 100 kilometres — a true wine city beneath the ground.')),
+  (4, 'Mileștii Mici', 46.905, 28.828, 'Codru · Ialoveni', 1969,
+   jsonb_build_object('ru', 'Подземные галереи с огромной коллекцией вин, которая занесена в Книгу рекордов Гиннесса как крупнейшая в мире.', 'ro', 'Galerii subterane cu o colecție imensă de vinuri, înscrisă în Cartea Recordurilor Guinness drept cea mai mare din lume.', 'en', 'Underground galleries holding a vast wine collection listed in the Guinness World Records as the largest in the world.')),
+  (5, 'Castel Mimi', 46.89, 29.305, 'Codru · Bulboaca', 1893,
+   jsonb_build_object('ru', 'Винодельня в замке, построенном в конце XIX века Константином Мими. Сегодня здесь также ресторан и гостиница.', 'ro', 'Vinărie într-un castel construit la sfârșitul secolului XIX de Constantin Mimi, astăzi cu restaurant și hotel.', 'en', 'A winery in a castle built in the late 19th century by Constantin Mimi, now also home to a restaurant and a hotel.')),
+  (6, 'Asconi', 46.825, 29.09, 'Codru · Puhoi', null,
+   jsonb_build_object('ru', 'Семейная винодельня в селе Пуой, недалеко от Кишинёва, с рестораном в традиционном молдавском стиле.', 'ro', 'Vinărie de familie în satul Puhoi, aproape de Chișinău, cu un restaurant în stil tradițional moldovenesc.', 'en', 'A family winery in the village of Puhoi, near Chișinău, with a restaurant in traditional Moldovan style.')),
+  (7, 'Et Cetera', 46.423, 29.93, 'Ștefan Vodă · Crocmaz', null,
+   jsonb_build_object('ru', 'Небольшая семейная винодельня в селе Крокмаз на юге Молдовы, в регионе Штефан-Водэ.', 'ro', 'Vinărie mică de familie în satul Crocmaz, în sudul Moldovei, în regiunea Ștefan Vodă.', 'en', 'A small family winery in the village of Crocmaz in southern Moldova, in the Ștefan Vodă region.'))
 on conflict (id) do nothing;
 
 insert into public.wines (id, winery_id, name, type, grape_variety, vintage, rating, avg_price_lei, image_url, description) values

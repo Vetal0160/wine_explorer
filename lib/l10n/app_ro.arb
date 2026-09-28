@@ -76,5 +76,20 @@
   "ageDeniedTitle": "Aplicația este disponibilă de la 18 ani",
   "ageDeniedText": "Revino când vei împlini 18 ani.",
   "ageBack": "Înapoi",
-  "ageHealthWarning": "Consumul excesiv de alcool dăunează sănătății."
+  "ageHealthWarning": "Consumul excesiv de alcool dăunează sănătății.",
+  "wineryMore": "Detalii",
+  "wineryAbout": "Despre vinărie",
+  "wineryFounded": "Fondată în {year}",
+  "wineryNoInfo": "Informațiile detaliate nu au fost încă adăugate.",
+  "wineryTastings": "Degustări",
+  "wineryTastingsYes": "Disponibile",
+  "wineryTastingsNo": "Nu sunt disponibile",
+  "wineryTastingFrom": "de la {price} MDL",
+  "wineryBookingRequired": "Este necesară rezervarea",
+  "wineryHours": "Program",
+  "wineryAddress": "Adresa",
+  "wineryPhone": "Telefon",
+  "wineryWebsite": "Site web",
+  "wineryWines": "Vinurile vinăriei",
+  "openError": "Nu s-a putut deschide"
 }

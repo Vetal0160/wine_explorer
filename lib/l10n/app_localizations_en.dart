@@ -280,4 +280,53 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get ageHealthWarning =>
       'Excessive alcohol consumption is harmful to your health.';
+
+  @override
+  String get wineryMore => 'Details';
+
+  @override
+  String get wineryAbout => 'About the winery';
+
+  @override
+  String wineryFounded(int year) {
+    return 'Founded in $year';
+  }
+
+  @override
+  String get wineryNoInfo => 'Details haven\'t been added yet.';
+
+  @override
+  String get wineryTastings => 'Tastings';
+
+  @override
+  String get wineryTastingsYes => 'Available';
+
+  @override
+  String get wineryTastingsNo => 'Not available';
+
+  @override
+  String wineryTastingFrom(int price) {
+    return 'from $price MDL';
+  }
+
+  @override
+  String get wineryBookingRequired => 'Booking required';
+
+  @override
+  String get wineryHours => 'Opening hours';
+
+  @override
+  String get wineryAddress => 'Address';
+
+  @override
+  String get wineryPhone => 'Phone';
+
+  @override
+  String get wineryWebsite => 'Website';
+
+  @override
+  String get wineryWines => 'Wines from this winery';
+
+  @override
+  String get openError => 'Couldn\'t open';
 }

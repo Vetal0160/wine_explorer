@@ -561,6 +561,96 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Чрезмерное употребление алкоголя вредит вашему здоровью.'**
   String get ageHealthWarning;
+
+  /// No description provided for @wineryMore.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подробнее'**
+  String get wineryMore;
+
+  /// No description provided for @wineryAbout.
+  ///
+  /// In ru, this message translates to:
+  /// **'О винодельне'**
+  String get wineryAbout;
+
+  /// No description provided for @wineryFounded.
+  ///
+  /// In ru, this message translates to:
+  /// **'Основана в {year} году'**
+  String wineryFounded(int year);
+
+  /// No description provided for @wineryNoInfo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подробная информация пока не добавлена.'**
+  String get wineryNoInfo;
+
+  /// No description provided for @wineryTastings.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дегустации'**
+  String get wineryTastings;
+
+  /// No description provided for @wineryTastingsYes.
+  ///
+  /// In ru, this message translates to:
+  /// **'Проводятся'**
+  String get wineryTastingsYes;
+
+  /// No description provided for @wineryTastingsNo.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не проводятся'**
+  String get wineryTastingsNo;
+
+  /// No description provided for @wineryTastingFrom.
+  ///
+  /// In ru, this message translates to:
+  /// **'от {price} MDL'**
+  String wineryTastingFrom(int price);
+
+  /// No description provided for @wineryBookingRequired.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нужна предварительная запись'**
+  String get wineryBookingRequired;
+
+  /// No description provided for @wineryHours.
+  ///
+  /// In ru, this message translates to:
+  /// **'Часы работы'**
+  String get wineryHours;
+
+  /// No description provided for @wineryAddress.
+  ///
+  /// In ru, this message translates to:
+  /// **'Адрес'**
+  String get wineryAddress;
+
+  /// No description provided for @wineryPhone.
+  ///
+  /// In ru, this message translates to:
+  /// **'Телефон'**
+  String get wineryPhone;
+
+  /// No description provided for @wineryWebsite.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сайт'**
+  String get wineryWebsite;
+
+  /// No description provided for @wineryWines.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вина винодельни'**
+  String get wineryWines;
+
+  /// No description provided for @openError.
+  ///
+  /// In ru, this message translates to:
+  /// **'Не удалось открыть'**
+  String get openError;
 }
 
 class _AppLocalizationsDelegate

@@ -83,6 +83,23 @@ class CatalogStore extends ChangeNotifier {
     return null;
   }
 
+  Winery? wineryById(int id) {
+    for (final winery in wineries) {
+      if (winery.id == id) return winery;
+    }
+    return null;
+  }
+
+  /// Винодельня вина: по id, а если его нет — по названию.
+  Winery? wineryFor(Wine wine) {
+    final id = int.tryParse(wine.wineryId ?? '');
+    if (id != null) return wineryById(id);
+    for (final winery in wineries) {
+      if (winery.name == wine.wineryName) return winery;
+    }
+    return null;
+  }
+
   /// Вина конкретной винодельни.
   List<Wine> winesOf(Winery winery) => wines
       .where(

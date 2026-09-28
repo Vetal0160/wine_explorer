@@ -6,6 +6,8 @@ import '../l10n/app_localizations.dart';
 import '../l10n/wine_type_labels.dart';
 import '../models/wine.dart';
 import '../widgets/wine_image.dart';
+import '../data/catalog_store.dart';
+import 'winery_detail_screen.dart';
 
 /// Детальная карточка вина.
 class WineDetailScreen extends StatelessWidget {
@@ -108,14 +110,7 @@ class WineDetailScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 4),
-                      Text(
-                        '${wine.wineryName} • ${l10n.vintageYear(wine.vintage)}',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey[700],
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
+                      _WineryLink(wine: wine),
 
                       const SizedBox(height: 16),
 
@@ -263,6 +258,68 @@ class _RatingBadge extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// «Château Purcari › • 2023 год» — нажатие открывает страницу винодельни.
+class _WineryLink extends StatelessWidget {
+  final Wine wine;
+
+  const _WineryLink({required this.wine});
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final winery = catalog.wineryFor(wine);
+    final style = TextStyle(
+      fontSize: 16,
+      color: Colors.grey[700],
+      fontWeight: FontWeight.w500,
+    );
+    final vintage = Text(' • ${l10n.vintageYear(wine.vintage)}', style: style);
+
+    if (winery == null) {
+      return Text(
+        '${wine.wineryName} • ${l10n.vintageYear(wine.vintage)}',
+        style: style,
+      );
+    }
+    return Wrap(
+      crossAxisAlignment: WrapCrossAlignment.center,
+      children: [
+        InkWell(
+          borderRadius: BorderRadius.circular(6),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => WineryDetailScreen(winery: winery),
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 4),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  wine.wineryName,
+                  style: style.copyWith(
+                    color: AppTheme.wineRed,
+                    decoration: TextDecoration.underline,
+                    decorationColor: AppTheme.wineRed.withValues(alpha: 0.4),
+                  ),
+                ),
+                const Icon(
+                  Icons.chevron_right,
+                  size: 18,
+                  color: AppTheme.wineRed,
+                ),
+              ],
+            ),
+          ),
+        ),
+        vintage,
+      ],
     );
   }
 }

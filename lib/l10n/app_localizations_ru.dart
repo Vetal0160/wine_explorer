@@ -285,4 +285,53 @@ class AppLocalizationsRu extends AppLocalizations {
   @override
   String get ageHealthWarning =>
       'Чрезмерное употребление алкоголя вредит вашему здоровью.';
+
+  @override
+  String get wineryMore => 'Подробнее';
+
+  @override
+  String get wineryAbout => 'О винодельне';
+
+  @override
+  String wineryFounded(int year) {
+    return 'Основана в $year году';
+  }
+
+  @override
+  String get wineryNoInfo => 'Подробная информация пока не добавлена.';
+
+  @override
+  String get wineryTastings => 'Дегустации';
+
+  @override
+  String get wineryTastingsYes => 'Проводятся';
+
+  @override
+  String get wineryTastingsNo => 'Не проводятся';
+
+  @override
+  String wineryTastingFrom(int price) {
+    return 'от $price MDL';
+  }
+
+  @override
+  String get wineryBookingRequired => 'Нужна предварительная запись';
+
+  @override
+  String get wineryHours => 'Часы работы';
+
+  @override
+  String get wineryAddress => 'Адрес';
+
+  @override
+  String get wineryPhone => 'Телефон';
+
+  @override
+  String get wineryWebsite => 'Сайт';
+
+  @override
+  String get wineryWines => 'Вина винодельни';
+
+  @override
+  String get openError => 'Не удалось открыть';
 }

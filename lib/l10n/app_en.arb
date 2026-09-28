@@ -76,5 +76,20 @@
   "ageDeniedTitle": "This app is for adults only",
   "ageDeniedText": "Come back when you turn 18.",
   "ageBack": "Back",
-  "ageHealthWarning": "Excessive alcohol consumption is harmful to your health."
+  "ageHealthWarning": "Excessive alcohol consumption is harmful to your health.",
+  "wineryMore": "Details",
+  "wineryAbout": "About the winery",
+  "wineryFounded": "Founded in {year}",
+  "wineryNoInfo": "Details haven't been added yet.",
+  "wineryTastings": "Tastings",
+  "wineryTastingsYes": "Available",
+  "wineryTastingsNo": "Not available",
+  "wineryTastingFrom": "from {price} MDL",
+  "wineryBookingRequired": "Booking required",
+  "wineryHours": "Opening hours",
+  "wineryAddress": "Address",
+  "wineryPhone": "Phone",
+  "wineryWebsite": "Website",
+  "wineryWines": "Wines from this winery",
+  "openError": "Couldn't open"
 }

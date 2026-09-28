@@ -3,6 +3,7 @@
 Запуск: python tool/gen_catalog_data.py
 """
 import os
+import sys
 
 # Корень проекта — на уровень выше папки tool/
 ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "")
@@ -22,6 +23,47 @@ WINERIES = [
     (7, "Et Cetera", 46.4230, 29.9300, "Ștefan Vodă · Crocmaz"),
 ]
 WINERY_NAME = {w[0]: w[1] for w in WINERIES}
+
+# Описания — по общеизвестным фактам, перед релизом стоит сверить с сайтами виноделен.
+# Телефоны, часы работы и цены дегустаций не выдумываем — заполняются в Supabase.
+WINERY_DETAILS = {
+    1: {"founded": None, "description": {
+        "ru": "Современная винодельня у Орхея, в зоне Кодру. При ней работает туристический комплекс с гостиницей и рестораном.",
+        "ro": "Vinărie modernă lângă Orhei, în zona Codru, cu un complex turistic care include hotel și restaurant.",
+        "en": "A modern winery near Orhei in the Codru region, with a tourist complex that includes a hotel and a restaurant."}},
+    2: {"founded": 1827, "description": {
+        "ru": "Одна из старейших виноделен Молдовы, основана в 1827 году на юге страны. Известна красным купажом Negru de Purcari.",
+        "ro": "Una dintre cele mai vechi vinării din Moldova, fondată în 1827 în sudul țării. Cunoscută pentru cupajul roșu Negru de Purcari.",
+        "en": "One of Moldova's oldest wineries, founded in 1827 in the south of the country. Known for its red blend Negru de Purcari."}},
+    3: {"founded": 1952, "description": {
+        "ru": "Знаменита подземными винными галереями протяжённостью более 100 километров — настоящий винный город под землёй.",
+        "ro": "Renumită pentru galeriile subterane de peste 100 de kilometri — un adevărat oraș al vinului sub pământ.",
+        "en": "Famous for its underground wine galleries stretching over 100 kilometres — a true wine city beneath the ground."}},
+    4: {"founded": 1969, "description": {
+        "ru": "Подземные галереи с огромной коллекцией вин, которая занесена в Книгу рекордов Гиннесса как крупнейшая в мире.",
+        "ro": "Galerii subterane cu o colecție imensă de vinuri, înscrisă în Cartea Recordurilor Guinness drept cea mai mare din lume.",
+        "en": "Underground galleries holding a vast wine collection listed in the Guinness World Records as the largest in the world."}},
+    5: {"founded": 1893, "description": {
+        "ru": "Винодельня в замке, построенном в конце XIX века Константином Мими. Сегодня здесь также ресторан и гостиница.",
+        "ro": "Vinărie într-un castel construit la sfârșitul secolului XIX de Constantin Mimi, astăzi cu restaurant și hotel.",
+        "en": "A winery in a castle built in the late 19th century by Constantin Mimi, now also home to a restaurant and a hotel."}},
+    6: {"founded": None, "description": {
+        "ru": "Семейная винодельня в селе Пуой, недалеко от Кишинёва, с рестораном в традиционном молдавском стиле.",
+        "ro": "Vinărie de familie în satul Puhoi, aproape de Chișinău, cu un restaurant în stil tradițional moldovenesc.",
+        "en": "A family winery in the village of Puhoi, near Chișinău, with a restaurant in traditional Moldovan style."}},
+    7: {"founded": None, "description": {
+        "ru": "Небольшая семейная винодельня в селе Крокмаз на юге Молдовы, в регионе Штефан-Водэ.",
+        "ro": "Vinărie mică de familie în satul Crocmaz, în sudul Moldovei, în regiunea Ștefan Vodă.",
+        "en": "A small family winery in the village of Crocmaz in southern Moldova, in the Ștefan Vodă region."}},
+}
+
+
+def dart_map(d):
+    return "{" + ", ".join(f"{dart_str(k)}: {dart_str(v)}" for k, v in d.items()) + "}"
+
+
+def sql_json(d):
+    return "jsonb_build_object(" + ", ".join(f"{sql_str(k)}, {sql_str(v)}" for k, v in d.items()) + ")"
 
 # id, winery_id, name, type, grape, vintage, rating, price, image, {ru, ro, en}
 WINES = [
@@ -93,12 +135,15 @@ for i, wid, name, typ, grape, vintage, rating, price, img, desc in WINES:
   ),""")
 out += ["];", "", "// Координаты примерные — уточните перед релизом", "const List<Winery> mockWineries = ["]
 for i, name, lat, lng, region in WINERIES:
+    det = WINERY_DETAILS.get(i, {})
+    founded = f"\n    foundedYear: {det['founded']}," if det.get("founded") else ""
     out.append(f"""  Winery(
     id: {i},
     name: {dart_str(name)},
     latitude: {lat},
     longitude: {lng},
     region: {dart_str(region)},
+    description: {dart_map(det.get("description", {}))},{founded}
   ),""")
 out += ["];", ""]
 open(ROOT + "lib/data/mock_data.dart", "w", encoding="utf-8", newline="\n").write("\n".join(out))
@@ -108,8 +153,10 @@ os.makedirs(ROOT + "supabase", exist_ok=True)
 sql = ["-- Начальные данные. Выполняется после миграции (или автоматически через `supabase db reset`).",
        "-- Сгенерировано скриптом tool/gen_catalog_data.py (вместе с lib/data/mock_data.dart).",
        "",
-       "insert into public.wineries (id, name, latitude, longitude, region) values"]
-sql.append(",\n".join(f"  ({i}, {sql_str(n)}, {lat}, {lng}, {sql_str(r)})" for i, n, lat, lng, r in WINERIES) + "\non conflict (id) do nothing;")
+       "insert into public.wineries (id, name, latitude, longitude, region, founded_year, description) values"]
+sql.append(",\n".join(
+    f"  ({i}, {sql_str(n)}, {lat}, {lng}, {sql_str(r)}, {WINERY_DETAILS.get(i, {}).get('founded') or 'null'},\n   {sql_json(WINERY_DETAILS.get(i, {}).get('description', {}))})"
+    for i, n, lat, lng, r in WINERIES) + "\non conflict (id) do nothing;")
 sql += ["", "insert into public.wines (id, winery_id, name, type, grape_variety, vintage, rating, avg_price_lei, image_url, description) values"]
 rows = []
 for i, wid, name, typ, grape, vintage, rating, price, img, desc in WINES:
@@ -122,4 +169,13 @@ sql += ["",
         "select setval(pg_get_serial_sequence('public.wines', 'id'), (select max(id) from public.wines));",
         ""]
 open(ROOT + "supabase/seed.sql", "w", encoding="utf-8", newline="\n").write("\n".join(sql))
+
+if len(sys.argv) > 1:
+    # python tool/gen_catalog_data.py <файл> — SQL для обновления описаний в уже заполненной базе
+    upd = ["-- Описания и год основания виноделен (для базы, заполненной раньше)."]
+    for i, *_ in WINERIES:
+        det = WINERY_DETAILS.get(i, {})
+        upd.append(f"update public.wineries set description = {sql_json(det.get('description', {}))}, "
+                   f"founded_year = {det.get('founded') or 'null'} where id = {i};")
+    open(sys.argv[1], "w", encoding="utf-8", newline="\n").write("\n".join(upd) + "\n")
 print("ok")

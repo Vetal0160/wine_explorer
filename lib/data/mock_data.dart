@@ -151,6 +151,11 @@ const List<Winery> mockWineries = [
     latitude: 47.3833,
     longitude: 28.8167,
     region: 'Codru · Orhei',
+    description: {
+      'ru': 'Современная винодельня у Орхея, в зоне Кодру. При ней работает туристический комплекс с гостиницей и рестораном.',
+      'ro': 'Vinărie modernă lângă Orhei, în zona Codru, cu un complex turistic care include hotel și restaurant.',
+      'en': 'A modern winery near Orhei in the Codru region, with a tourist complex that includes a hotel and a restaurant.',
+    },
   ),
   Winery(
     id: 2,
@@ -158,6 +163,12 @@ const List<Winery> mockWineries = [
     latitude: 46.525,
     longitude: 29.865,
     region: 'Ștefan Vodă · Purcari',
+    description: {
+      'ru': 'Одна из старейших виноделен Молдовы, основана в 1827 году на юге страны. Известна красным купажом Negru de Purcari.',
+      'ro': 'Una dintre cele mai vechi vinării din Moldova, fondată în 1827 în sudul țării. Cunoscută pentru cupajul roșu Negru de Purcari.',
+      'en': 'One of Moldova\'s oldest wineries, founded in 1827 in the south of the country. Known for its red blend Negru de Purcari.',
+    },
+    foundedYear: 1827,
   ),
   Winery(
     id: 3,
@@ -165,6 +176,12 @@ const List<Winery> mockWineries = [
     latitude: 47.1386,
     longitude: 28.862,
     region: 'Codru · Cricova',
+    description: {
+      'ru': 'Знаменита подземными винными галереями протяжённостью более 100 километров — настоящий винный город под землёй.',
+      'ro': 'Renumită pentru galeriile subterane de peste 100 de kilometri — un adevărat oraș al vinului sub pământ.',
+      'en': 'Famous for its underground wine galleries stretching over 100 kilometres — a true wine city beneath the ground.',
+    },
+    foundedYear: 1952,
   ),
   Winery(
     id: 4,
@@ -172,6 +189,12 @@ const List<Winery> mockWineries = [
     latitude: 46.905,
     longitude: 28.828,
     region: 'Codru · Ialoveni',
+    description: {
+      'ru': 'Подземные галереи с огромной коллекцией вин, которая занесена в Книгу рекордов Гиннесса как крупнейшая в мире.',
+      'ro': 'Galerii subterane cu o colecție imensă de vinuri, înscrisă în Cartea Recordurilor Guinness drept cea mai mare din lume.',
+      'en': 'Underground galleries holding a vast wine collection listed in the Guinness World Records as the largest in the world.',
+    },
+    foundedYear: 1969,
   ),
   Winery(
     id: 5,
@@ -179,6 +202,12 @@ const List<Winery> mockWineries = [
     latitude: 46.89,
     longitude: 29.305,
     region: 'Codru · Bulboaca',
+    description: {
+      'ru': 'Винодельня в замке, построенном в конце XIX века Константином Мими. Сегодня здесь также ресторан и гостиница.',
+      'ro': 'Vinărie într-un castel construit la sfârșitul secolului XIX de Constantin Mimi, astăzi cu restaurant și hotel.',
+      'en': 'A winery in a castle built in the late 19th century by Constantin Mimi, now also home to a restaurant and a hotel.',
+    },
+    foundedYear: 1893,
   ),
   Winery(
     id: 6,
@@ -186,6 +215,11 @@ const List<Winery> mockWineries = [
     latitude: 46.825,
     longitude: 29.09,
     region: 'Codru · Puhoi',
+    description: {
+      'ru': 'Семейная винодельня в селе Пуой, недалеко от Кишинёва, с рестораном в традиционном молдавском стиле.',
+      'ro': 'Vinărie de familie în satul Puhoi, aproape de Chișinău, cu un restaurant în stil tradițional moldovenesc.',
+      'en': 'A family winery in the village of Puhoi, near Chișinău, with a restaurant in traditional Moldovan style.',
+    },
   ),
   Winery(
     id: 7,
@@ -193,5 +227,10 @@ const List<Winery> mockWineries = [
     latitude: 46.423,
     longitude: 29.93,
     region: 'Ștefan Vodă · Crocmaz',
+    description: {
+      'ru': 'Небольшая семейная винодельня в селе Крокмаз на юге Молдовы, в регионе Штефан-Водэ.',
+      'ro': 'Vinărie mică de familie în satul Crocmaz, în sudul Moldovei, în regiunea Ștefan Vodă.',
+      'en': 'A small family winery in the village of Crocmaz in southern Moldova, in the Ștefan Vodă region.',
+    },
   ),
 ];
