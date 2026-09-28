@@ -104,6 +104,8 @@ class _MapScreenState extends State<MapScreen> {
             ),
             // Атрибуция обязательна по правилам OpenStreetMap
             RichAttributionWidget(
+              // Справа — кнопка «Показать все», атрибуция не должна быть под ней
+              alignment: AttributionAlignment.bottomLeft,
               attributions: [
                 TextSourceAttribution(
                   'OpenStreetMap contributors',

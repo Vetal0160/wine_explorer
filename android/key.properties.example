@@ -1,0 +1,7 @@
+# Скопируйте в android/key.properties и впишите свои значения.
+# key.properties и сам ключ (.jks) в git НЕ попадают — храните их копию в надёжном месте.
+storePassword=ПАРОЛЬ_ХРАНИЛИЩА
+keyPassword=ПАРОЛЬ_КЛЮЧА
+keyAlias=upload
+# Путь к ключу; в Windows — через / или \\
+storeFile=C:/Users/vital/keys/wine-explorer-upload.jks
