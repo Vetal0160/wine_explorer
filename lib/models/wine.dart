@@ -31,9 +31,13 @@ class Wine {
       wineryName: json['winery_name'] ?? json['wineryName'] ?? '',
       type: json['type'] ?? '',
       grapeVariety: json['grape_variety'] ?? json['grapeVariety'] ?? '',
-      vintage: json['vintage'] is int ? json['vintage'] : int.tryParse(json['vintage']?.toString() ?? '0') ?? 0,
+      vintage: json['vintage'] is int
+          ? json['vintage']
+          : int.tryParse(json['vintage']?.toString() ?? '0') ?? 0,
       rating: (json['rating'] as num?)?.toDouble() ?? 0.0,
-      priceLei: (json['avg_price_lei'] ?? json['priceLei'] as num?)?.toDouble() ?? 0.0,
+      priceLei:
+          (json['avg_price_lei'] ?? json['priceLei'] as num?)?.toDouble() ??
+          0.0,
       imageUrl: json['image_url'] ?? json['imageUrl'] ?? '',
       description: json['description'] ?? '',
     );

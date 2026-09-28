@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+
 import '../l10n/app_localizations.dart';
 import '../core/locale_controller.dart';
 import 'catalog_screen.dart';
+import 'cellar_screen.dart';
 import 'map_screen.dart';
 import 'pairing_screen.dart';
 
@@ -14,12 +16,6 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
-
-  final List<Widget> _screens = const [
-    CatalogScreen(),
-    MapScreen(),
-    PairingScreen(),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -44,9 +40,16 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
       ),
-      body: _screens[_currentIndex],
+      body: switch (_currentIndex) {
+        0 => const CatalogScreen(),
+        1 => const MapScreen(),
+        2 => const PairingScreen(),
+        _ => CellarScreen(onBrowse: () => setState(() => _currentIndex = 0)),
+      },
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        // С 4 вкладками по умолчанию включается shifting-режим с белыми иконками
+        type: BottomNavigationBarType.fixed,
         onTap: (index) => setState(() => _currentIndex = index),
         selectedItemColor: Theme.of(context).colorScheme.primary,
         items: [
@@ -61,6 +64,11 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
             icon: const Icon(Icons.restaurant_menu),
             label: l10n.tabPairings,
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.favorite_border),
+            activeIcon: const Icon(Icons.favorite),
+            label: l10n.tabCellar,
           ),
         ],
       ),

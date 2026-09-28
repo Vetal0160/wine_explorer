@@ -113,4 +113,83 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get mapShowAll => 'Arată toate vinăriile';
+
+  @override
+  String get tabCellar => 'Crama';
+
+  @override
+  String get cellarEmptyTitle => 'Crama ta este goală deocamdată';
+
+  @override
+  String get cellarEmptyHint =>
+      'Apasă ♡ pe pagina unui vin pentru a-l salva aici.';
+
+  @override
+  String get cellarBrowse => 'Mergi la catalog';
+
+  @override
+  String get pairingQuestion => 'Ce ai pe masă?';
+
+  @override
+  String get pairingMatches => 'Vinuri potrivite';
+
+  @override
+  String get pairingNoMatches =>
+      'Deocamdată nu sunt vinuri potrivite în catalog';
+
+  @override
+  String get dishPlacinte => 'Plăcinte';
+
+  @override
+  String get dishTochitura => 'Tocană / tochitură';
+
+  @override
+  String get dishZeama => 'Zeamă';
+
+  @override
+  String get dishMamaliga => 'Mămăligă cu brânză';
+
+  @override
+  String get dishGrill => 'Frigărui la grătar';
+
+  @override
+  String get dishFish => 'Pește';
+
+  @override
+  String get dishCheese => 'Brânzeturi';
+
+  @override
+  String get dishDessert => 'Deserturi';
+
+  @override
+  String get dishReasonPlacinte =>
+      'Plăcintele cu carne sau brânză se potrivesc cu un roșu moale sau un rose proaspăt — vinul nu acoperă umplutura.';
+
+  @override
+  String get dishReasonTochitura =>
+      'Tocănița bogată cere un roșu tanic: Fetească Neagră sau Rară Neagră se deschid cel mai bine alături de ea.';
+
+  @override
+  String get dishReasonZeama =>
+      'Zeama acrișoară cu borș și verdeață e împrospătată de un alb sec cu aciditate vie.';
+
+  @override
+  String get dishReasonMamaliga =>
+      'Mămăliga cremoasă cu smântână și brânză cere un alb sau rose ușor, care împrospătează gustul.';
+
+  @override
+  String get dishReasonGrill =>
+      'Carnea afumată de pe jar este clasica pentru un roșu sec corpolent.';
+
+  @override
+  String get dishReasonFish =>
+      'Peștele de râu și fructele de mare sunt ideale cu un alb crocant sau un spumant.';
+
+  @override
+  String get dishReasonCheese =>
+      'Brânza de oi maturată și sărată merge cu roșu, iar brânzeturile proaspete — cu alb.';
+
+  @override
+  String get dishReasonDessert =>
+      'Vertuta, cozonacul și fructele se potrivesc bine cu un vin spumant.';
 }

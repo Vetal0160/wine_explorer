@@ -114,4 +114,82 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get mapShowAll => 'Показать все винодельни';
+
+  @override
+  String get tabCellar => 'Подвал';
+
+  @override
+  String get cellarEmptyTitle => 'Ваш подвал пока пуст';
+
+  @override
+  String get cellarEmptyHint =>
+      'Нажмите ♡ на странице вина, чтобы сохранить его здесь.';
+
+  @override
+  String get cellarBrowse => 'Перейти в каталог';
+
+  @override
+  String get pairingQuestion => 'Что у вас на столе?';
+
+  @override
+  String get pairingMatches => 'Подходящие вина';
+
+  @override
+  String get pairingNoMatches => 'В каталоге пока нет подходящих вин';
+
+  @override
+  String get dishPlacinte => 'Плацинды';
+
+  @override
+  String get dishTochitura => 'Токана / точкэре';
+
+  @override
+  String get dishZeama => 'Зама';
+
+  @override
+  String get dishMamaliga => 'Мамалыга с брынзой';
+
+  @override
+  String get dishGrill => 'Шашлык на гратаре';
+
+  @override
+  String get dishFish => 'Рыба';
+
+  @override
+  String get dishCheese => 'Сыры';
+
+  @override
+  String get dishDessert => 'Десерты';
+
+  @override
+  String get dishReasonPlacinte =>
+      'Сытная выпечка с мясом или брынзой любит мягкое красное или свежее розовое — вино не перебьёт начинку.';
+
+  @override
+  String get dishReasonTochitura =>
+      'Насыщенное мясное рагу требует танинного красного: Фетяска Нягрэ или Рарэ Нягрэ раскрываются рядом с ним лучше всего.';
+
+  @override
+  String get dishReasonZeama =>
+      'Кисловатый куриный суп с борщом и зеленью хорошо освежает сухое белое с яркой кислотностью.';
+
+  @override
+  String get dishReasonMamaliga =>
+      'Сливочная мамалыга со сметаной и брынзой просит лёгкое белое или розовое, которое освежит вкус.';
+
+  @override
+  String get dishReasonGrill =>
+      'Дымное мясо с углей — классика для сухого красного с плотным телом.';
+
+  @override
+  String get dishReasonFish =>
+      'Речная рыба и морепродукты идеальны с хрустящим белым или игристым.';
+
+  @override
+  String get dishReasonCheese =>
+      'Солёной выдержанной брынзе подойдёт красное, свежим сырам — белое.';
+
+  @override
+  String get dishReasonDessert =>
+      'Вертута, куличи и фрукты хорошо сочетаются с игристым вином.';
 }

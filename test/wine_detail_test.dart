@@ -6,8 +6,9 @@ import 'package:wine_explorer/main.dart';
 import 'package:wine_explorer/screens/wine_detail_screen.dart';
 
 void main() {
-  testWidgets('карточка открывает детальный экран и добавляет в подвал',
-      (tester) async {
+  testWidgets('карточка открывает детальный экран и добавляет в подвал', (
+    tester,
+  ) async {
     SharedPreferences.setMockInitialValues({});
     await setAppLocale('ru');
     await loadFavorites();

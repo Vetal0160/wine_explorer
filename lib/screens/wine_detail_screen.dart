@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+
 import '../core/favorites_controller.dart';
 import '../core/theme.dart';
 import '../l10n/app_localizations.dart';
@@ -56,9 +57,10 @@ class WineDetailScreen extends StatelessWidget {
                           placeholder: (context, url) =>
                               const Center(child: CircularProgressIndicator()),
                           errorWidget: (context, url, error) => const Icon(
-                              Icons.wine_bar,
-                              size: 80,
-                              color: Colors.white),
+                            Icons.wine_bar,
+                            size: 80,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                       // Затемнение сверху, чтобы кнопки были видны на светлом фото
@@ -185,8 +187,10 @@ class WineDetailScreen extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                const Icon(Icons.restaurant,
-                                    color: AppTheme.wineRed),
+                                const Icon(
+                                  Icons.restaurant,
+                                  color: AppTheme.wineRed,
+                                ),
                                 const SizedBox(width: 8),
                                 Text(
                                   l10n.detailPairing,

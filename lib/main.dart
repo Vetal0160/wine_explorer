@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'l10n/app_localizations.dart';
 import 'core/favorites_controller.dart';
 import 'core/locale_controller.dart';
@@ -38,7 +39,9 @@ class WineExplorerApp extends StatelessWidget {
             GlobalCupertinoLocalizations.delegate,
           ],
           supportedLocales: const [
-            Locale('ru'), // Русский (используется, если язык телефона не поддерживается)
+            Locale(
+              'ru',
+            ), // Русский (используется, если язык телефона не поддерживается)
             Locale('ro'), // Румынский
             Locale('en'), // Английский
           ],

@@ -41,6 +41,71 @@ final List<Wine> mockWines = [
     imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600',
     description: 'Выдержанное вино с оттенками сухофруктов и дуба.',
   ),
+  Wine(
+    id: '4',
+    name: 'Cricova Brut',
+    wineryName: 'Cricova',
+    type: 'sparkling',
+    grapeVariety: 'Chardonnay, Pinot Noir',
+    vintage: 2021,
+    rating: 4.6,
+    priceLei: 210,
+    imageUrl:
+        'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
+    description:
+        'Классическое игристое с тонкой перлажью, нотами яблока и бриоши.',
+  ),
+  Wine(
+    id: '5',
+    name: 'Rosé de Mimi',
+    wineryName: 'Castel Mimi',
+    type: 'rose_dry',
+    grapeVariety: 'Pinot Noir',
+    vintage: 2023,
+    rating: 4.5,
+    priceLei: 190,
+    imageUrl:
+        'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
+    description: 'Лёгкое розовое с ароматом клубники, малины и цветов.',
+  ),
+  Wine(
+    id: '6',
+    name: 'Asconi Sauvignon Blanc',
+    wineryName: 'Asconi',
+    type: 'white_dry',
+    grapeVariety: 'Sauvignon Blanc',
+    vintage: 2023,
+    rating: 4.4,
+    priceLei: 130,
+    imageUrl:
+        'https://images.unsplash.com/photo-1558001373-7b93ee48ffa0?q=80&w=600',
+    description: 'Хрустящее белое с нотами крыжовника, лайма и свежей травы.',
+  ),
+  Wine(
+    id: '7',
+    name: 'Et Cetera Merlot',
+    wineryName: 'Et Cetera',
+    type: 'red_dry',
+    grapeVariety: 'Merlot',
+    vintage: 2020,
+    rating: 4.6,
+    priceLei: 250,
+    imageUrl: 'https://images.unsplash.com/photo-1586370434639-0fe43b2d32e6?q=80&w=600',
+    description: 'Мягкое бархатистое красное со спелой сливой и шоколадом.',
+  ),
+  Wine(
+    id: '8',
+    name: 'Mileștii Mici Cabernet Sauvignon',
+    wineryName: 'Mileștii Mici',
+    type: 'red_dry',
+    grapeVariety: 'Cabernet Sauvignon',
+    vintage: 2018,
+    rating: 4.7,
+    priceLei: 280,
+    imageUrl: 'https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600',
+    description:
+        'Выдержанное в подвалах вино с тонами чёрной смородины и табака.',
+  ),
 ];
 
 // Координаты примерные — уточните перед релизом

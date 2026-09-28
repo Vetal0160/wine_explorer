@@ -8,7 +8,7 @@ import '../models/winery.dart';
 /// Клиент для связи с бэкендом.
 class ApiClient {
   ApiClient({this.baseUrl = 'http://localhost:8080/api', http.Client? client})
-      : _client = client ?? http.Client();
+    : _client = client ?? http.Client();
 
   final String baseUrl;
   final http.Client _client;

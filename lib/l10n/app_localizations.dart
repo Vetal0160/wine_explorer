@@ -273,6 +273,144 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Показать все винодельни'**
   String get mapShowAll;
+
+  /// No description provided for @tabCellar.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подвал'**
+  String get tabCellar;
+
+  /// No description provided for @cellarEmptyTitle.
+  ///
+  /// In ru, this message translates to:
+  /// **'Ваш подвал пока пуст'**
+  String get cellarEmptyTitle;
+
+  /// No description provided for @cellarEmptyHint.
+  ///
+  /// In ru, this message translates to:
+  /// **'Нажмите ♡ на странице вина, чтобы сохранить его здесь.'**
+  String get cellarEmptyHint;
+
+  /// No description provided for @cellarBrowse.
+  ///
+  /// In ru, this message translates to:
+  /// **'Перейти в каталог'**
+  String get cellarBrowse;
+
+  /// No description provided for @pairingQuestion.
+  ///
+  /// In ru, this message translates to:
+  /// **'Что у вас на столе?'**
+  String get pairingQuestion;
+
+  /// No description provided for @pairingMatches.
+  ///
+  /// In ru, this message translates to:
+  /// **'Подходящие вина'**
+  String get pairingMatches;
+
+  /// No description provided for @pairingNoMatches.
+  ///
+  /// In ru, this message translates to:
+  /// **'В каталоге пока нет подходящих вин'**
+  String get pairingNoMatches;
+
+  /// No description provided for @dishPlacinte.
+  ///
+  /// In ru, this message translates to:
+  /// **'Плацинды'**
+  String get dishPlacinte;
+
+  /// No description provided for @dishTochitura.
+  ///
+  /// In ru, this message translates to:
+  /// **'Токана / точкэре'**
+  String get dishTochitura;
+
+  /// No description provided for @dishZeama.
+  ///
+  /// In ru, this message translates to:
+  /// **'Зама'**
+  String get dishZeama;
+
+  /// No description provided for @dishMamaliga.
+  ///
+  /// In ru, this message translates to:
+  /// **'Мамалыга с брынзой'**
+  String get dishMamaliga;
+
+  /// No description provided for @dishGrill.
+  ///
+  /// In ru, this message translates to:
+  /// **'Шашлык на гратаре'**
+  String get dishGrill;
+
+  /// No description provided for @dishFish.
+  ///
+  /// In ru, this message translates to:
+  /// **'Рыба'**
+  String get dishFish;
+
+  /// No description provided for @dishCheese.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сыры'**
+  String get dishCheese;
+
+  /// No description provided for @dishDessert.
+  ///
+  /// In ru, this message translates to:
+  /// **'Десерты'**
+  String get dishDessert;
+
+  /// No description provided for @dishReasonPlacinte.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сытная выпечка с мясом или брынзой любит мягкое красное или свежее розовое — вино не перебьёт начинку.'**
+  String get dishReasonPlacinte;
+
+  /// No description provided for @dishReasonTochitura.
+  ///
+  /// In ru, this message translates to:
+  /// **'Насыщенное мясное рагу требует танинного красного: Фетяска Нягрэ или Рарэ Нягрэ раскрываются рядом с ним лучше всего.'**
+  String get dishReasonTochitura;
+
+  /// No description provided for @dishReasonZeama.
+  ///
+  /// In ru, this message translates to:
+  /// **'Кисловатый куриный суп с борщом и зеленью хорошо освежает сухое белое с яркой кислотностью.'**
+  String get dishReasonZeama;
+
+  /// No description provided for @dishReasonMamaliga.
+  ///
+  /// In ru, this message translates to:
+  /// **'Сливочная мамалыга со сметаной и брынзой просит лёгкое белое или розовое, которое освежит вкус.'**
+  String get dishReasonMamaliga;
+
+  /// No description provided for @dishReasonGrill.
+  ///
+  /// In ru, this message translates to:
+  /// **'Дымное мясо с углей — классика для сухого красного с плотным телом.'**
+  String get dishReasonGrill;
+
+  /// No description provided for @dishReasonFish.
+  ///
+  /// In ru, this message translates to:
+  /// **'Речная рыба и морепродукты идеальны с хрустящим белым или игристым.'**
+  String get dishReasonFish;
+
+  /// No description provided for @dishReasonCheese.
+  ///
+  /// In ru, this message translates to:
+  /// **'Солёной выдержанной брынзе подойдёт красное, свежим сырам — белое.'**
+  String get dishReasonCheese;
+
+  /// No description provided for @dishReasonDessert.
+  ///
+  /// In ru, this message translates to:
+  /// **'Вертута, куличи и фрукты хорошо сочетаются с игристым вином.'**
+  String get dishReasonDessert;
 }
 
 class _AppLocalizationsDelegate

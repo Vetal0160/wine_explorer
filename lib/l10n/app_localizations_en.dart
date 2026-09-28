@@ -112,4 +112,81 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mapShowAll => 'Show all wineries';
+
+  @override
+  String get tabCellar => 'Cellar';
+
+  @override
+  String get cellarEmptyTitle => 'Your cellar is empty';
+
+  @override
+  String get cellarEmptyHint => 'Tap ♡ on a wine\'s page to save it here.';
+
+  @override
+  String get cellarBrowse => 'Browse the catalog';
+
+  @override
+  String get pairingQuestion => 'What\'s on your table?';
+
+  @override
+  String get pairingMatches => 'Matching wines';
+
+  @override
+  String get pairingNoMatches => 'No matching wines in the catalog yet';
+
+  @override
+  String get dishPlacinte => 'Plăcinte';
+
+  @override
+  String get dishTochitura => 'Tocană / tochitură';
+
+  @override
+  String get dishZeama => 'Zeamă';
+
+  @override
+  String get dishMamaliga => 'Mămăligă with brânză';
+
+  @override
+  String get dishGrill => 'Grilled skewers';
+
+  @override
+  String get dishFish => 'Fish';
+
+  @override
+  String get dishCheese => 'Cheese';
+
+  @override
+  String get dishDessert => 'Desserts';
+
+  @override
+  String get dishReasonPlacinte =>
+      'Hearty pies with meat or cheese love a soft red or a fresh rosé that won\'t overpower the filling.';
+
+  @override
+  String get dishReasonTochitura =>
+      'A rich meat stew calls for a tannic red: Fetească Neagră or Rară Neagră shine next to it.';
+
+  @override
+  String get dishReasonZeama =>
+      'This tangy chicken soup with borș and herbs is lifted by a dry white with bright acidity.';
+
+  @override
+  String get dishReasonMamaliga =>
+      'Creamy mămăligă with sour cream and brânză wants a light white or rosé to refresh the palate.';
+
+  @override
+  String get dishReasonGrill =>
+      'Smoky meat from the coals is a classic match for a full-bodied dry red.';
+
+  @override
+  String get dishReasonFish =>
+      'River fish and seafood are ideal with a crisp white or a sparkling wine.';
+
+  @override
+  String get dishReasonCheese =>
+      'Salty aged sheep\'s cheese pairs with red; fresh cheeses go with white.';
+
+  @override
+  String get dishReasonDessert =>
+      'Vertută, cozonac and fruit pair nicely with a sparkling wine.';
 }

@@ -4,7 +4,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 const _favoritesKey = 'favorite_wine_ids';
 
 /// id вин, добавленных в «Мой подвал».
-final ValueNotifier<Set<String>> favoriteWineIds = ValueNotifier<Set<String>>({});
+final ValueNotifier<Set<String>> favoriteWineIds = ValueNotifier<Set<String>>(
+  {},
+);
 
 /// Загружает избранное (вызывается при старте приложения).
 Future<void> loadFavorites() async {
